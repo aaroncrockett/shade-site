@@ -3,6 +3,8 @@ import { dev } from '$app/environment';
 import fs from 'fs';
 import path from 'path';
 
+import type { BookedDate } from '$lib/types/index.ts';
+
 import { DIR_APPOINTMENTS } from '$lib/config/index.js';
 
 // we don't need any JS on this page, though we'll load
@@ -16,6 +18,8 @@ export const prerender = false;
 import type { PageServerLoad } from './$types';
 
 export const load: PageServerLoad = async () => {
+	// // ** TEMP PROGRAMMING STEPS ** //
+
 	// then the dir for the current month (2), and the next two months (it might have to go to the next year obviously)
 	//
 	// it should use this data to determine which days are available for appointments
@@ -23,6 +27,7 @@ export const load: PageServerLoad = async () => {
 	// unless it is included in nonAvailableDates
 	// then also determine which days have already been booked
 
+	// // Handle file data
 	const currentYear = new Date().getFullYear();
 	// this month
 	const currentMonth = new Date().getMonth() + 1;
@@ -30,16 +35,23 @@ export const load: PageServerLoad = async () => {
 	// month after next
 
 	const filePath = path.join(DIR_APPOINTMENTS, `${currentYear}`, `${currentMonth}.json`);
-
 	const appointmentM1JSON = fs.readFileSync(filePath, 'utf-8');
 	const appointmentM1Data = JSON.parse(appointmentM1JSON);
 
-	console.log(appointmentM1Data);
+	// // Logic to extract the data.
+	const filledDates: string[] = [];
+
+	// Iterate over booked dates to determine filled dates
+
+	appointmentM1Data.bookedDates.forEach((bookedDate: BookedDate) => {
+		if (bookedDate.full) {
+			filledDates.push(bookedDate.date);
+		}
+	});
+
+	console.log('filledDates', filledDates);
 
 	return {
-		post: {
-			title: `Title for `,
-			content: `Content for `
-		}
+		filledDates
 	};
 };
