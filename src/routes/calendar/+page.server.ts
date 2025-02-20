@@ -22,27 +22,6 @@ export const load: PageServerLoad = async () => {
 	// availableDays will be each of the type of day in the list (all mondays, tuesdays, etc)
 	// unless it is included in nonAvailableDates
 	// then also determine which days have already been booked
-	// {
-	//     "availableDays": ["thu, fri", "sat", "sun"],
-	//     "nonAvailableDates": [""],
-	//     "bookedDates": [
-	//         {
-	//             "date": "17",
-	//             "type": "consult",
-	//             "start": "11",
-	//             "end": "12",
-	//             "contactId": ""
-	//         },
-	//         { "date": "18", "type": "tat", "start": "12", "end": "5", "contactId": "" },
-	//         {
-	//             "date": "19",
-	//             "type": "consult",
-	//             "start": "11",
-	//             "end": "12",
-	//             "contactId": ""
-	//         }
-	//     ]
-	// }
 
 	const currentYear = new Date().getFullYear();
 	// this month
