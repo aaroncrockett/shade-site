@@ -1,8 +1,9 @@
 import { dev } from '$app/environment';
+
 import fs from 'fs';
 import path from 'path';
-import { fileURLToPath } from 'url';
-import { dirname } from 'path';
+
+import { DIR_APPOINTMENTS } from '$lib/config/index.js';
 
 // we don't need any JS on this page, though we'll load
 // it in dev so that we get hot module replacement
@@ -15,7 +16,6 @@ export const prerender = false;
 import type { PageServerLoad } from './$types';
 
 export const load: PageServerLoad = async () => {
-	// have node find the file in $lib/data/appointments/2025 (current year)
 	// then the dir for the current month (2), and the next two months (it might have to go to the next year obviously)
 	//
 	// it should use this data to determine which days are available for appointments
@@ -45,12 +45,18 @@ export const load: PageServerLoad = async () => {
 	// }
 
 	const currentYear = new Date().getFullYear();
-	console.log(currentYear);
+	// this month
+	const currentMonth = new Date().getMonth() + 1;
+	// next month
+	// month after next
 
-	const filePath = path.resolve('src/lib/data/appointments/2025/2.json');
+	const filePath = path.join(DIR_APPOINTMENTS, `${currentYear}`, `${currentMonth}.json`);
 
-	const fileContents = fs.readFileSync(filePath, 'utf-8');
-	console.log(fileContents);
+	const appointmentM1JSON = fs.readFileSync(filePath, 'utf-8');
+	const appointmentM1Data = JSON.parse(appointmentM1JSON);
+
+	console.log(appointmentM1Data);
+
 	return {
 		post: {
 			title: `Title for `,
