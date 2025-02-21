@@ -1,8 +1,8 @@
 import type { AppointmentData } from '$lib/types/index.ts';
-import { daysMap, daysOfWeek } from '$lib/config';
+import { daysMap, shortDaysOfWeek } from '$lib/config';
 
 export function getDayOfWeek(date: Date): string {
-	return daysOfWeek[date.getDay()];
+	return shortDaysOfWeek[date.getDay()];
 }
 
 export function getAllDaysInMonth(year: number, month: number): Date[] {
