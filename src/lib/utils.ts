@@ -1,4 +1,5 @@
 import type { AppointmentData } from '$lib/types/index.ts';
+import { daysMap } from '$lib/config'; // Import from config
 
 export function getDayOfWeek(date: Date): string {
 	const daysOfWeek = ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat'];
@@ -22,18 +23,6 @@ export function buildAvailableDates(
 	year: number,
 	month: number
 ): Date[] {
-	// Map days of the week to numbers (0: Sunday, 1: Monday, ..., 6: Saturday)
-	const daysMap: Record<string, number> = {
-		sun: 0,
-		mon: 1,
-		tue: 2,
-		wed: 3,
-		thu: 4,
-		fri: 5,
-		sat: 6
-	};
-
-	// Ensure availableDays are trimmed, lowercase and valid
 	const availableDayNumbers = appointmentData.availableDays
 		.map((day) => {
 			const dayLower = day.trim().toLowerCase();
@@ -45,13 +34,11 @@ export function buildAvailableDates(
 		})
 		.filter((day) => day !== -1); // Filter out any invalid days
 
-	// Get all days of the month
 	const allDaysInMonth = getAllDaysInMonth(year, month);
 
-	// Filter the days that match the available days
 	const availableDates: Date[] = allDaysInMonth.filter((date) => {
 		const dayOfWeek = date.getDay(); // Get numeric day (0 for Sunday, 1 for Monday, ...)
-		return availableDayNumbers.includes(dayOfWeek); // Check if the numeric day is in availableDayNumbers
+		return availableDayNumbers.includes(dayOfWeek);
 	});
 
 	return availableDates;
