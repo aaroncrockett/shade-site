@@ -3,9 +3,11 @@ import { dev } from '$app/environment';
 import fs from 'fs';
 import path from 'path';
 
-import type { BookedDate } from '$lib/types/index.ts';
+import type { AppointmentData } from '$lib/types/index.ts';
 
-import { DIR_APPOINTMENTS } from '$lib/config/index.js';
+import { getDayOfWeek, getAllDaysInMonth } from '$lib/utils';
+
+import { DIR_APPOINTMENTS } from '$lib/config';
 
 // we don't need any JS on this page, though we'll load
 // it in dev so that we get hot module replacement
@@ -39,19 +41,10 @@ export const load: PageServerLoad = async () => {
 	const appointmentM1Data = JSON.parse(appointmentM1JSON);
 
 	// // Logic to extract the data.
-	const filledDates: string[] = [];
 
-	// Iterate over booked dates to determine filled dates
-
-	appointmentM1Data.bookedDates.forEach((bookedDate: BookedDate) => {
-		if (bookedDate.full) {
-			filledDates.push(bookedDate.date);
-		}
-	});
-
-	console.log('filledDates', filledDates);
+	const availableDates: AppointmentData[] = [];
 
 	return {
-		filledDates
+		availableDates
 	};
 };

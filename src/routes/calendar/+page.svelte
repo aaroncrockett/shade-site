@@ -2,7 +2,7 @@
 	import type { PageProps } from './$types';
 
 	let { data }: PageProps = $props();
-	const { filledDates } = data;
+	const { availableDates } = data;
 </script>
 
 <svelte:head>
@@ -14,10 +14,10 @@
 	<h1>Available time slots.</h1>
 </div>
 <ul>
-	{#each filledDates as date}
+	{#each availableDates as date}
 		<li>
 			{date}
 		</li>
 	{/each}
 </ul>
-<h1>{data.filledDates}</h1>
+<h1>{data.availableDates}</h1>
