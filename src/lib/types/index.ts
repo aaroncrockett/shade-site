@@ -1,8 +1,10 @@
-// Define the structure for the "appointments" within "bookedDates"
+export type AppointmentType = 'consult' | 'flash' | 'tat';
+
 export interface Appointment {
-	type: string;
-	start: string;
-	end: string;
+	type: AppointmentType;
+
+	start: number;
+	end: number;
 	clientId: string;
 	contactedVia: string;
 	transactionId: string;
@@ -11,16 +13,16 @@ export interface Appointment {
 
 // Define the structure for each "bookedDate" entry
 export interface BookedDate {
-	date: string;
+	date: number;
 	full: boolean;
 	appointments: Appointment[];
 }
 
 // Define the structure for "availableHours"
 export interface AvailableHours {
-	start: string;
-	end: string;
-	breaks: string[];
+	start: number;
+	end: number;
+	breaks: number[];
 }
 
 export type DayOfWeek = 'sun' | 'mon' | 'tue' | 'wed' | 'thu' | 'fri' | 'sat';
