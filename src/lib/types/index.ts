@@ -31,7 +31,7 @@ export interface AppointmentData {
 	availableDays: DayOfWeek[]; // List of available days (e.g., ["thu", "fri"])
 	availableHours: AvailableHours;
 	availableDates: AvailableDate[]; // Array of available dates with start and end time
-	nonAvailableDates: string[]; // List of dates that are non-available
+	nonAvailableDates: number[]; // List of dates that are non-available
 	bookedDates: BookedDate[]; // Array of booked dates with full status and appointments
 }
 

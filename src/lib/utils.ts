@@ -36,8 +36,11 @@ export function buildAvailableDates(
 	const allDaysInMonth = getAllDaysInMonth(year, month);
 
 	const availableDates: Date[] = allDaysInMonth.filter((date) => {
-		const dayOfWeek = date.getDay(); // Get numeric day (0 for Sunday, 1 for Monday, ...)
-		return availableDayNumbers.includes(dayOfWeek);
+		// Still need to filter for filled and
+		// still need to add specifically noted available dates
+		const dayOfWeek = date.getDay();
+		const isNotNonAvailable = !appointmentData.nonAvailableDates.includes(date.getDate());
+		return availableDayNumbers.includes(dayOfWeek) && isNotNonAvailable;
 	});
 
 	return availableDates;
