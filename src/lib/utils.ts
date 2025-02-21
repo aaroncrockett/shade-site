@@ -1,5 +1,5 @@
 import type { AppointmentData } from '$lib/types/index.ts';
-import { daysMap } from '$lib/config'; // Import from config
+import { daysMap } from '$lib/config';
 
 export function getDayOfWeek(date: Date): string {
 	const daysOfWeek = ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat'];
@@ -11,8 +11,8 @@ export function getAllDaysInMonth(year: number, month: number): Date[] {
 	const days: Date[] = [];
 
 	while (date.getMonth() === month - 1) {
-		days.push(new Date(date)); // Push the current date
-		date.setDate(date.getDate() + 1); // Move to the next day
+		days.push(new Date(date));
+		date.setDate(date.getDate() + 1);
 	}
 
 	return days;
@@ -28,11 +28,11 @@ export function buildAvailableDates(
 			const dayLower = day.trim().toLowerCase();
 			if (daysMap[dayLower] === undefined) {
 				console.error(`Invalid day: ${day}`);
-				return -1; // Invalid day returns -1
+				return -1;
 			}
 			return daysMap[dayLower];
 		})
-		.filter((day) => day !== -1); // Filter out any invalid days
+		.filter((day) => day !== -1);
 
 	const allDaysInMonth = getAllDaysInMonth(year, month);
 
