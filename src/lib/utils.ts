@@ -1,8 +1,7 @@
 import type { AppointmentData } from '$lib/types/index.ts';
-import { daysMap } from '$lib/config';
+import { daysMap, daysOfWeek } from '$lib/config';
 
 export function getDayOfWeek(date: Date): string {
-	const daysOfWeek = ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat'];
 	return daysOfWeek[date.getDay()];
 }
 

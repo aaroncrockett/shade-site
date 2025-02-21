@@ -1,5 +1,7 @@
 import path from 'path';
 
+export const daysOfWeek = ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat'];
+
 export const daysMap: Record<string, number> = {
 	sun: 0,
 	mon: 1,
