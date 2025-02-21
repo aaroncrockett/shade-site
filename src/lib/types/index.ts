@@ -23,16 +23,16 @@ export interface AvailableHours {
 	breaks: string[];
 }
 
-// Define the overall structure of the appointment data
+export type DayOfWeek = 'sun' | 'mon' | 'tue' | 'wed' | 'thu' | 'fri' | 'sat';
+
 export interface AppointmentData {
-	availableDays: string[]; // List of available days (e.g., ["thu", "fri"])
+	availableDays: DayOfWeek[]; // List of available days (e.g., ["thu", "fri"])
 	availableHours: AvailableHours;
 	availableDates: AvailableDate[]; // Array of available dates with start and end time
 	nonAvailableDates: string[]; // List of dates that are non-available
 	bookedDates: BookedDate[]; // Array of booked dates with full status and appointments
 }
 
-// Define the structure for available dates
 export interface AvailableDate {
 	date: string;
 	start: string;
