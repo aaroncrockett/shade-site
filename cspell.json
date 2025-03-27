@@ -1,0 +1,43 @@
+{
+	"language": "en",
+	"ignorePaths": [
+		"src/lib/tailwind/generated/**",
+		"static/**",
+		"pnpm-lock.yaml",
+		"package-lock.json",
+		"yarn.lock",
+		"package/**"
+	],
+	"dictionaries": ["html", "typescript", "softwareTerms", "companies"],
+	"allowCompoundWords": true,
+	"words": [
+		"autocollapse",
+		"autohide",
+		"blockquote",
+		"changelogen",
+		"consolas",
+		"contenteditable",
+		"dropzone",
+		"ecommerce",
+		"fieldset",
+		"filesize",
+		"fira",
+		"flexbox",
+		"Helvetica",
+		"hoverable",
+		"listbox",
+		"nowrap",
+		"nocheck",
+		"postcss",
+		"rgba",
+		"stylesheet",
+
+		"testid",
+		"textareas",
+		"tsup",
+		"unplugin",
+		"Vercel",
+		"vite",
+		"Vitest"
+	]
+}
