@@ -1,6 +1,5 @@
 import { json, redirect } from '@sveltejs/kit';
 import { PUBLIC_APP_DOMAIN } from '$env/static/public';
-import { AUTH_CB_SEG } from '$lib/config';
 import type { RequestHandler } from './$types';
 
 export const GET: RequestHandler = async ({ locals: { supabase } }) => {
