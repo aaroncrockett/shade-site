@@ -1,5 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import { PUBLIC_APP_DOMAIN } from '$env/static/public';
+	import { ADMIN_SEG } from '$lib/config';
 
 	export let data;
 
@@ -7,7 +9,7 @@
 		const { data: signInData, error } = await data.supabase.auth.signInWithOAuth({
 			provider: 'google',
 			options: {
-				redirectTo: 'http://localhost:5173/auth/callback'
+				redirectTo: `${PUBLIC_APP_DOMAIN}${ADMIN_SEG}`
 			}
 		});
 

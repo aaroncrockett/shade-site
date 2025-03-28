@@ -1,5 +1,7 @@
 import path from 'path';
 
+// dates
+
 export const shortDaysOfWeek = ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat'];
 
 export const daysMap: Record<string, number> = {
@@ -11,5 +13,10 @@ export const daysMap: Record<string, number> = {
 	fri: 5,
 	sat: 6
 };
+
+// paths
+
+export const AUTH_CB_SEG = '/auth/callback';
+export const ADMIN_SEG = '/admin';
 
 export const DIR_APPOINTMENTS = path.resolve('src/lib/data/appointments');
