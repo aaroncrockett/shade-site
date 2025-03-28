@@ -1,6 +1,6 @@
 import { json, redirect } from '@sveltejs/kit';
 import { PUBLIC_APP_DOMAIN } from '$env/static/public';
-import { ADMIN_SEG } from '$lib/config';
+import { AUTH_CB_SEG } from '$lib/config';
 import type { RequestHandler } from './$types';
 
 export const GET: RequestHandler = async ({ locals: { supabase } }) => {
@@ -8,7 +8,7 @@ export const GET: RequestHandler = async ({ locals: { supabase } }) => {
 	const { data, error } = await supabase.auth.signInWithOAuth({
 		provider: 'google',
 		options: {
-			redirectTo: `${PUBLIC_APP_DOMAIN}${ADMIN_SEG}`
+			redirectTo: `${PUBLIC_APP_DOMAIN}`
 		}
 	});
 

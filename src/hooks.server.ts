@@ -75,6 +75,10 @@ const authGuard: Handle = async ({ event, resolve }) => {
 		redirect(303, '/admin');
 	}
 
+	// if (event.locals.session && event.url.pathname === '/') {
+	// 	redirect(303, '/admin');
+	// }
+
 	return resolve(event);
 };
 
