@@ -1,22 +1,14 @@
 <script>
-	import { redirect } from '@sveltejs/kit';
+	import { logout } from '$lib/logic';
 
 	let { data, children } = $props();
 	let { supabase } = $derived(data);
 
-	const logout = async () => {
-		const { error } = await supabase.auth.signOut();
-		if (error) {
-			console.error(error);
-			return;
-		}
-
-		window.location.href = '/';
-	};
+	const handleLogout = () => logout(supabase);
 </script>
 
 <header>
-	<button onclick={logout}>Logout</button>
+	<button onclick={handleLogout}>Logout</button>
 </header>
 <main>
 	{@render children()}
