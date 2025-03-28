@@ -24,7 +24,7 @@
 	};
 </script>
 
-<h1>Private page for user: {user?.email}</h1>
+<h1>Admin page for user: {user?.email}</h1>
 <h2>Notes</h2>
 <ul>
 	{#each notes as note}
