@@ -1,8 +1,8 @@
 <svelte:head>
-	<title>About</title>
-	<meta name="description" content="About this app" />
+	<title>Bio</title>
+	<meta name="description" content="Artists Bio" />
 </svelte:head>
 
 <div class="text-column">
-	<h1>About the artist</h1>
+	<h1>Artists Bio</h1>
 </div>
