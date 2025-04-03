@@ -67,17 +67,23 @@ const authGuard: Handle = async ({ event, resolve }) => {
 	event.locals.session = session;
 	event.locals.user = user;
 
-	if (!event.locals.session && event.url.pathname.startsWith('/admin')) {
+	// don't allow anyone to go to admin or auth until this is ready
+
+	// if (!event.locals.session && event.url.pathname.startsWith('/admin')) {
+	// 	redirect(303, '/');
+	// }
+
+	if (event.url.pathname.startsWith('/admin')) {
 		redirect(303, '/');
 	}
 
-	if (event.locals.session && event.url.pathname === '/auth') {
-		redirect(303, '/admin');
-	}
-
-	// if (event.locals.session && event.url.pathname === '/') {
+	// if (event.locals.session && event.url.pathname === '/auth') {
 	// 	redirect(303, '/admin');
 	// }
+
+	if (event.url.pathname === '/auth') {
+		redirect(303, '/');
+	}
 
 	return resolve(event);
 };
