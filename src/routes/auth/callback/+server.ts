@@ -1,4 +1,5 @@
 import { redirect } from '@sveltejs/kit';
+import { ADMIN_SEG } from '$lib/config';
 
 import type { RequestEvent } from '@sveltejs/kit';
 
@@ -8,7 +9,7 @@ export const GET = async (event: RequestEvent) => {
 		locals: { supabase }
 	} = event;
 	const code = url.searchParams.get('code') as string;
-	const next = url.searchParams.get('next') ?? '/';
+	const next = url.searchParams.get('next') ?? ADMIN_SEG;
 
 	if (code) {
 		const { error } = await supabase.auth.exchangeCodeForSession(code);

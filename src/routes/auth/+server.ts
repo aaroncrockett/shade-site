@@ -1,13 +1,14 @@
 import { json, redirect } from '@sveltejs/kit';
 import { PUBLIC_APP_DOMAIN } from '$env/static/public';
 import type { RequestHandler } from './$types';
+import { AUTH_CB_SEG } from '$lib/config';
 
 export const GET: RequestHandler = async ({ locals: { supabase } }) => {
 	// could have multi auths in the future, but not planning to currently
 	const { data, error } = await supabase.auth.signInWithOAuth({
 		provider: 'google',
 		options: {
-			redirectTo: `${PUBLIC_APP_DOMAIN}`
+			redirectTo: `${PUBLIC_APP_DOMAIN}${AUTH_CB_SEG}`
 		}
 	});
 
