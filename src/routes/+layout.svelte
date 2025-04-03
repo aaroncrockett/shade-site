@@ -2,8 +2,13 @@
 	import { invalidate } from '$app/navigation';
 	import { onMount } from 'svelte';
 
-	import Header from './Header.svelte';
 	import '../app.css';
+
+	import { page } from '$app/state';
+
+	import Logo from '$lib/components/site-ui/logo.svelte';
+	import NavMainItems from '$lib/components/site-ui/nav-main-items.svelte';
+	import FooterMainItems from '$lib/components/site-ui/footer-main-items.svelte';
 
 	let { data, children } = $props();
 	let { session, supabase } = $derived(data);
@@ -19,14 +24,21 @@
 	});
 </script>
 
-<div class="app">
-	<Header />
+<div class="app bg-neutral-700">
+	<header class="site-wrapper">
+		<nav class="flex items-center justify-between gap-4">
+			<Logo />
+			<ul class="flex gap-4">
+				<NavMainItems />
+			</ul>
+		</nav>
+	</header>
 
-	<main>
+	<main class="site-wrapper">
 		{@render children()}
 	</main>
 
-	<footer>
-		<p>Shade To Shade Footer</p>
+	<footer class="site-wrapper">
+		<FooterMainItems />
 	</footer>
 </div>
