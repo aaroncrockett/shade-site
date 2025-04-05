@@ -7,8 +7,8 @@
 	import { page } from '$app/state';
 
 	import Logo from '$lib/components/site-ui/logo.svelte';
-	import NavMainItems from '$lib/components/site-ui/nav-main-items.svelte';
-	import FooterMainItems from '$lib/components/site-ui/footer-main-items.svelte';
+	import NavMainItems from '$lib/components/site-ui/nav/main-items.svelte';
+	import FooterMainItems from '$lib/components/site-ui/footer/main-items.svelte';
 
 	let { data, children } = $props();
 	let { session, supabase } = $derived(data);
@@ -24,21 +24,23 @@
 	});
 </script>
 
-<div class="app bg-neutral-700">
-	<header class="site-wrapper">
-		<nav class="flex items-center justify-between gap-4">
-			<Logo />
-			<ul class="flex gap-4">
-				<NavMainItems />
-			</ul>
-		</nav>
-	</header>
+<div class="app bg-neutral-800">
+	<div class="bg-neutral-700 shadow-md">
+		<header class="site-wrapper">
+			<nav class="flex items-center justify-between gap-4">
+				<Logo />
+				<ul class="flex gap-4">
+					<NavMainItems />
+				</ul>
+			</nav>
+		</header>
+	</div>
 
-	<main class="site-wrapper">
+	<main class="site-wrapper p-1">
 		{@render children()}
 	</main>
 
-	<footer class="site-wrapper">
+	<footer class="site-wrapper p-1">
 		<FooterMainItems />
 	</footer>
 </div>

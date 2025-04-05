@@ -1,4 +1,5 @@
 <script lang="ts">
+	import MainPageContent from '$lib/components/site-ui/page-main/index.svelte';
 </script>
 
 <svelte:head>
@@ -7,5 +8,5 @@
 </svelte:head>
 
 <section>
-	<h1>Shade To Shade Homepage</h1>
+	<MainPageContent />
 </section>
