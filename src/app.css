@@ -3,3 +3,19 @@
 .site-wrapper {
 	@apply mx-auto max-w-[1300px] py-3;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	@apply font-normal text-white;
+	font-family: 'futura-pt', sans-serif;
+}
+
+a {
+	@apply bg-gradient-to-r from-neutral-50 to-zinc-400 bg-clip-text font-bold text-transparent hover:text-zinc-400;
+	font-family: 'futura-pt', sans-serif;
+}
