@@ -4,9 +4,7 @@
 
 <svelte:head>
 	<title>Home</title>
-	<meta name="description" content="Svelte demo app" />
+	<meta name="description" content="Shade to Shade Tattoo Artist" />
 </svelte:head>
 
-<section>
-	<MainPageContent />
-</section>
+<MainPageContent />
