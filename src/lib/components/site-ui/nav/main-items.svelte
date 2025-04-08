@@ -5,6 +5,6 @@
 <li aria-current={page.url.pathname === '/bio' ? 'page' : undefined}>
 	<a class="text-white" href="/bio">Bio</a>
 </li>
-<li aria-current={page.url.pathname === '/tattoos' ? 'page' : undefined}>
-	<a class="text-white" href="/tattoos">Tattoos</a>
+<li aria-current={page.url.pathname === '/gallery' ? 'page' : undefined}>
+	<a class="text-white" href="/gallery">Gallery</a>
 </li>

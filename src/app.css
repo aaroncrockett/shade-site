@@ -1,8 +1,6 @@
 @import 'tailwindcss';
 
-.site-wrapper {
-	@apply mx-auto max-w-[1300px] py-3;
-}
+/* global */
 
 h1,
 h2,
@@ -18,4 +16,52 @@ p {
 a {
 	@apply bg-gradient-to-r from-neutral-50 to-zinc-400 bg-clip-text font-bold text-transparent hover:text-zinc-400;
 	font-family: 'futura-pt', sans-serif;
+}
+
+.site-wrapper {
+	@apply mx-auto max-w-[1300px] py-3;
+}
+
+/* Gallery  Lightbox customizations */
+.svelte-lightbox-header button {
+	@apply text-2xl text-neutral-500;
+}
+
+.svelte-lightbox-header button:hover {
+	@apply !text-neutral-700;
+}
+
+/* Lightbox customizations */
+.svelte-lightbox-header button {
+	@apply !text-3xl !text-neutral-500;
+}
+
+.svelte-lightbox-header button:hover {
+	@apply text-neutral-700;
+}
+
+/* Custom styles for svelte-lightbox */
+.svelte-lightbox-overlay img {
+	@apply mx-auto max-h-[70vh] object-contain;
+}
+
+.svelte-lightbox-footer p {
+	@apply hidden;
+}
+
+.svelte-lightbox-footer h1,
+.svelte-lightbox-footer h2,
+.svelte-lightbox-footer h3,
+.svelte-lightbox-footer h4,
+.svelte-lightbox-footer h5 {
+	@apply text-center;
+}
+
+.svelte-lightbox-header {
+	@apply hidden;
+}
+
+.next-button,
+.previous-button {
+	@apply !hidden;
 }
