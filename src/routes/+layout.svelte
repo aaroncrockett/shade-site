@@ -27,7 +27,7 @@
 <div class="app bg-neutral-800">
 	<div class="bg-neutral-700 shadow-md">
 		<header class="site-wrapper">
-			<nav class="flex items-center justify-between gap-4">
+			<nav class="flex items-center justify-between gap-4 px-4">
 				<Logo />
 				<ul class="flex gap-4">
 					<NavMainItems />
@@ -36,11 +36,11 @@
 		</header>
 	</div>
 
-	<main class="site-wrapper p-1">
+	<main class="site-wrapper px-5 py-4">
 		{@render children()}
 	</main>
 
-	<footer class="site-wrapper p-1">
+	<footer class="site-wrapper px-5 py-4">
 		<FooterMainItems />
 	</footer>
 </div>

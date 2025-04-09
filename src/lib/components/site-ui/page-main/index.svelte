@@ -2,9 +2,13 @@
 	import snakeHero from '$lib/images/tattoos/snake.png?enhanced';
 </script>
 
-<section class="flex flex-col gap-4 sm:flex-row">
+<section class="flex flex-col gap-4 py-4 sm:flex-row">
 	<div class="w-full sm:w-1/2">
-		<h1>Shade To Shade Homepage</h1>
+		<h1 class="bold text-3xl">New Spring Studio, Styles & Social Media!</h1>
+		<section>
+			<h3>current location</h3>
+			<p>1234 example</p>
+		</section>
 	</div>
 	<div class="w-full sm:w-1/2">
 		<enhanced:img
