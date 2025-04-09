@@ -18,6 +18,11 @@ a {
 	font-family: 'futura-pt', sans-serif;
 }
 
+h1.hero-hl {
+	@apply text-5xl sm:text-7xl lg:text-8xl;
+	font-family: 'acumin-pro-extra-condensed';
+}
+
 .site-wrapper {
 	@apply mx-auto max-w-[1300px] py-3;
 }

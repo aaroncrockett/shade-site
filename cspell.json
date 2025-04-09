@@ -11,6 +11,7 @@
 	"dictionaries": ["html", "typescript", "softwareTerms", "companies"],
 	"allowCompoundWords": true,
 	"words": [
+		"acumin",
 		"autocollapse",
 		"autohide",
 		"blockquote",
