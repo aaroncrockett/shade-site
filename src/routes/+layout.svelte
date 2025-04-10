@@ -27,11 +27,11 @@
 <div class="app bg-neutral-800">
 	<div class="bg-neutral-700 shadow-md">
 		<header class="site-wrapper">
-			<nav class="flex items-center justify-between gap-4 px-4">
+			<nav class="flex flex-col items-center justify-between gap-2 px-4 sm:flex-row sm:gap-4">
 				<Logo />
-				<ul class="flex gap-4">
+				<!-- <ul class="md: flex flex-col gap-1 text-center sm:flex-row sm:gap-4 sm:text-left">
 					<NavMainItems />
-				</ul>
+				</ul> -->
 			</nav>
 		</header>
 	</div>
@@ -40,7 +40,7 @@
 		{@render children()}
 	</main>
 
-	<footer class="site-wrapper px-5 py-4">
+	<!-- <footer class="site-wrapper px-5 py-4">
 		<FooterMainItems />
-	</footer>
+	</footer> -->
 </div>

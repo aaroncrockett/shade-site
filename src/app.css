@@ -19,7 +19,7 @@ a {
 }
 
 h1.hero-hl {
-	@apply text-5xl sm:text-7xl lg:text-8xl;
+	@apply text-6xl sm:text-7xl lg:text-8xl;
 	font-family: 'acumin-pro-extra-condensed';
 }
 
