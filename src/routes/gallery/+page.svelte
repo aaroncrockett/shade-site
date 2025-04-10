@@ -11,6 +11,20 @@
 			full: imgLg1,
 			title: 'Snake',
 			description: 'Black and grey, stipple shaded.'
+		},
+		{
+			id: 1,
+			thumbnail: imgTn1,
+			full: imgLg1,
+			title: 'Snake',
+			description: 'Black and grey, stipple shaded.'
+		},
+		{
+			id: 2,
+			thumbnail: imgTn1,
+			full: imgLg1,
+			title: 'Snake',
+			description: 'Black and grey, stipple shaded.'
 		}
 	];
 
@@ -37,25 +51,25 @@
 	<h1 class="text-center">TATTOOS</h1>
 </div>
 
-<LightboxGallery enableClickToClose={true} customization={custom}>
-	<svelte:fragment slot="thumbnail">
-		<div class="s2s-custom-lb flex flex-wrap gap-4">
+<div class="mx-auto flex w-full">
+	<LightboxGallery enableClickToClose={true} customization={custom}>
+		<svelte:fragment slot="thumbnail">
 			{#each images as { id, thumbnail, title, description }}
 				<GalleryThumbnail {id}>
 					<enhanced:img
-						class="h-[150px] w-[150px] cursor-pointer rounded object-cover md:h-[250px] md:w-[250px] lg:h-[300px] lg:w-[300px]"
+						class="h-[120px] w-[120px] cursor-pointer rounded object-cover md:h-[200px] md:w-[200px] lg:h-[300px] lg:w-[300px]"
 						src={thumbnail}
 						alt={`${title} - ${description}`}
 						{title}
 					/>
 				</GalleryThumbnail>
 			{/each}
-		</div>
-	</svelte:fragment>
+		</svelte:fragment>
 
-	{#each images as { id, full, title, description }}
-		<GalleryImage {id} {title} {description}>
-			<enhanced:img src={full} alt={title} />
-		</GalleryImage>
-	{/each}
-</LightboxGallery>
+		{#each images as { id, full, title, description }}
+			<GalleryImage {id} {title} {description}>
+				<enhanced:img src={full} alt={title} />
+			</GalleryImage>
+		{/each}
+	</LightboxGallery>
+</div>
