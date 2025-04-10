@@ -1,1 +1,1 @@
-<p>Shade To Shade Footer</p>
+<p>INSTAGRAM: @shade-to-shade-art</p>
