@@ -23,7 +23,7 @@
 			<p>I am currently creating this site, so bare with me while the features are sparse.</p>
 			<!-- <p class="text-3xl">Scroll down to seem my tattoos :D</p> -->
 
-			<ul class="md: flex flex-col gap-1 text-center sm:flex-row sm:gap-4 sm:text-left">
+			<ul class="md: flex flex-col gap-6 text-center sm:flex-row sm:text-left">
 				<NavMainItems />
 			</ul>
 		</section>
