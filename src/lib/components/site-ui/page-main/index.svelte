@@ -1,4 +1,5 @@
 <script lang="ts">
+	import NavMainItems from '$lib/components/site-ui/nav/main-items.svelte';
 	import snakeHero from '$lib/images/tattoos/snake.png?enhanced';
 </script>
 
@@ -21,6 +22,10 @@
 		<section class="flex flex-col gap-4">
 			<p>I am currently creating this site, so bare with me while the features are sparse.</p>
 			<!-- <p class="text-3xl">Scroll down to seem my tattoos :D</p> -->
+
+			<ul class="md: flex flex-col gap-1 text-center sm:flex-row sm:gap-4 sm:text-left">
+				<NavMainItems />
+			</ul>
 		</section>
 	</div>
 	<div class="order-1 w-full sm:order-2 sm:w-1/2">
