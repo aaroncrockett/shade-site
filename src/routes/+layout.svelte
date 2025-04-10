@@ -38,7 +38,7 @@
 		{@render children()}
 	</main>
 
-	<footer class="site-wrapper px-5 py-4">
+	<footer class="site-wrapper bg-neutral-700 px-5 py-4 shadow-sm">
 		<FooterMainItems />
 	</footer>
 </div>
