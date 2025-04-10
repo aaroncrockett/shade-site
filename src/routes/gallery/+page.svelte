@@ -34,7 +34,7 @@
 </svelte:head>
 
 <div class="text-column">
-	<h1>Tattoos by Shade To Shade</h1>
+	<h1 class="text-center">TATTOOS</h1>
 </div>
 
 <LightboxGallery enableClickToClose={true} customization={custom}>

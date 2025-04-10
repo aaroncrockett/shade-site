@@ -16,7 +16,7 @@
 		</h1>
 		<section class="flex flex-col gap-4">
 			<p>I am currently creating this site, so bare with me while the features are sparse.</p>
-			<p class="text-3xl">Scroll down to seem my tattoos :D</p>
+			<!-- <p class="text-3xl">Scroll down to seem my tattoos :D</p> -->
 		</section>
 	</div>
 	<div class="order-1 w-full sm:order-2 sm:w-1/2">

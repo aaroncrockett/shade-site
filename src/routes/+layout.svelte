@@ -29,9 +29,9 @@
 		<header class="site-wrapper">
 			<nav class="flex flex-col items-center justify-between gap-2 px-4 sm:flex-row sm:gap-4">
 				<Logo />
-				<!-- <ul class="md: flex flex-col gap-1 text-center sm:flex-row sm:gap-4 sm:text-left">
+				<ul class="md: flex flex-col gap-1 text-center sm:flex-row sm:gap-4 sm:text-left">
 					<NavMainItems />
-				</ul> -->
+				</ul>
 			</nav>
 		</header>
 	</div>
