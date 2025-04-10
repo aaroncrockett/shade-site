@@ -47,29 +47,31 @@
 	<meta name="description" content="Shade To Shade gallery of tattoos" />
 </svelte:head>
 
-<div class="text-column">
-	<h1 class="text-center">TATTOOS</h1>
-</div>
+<div class="flex flex-col gap-4">
+	<div class="text-column">
+		<h1 class="text-center">TATTOOS</h1>
+	</div>
 
-<div class="mx-auto flex w-full">
-	<LightboxGallery enableClickToClose={true} customization={custom}>
-		<svelte:fragment slot="thumbnail">
-			{#each images as { id, thumbnail, title, description }}
-				<GalleryThumbnail {id}>
-					<enhanced:img
-						class="h-[120px] w-[120px] cursor-pointer rounded object-cover md:h-[200px] md:w-[200px] lg:h-[300px] lg:w-[300px]"
-						src={thumbnail}
-						alt={`${title} - ${description}`}
-						{title}
-					/>
-				</GalleryThumbnail>
+	<div class="mx-auto flex w-full items-center justify-center gap-4">
+		<LightboxGallery enableClickToClose={true} customization={custom}>
+			<svelte:fragment slot="thumbnail">
+				{#each images as { id, thumbnail, title, description }}
+					<GalleryThumbnail {id}>
+						<enhanced:img
+							class="h-[120px] w-[120px] cursor-pointer rounded object-cover md:h-[200px] md:w-[200px] lg:h-[300px] lg:w-[300px]"
+							src={thumbnail}
+							alt={`${title} - ${description}`}
+							{title}
+						/>
+					</GalleryThumbnail>
+				{/each}
+			</svelte:fragment>
+
+			{#each images as { id, full, title, description }}
+				<GalleryImage {id} {title} {description}>
+					<enhanced:img src={full} alt={title} />
+				</GalleryImage>
 			{/each}
-		</svelte:fragment>
-
-		{#each images as { id, full, title, description }}
-			<GalleryImage {id} {title} {description}>
-				<enhanced:img src={full} alt={title} />
-			</GalleryImage>
-		{/each}
-	</LightboxGallery>
+		</LightboxGallery>
+	</div>
 </div>
