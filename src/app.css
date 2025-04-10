@@ -54,6 +54,11 @@ h1.hero-hl {
 	@apply mx-auto max-h-[70vh] object-contain;
 }
 
+.svelte-lightbox-footer h1,
+h2 {
+	@apply pt-2 font-bold;
+}
+
 .svelte-lightbox-footer p {
 	@apply hidden;
 }
