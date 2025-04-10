@@ -22,7 +22,7 @@
 	});
 </script>
 
-<div class="app bg-neutral-800">
+<div class="app h-full min-h-screen bg-neutral-800">
 	<div class="bg-neutral-700 shadow-md">
 		<header class="site-wrapper">
 			<nav class="flex flex-col items-center justify-between gap-2 px-4 sm:flex-row sm:gap-4">
