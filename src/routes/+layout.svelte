@@ -1,26 +1,24 @@
 <script>
-	import { invalidate } from '$app/navigation';
+	// import { invalidate } from '$app/navigation';
 	import { onMount } from 'svelte';
 
 	import '../app.css';
-
-	import { page } from '$app/state';
 
 	import Logo from '$lib/components/site-ui/logo.svelte';
 	import NavMainItems from '$lib/components/site-ui/nav/main-items.svelte';
 	import FooterMainItems from '$lib/components/site-ui/footer/main-items.svelte';
 
-	let { data, children } = $props();
-	let { session, supabase } = $derived(data);
+	// let { data, children } = $props();
+	let { children } = $props();
+	// let { session, supabase } = $derived(data);
 
 	onMount(() => {
-		const { data } = supabase.auth.onAuthStateChange((_, newSession) => {
-			if (newSession?.expires_at !== session?.expires_at) {
-				invalidate('supabase:auth');
-			}
-		});
-
-		return () => data.subscription.unsubscribe();
+		// const { data } = supabase.auth.onAuthStateChange((_, newSession) => {
+		// 	if (newSession?.expires_at !== session?.expires_at) {
+		// 		invalidate('supabase:auth');
+		// 	}
+		// });
+		// return () => data.subscription.unsubscribe();
 	});
 </script>
 

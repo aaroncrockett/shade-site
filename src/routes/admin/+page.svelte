@@ -1,4 +1,4 @@
-<script lang="ts">
+<!-- <script lang="ts">
 	import { invalidate } from '$app/navigation';
 	import type { EventHandler } from 'svelte/elements';
 
@@ -34,4 +34,4 @@
 		Add a note
 		<input name="note" type="text" />
 	</label>
-</form>
+</form> -->
