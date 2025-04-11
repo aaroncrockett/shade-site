@@ -20,7 +20,7 @@
 			> -->
 		</h1>
 		<section class="flex flex-col gap-4">
-			<p>I am currently creating this site, so bare with me while the features are sparse.</p>
+			<p>I am currently creating this site, so bear with me while the features are sparse.</p>
 			<!-- <p class="text-3xl">Scroll down to seem my tattoos :D</p> -->
 
 			<ul class="md: flex flex-col gap-6 text-center sm:flex-row sm:text-left">
