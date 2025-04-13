@@ -93,13 +93,13 @@
 		<h1 class="text-center">TATTOOS</h1>
 	</div>
 
-	<div class="mx-auto grid grid-cols-3 gap-2 sm:gap-3 lg:grid-cols-4">
+	<div class="mx-auto grid grid-cols-3 gap-4 px-2 sm:gap-6 sm:px-4 lg:grid-cols-4">
 		<LightboxGallery enableClickToClose={true} customization={custom}>
 			<svelte:fragment slot="thumbnail">
 				{#each images as { id, thumbnail, title, description }}
 					<GalleryThumbnail {id}>
 						<enhanced:img
-							class="h-[100px] w-[100px] cursor-pointer rounded-sm object-cover sm:h-[180px] sm:w-[180px] md:h-[220px] md:w-[220px] lg:h-[300px] lg:w-[300px]"
+							class="aspect-square w-full max-w-[260px] cursor-pointer rounded-sm object-cover"
 							src={thumbnail}
 							alt={`${title} - ${description}`}
 							{title}
