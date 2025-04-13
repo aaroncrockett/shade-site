@@ -1,6 +1,6 @@
 <script lang="ts">
 	import imgMe from '$lib/images/aaron.png?enhanced';
-	import bgImg from '$lib/images/heart-bg.png?enhanced';
+	import s2sImgBg from '$lib/images/heart-bg-sm.png';
 </script>
 
 <svelte:head>
@@ -9,7 +9,12 @@
 </svelte:head>
 
 <div class="text-column flex flex-col gap-4">
-	<h1>Artists Bio</h1>
+	<div
+		class=" p-4"
+		style={`background-image: url(${s2sImgBg}); background-repeat: repeat; background-position: center; background-size: 150px 150px;`}
+	>
+		<h1 class="text-4xl">My Bio, yo.</h1>
+	</div>
 
 	<div class="flex flex-col gap-4 md:flex-row md:gap-6">
 		<div>
@@ -20,6 +25,7 @@
 			/>
 		</div>
 		<div class="repeated-heart-bg flex flex-col gap-4">
+			<p>Sorry if this sounds too formal. But here goes:</p>
 			<p>
 				Aaron (ShadeToShade) has been interested in art and drawing since childhood and loves
 				tattooing. He attended college for Graphic Design and Drawing. Then, an MFA in Painting.

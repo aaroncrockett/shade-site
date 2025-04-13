@@ -1,6 +1,6 @@
 <script lang="ts">
 	import s2sImg from '$lib/images/shade-to-shade-heart-text.png?enhanced';
-	import s2sImgBg from '$lib/images/heart-bg-sm.png'; // no ?enhanced!
+	import s2sImgBg from '$lib/images/heart-bg-sm.png';
 </script>
 
 <svelte:head>
@@ -10,7 +10,7 @@
 
 <div class="text-column md: flex flex-col gap-4 md:gap-8">
 	<div
-		class="flex flex-row items-center gap-4 p-4"
+		class=" p-4"
 		style={`background-image: url(${s2sImgBg}); background-repeat: repeat; background-position: center; background-size: 150px 150px;`}
 	>
 		<h1 class="text-4xl">Steps for getting a tattoo with me.</h1>
@@ -26,10 +26,10 @@
 		</div>
 		<div class="flex flex-col gap-4">
 			<div>
-				<h2 class="text-3xl">Flash Appointment</h2>
+				<h2>Appointment</h2>
 				<p>If you'd like to book one of my flash pieces, here's what to do:</p>
 
-				<ol class="ml-4 list-decimal space-y-2 pl-4">
+				<ol class="ml-4 list-decimal space-y-2 pt-2 pl-4">
 					<li>
 						Pick a piece from my <a href="/bio">FLASH</a> collection.
 					</li>
@@ -51,7 +51,7 @@
 				<h2>Custom Tattoo</h2>
 				<p>If you're interested in a custom piece, here’s how the process works:</p>
 
-				<ol class="list-decimal space-y-2 pl-4">
+				<ol class="list-decimal space-y-2 pt-2 pl-4">
 					<li>
 						Send me a DM on Instagram @shade-to-shade-art or email me @
 						shade.to.shade.art@proton.me.
