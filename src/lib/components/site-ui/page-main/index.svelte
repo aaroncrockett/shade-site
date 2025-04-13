@@ -1,10 +1,14 @@
 <script lang="ts">
 	import NavMainItems from '$lib/components/site-ui/nav/main-items.svelte';
 	import snakeHero from '$lib/images/tattoos/snake.png?enhanced';
+	import s2sImgBg from '$lib/images/heart-bg-sm.png'; // no ?enhanced!
 </script>
 
-<section class="flex flex-col gap-0 py-0 sm:flex-row sm:gap-4 sm:py-4">
-	<div class="order-2 flex w-full flex-col gap-6 sm:order-1 sm:w-1/2">
+<section
+	class="flex flex-col gap-0 py-0 sm:flex-row sm:gap-4 sm:py-4"
+	style={`background-image: url(${s2sImgBg}); background-repeat: repeat; background-position: center; background-size: 150px 150px;`}
+>
+	<div class="order-2 flex w-full flex-col gap-6 p-4 sm:order-1 sm:w-1/2">
 		<h1 class="hero-hl text-100">
 			Coming Soon! <br /> <span class="!text-neutral-400"> Tattooing</span>
 			<span class="text-neutral-400">
