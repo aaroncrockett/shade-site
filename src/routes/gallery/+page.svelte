@@ -99,7 +99,7 @@
 				{#each images as { id, thumbnail, title, description }}
 					<GalleryThumbnail {id}>
 						<enhanced:img
-							class="h-[80px] w-[80px] cursor-pointer rounded-sm object-cover sm:h-[120px] sm:w-[120px] md:h-[200px] md:w-[200px] lg:h-[300px] lg:w-[300px]"
+							class="h-[100px] w-[100px] cursor-pointer rounded-sm object-cover sm:h-[180px] sm:w-[180px] md:h-[220px] md:w-[220px] lg:h-[300px] lg:w-[300px]"
 							src={thumbnail}
 							alt={`${title} - ${description}`}
 							{title}
