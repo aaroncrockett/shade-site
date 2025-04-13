@@ -14,17 +14,24 @@ h3,
 h4,
 h5,
 h6,
-p {
+p,
+ul,
+ol {
 	@apply font-normal text-white;
 	font-family: 'futura-pt', sans-serif;
 }
 
 h1 {
-	@apply text-2xl sm:text-3xl lg:text-4xl;
+	@apply text-3xl font-bold sm:text-4xl lg:text-5xl;
+	font-family: 'acumin-pro-extra-condensed';
+}
+h2 {
+	@apply text-2xl font-bold sm:text-3xl lg:text-4xl;
+	font-family: 'acumin-pro-extra-condensed';
 }
 
 a {
-	@apply bg-gradient-to-r from-neutral-50 to-zinc-400 bg-clip-text font-bold text-transparent hover:text-zinc-400;
+	@apply bg-gradient-to-r from-neutral-100 to-zinc-400 bg-clip-text font-bold text-transparent hover:cursor-pointer hover:text-zinc-400;
 	font-family: 'futura-pt', sans-serif;
 }
 
@@ -84,4 +91,17 @@ h2 {
 .next-button,
 .previous-button {
 	@apply !hidden;
+}
+
+/* noise background */
+
+.noise {
+	position: fixed;
+	inset: 0;
+	width: 100%;
+	height: 200%; /* yes, 200% for texture */
+	background: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='500' height='500'%3E%3Cfilter id='noise' x='0' y='0'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeBlend mode='screen'/%3E%3C/filter%3E%3Crect width='500' height='500' filter='url(%23noise)' opacity='0.5'/%3E%3C/svg%3E");
+	mix-blend-mode: soft-light;
+	z-index: 0;
+	pointer-events: none;
 }

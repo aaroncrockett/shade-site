@@ -30,8 +30,9 @@
 	});
 </script>
 
-<div class="app h-full min-h-screen bg-neutral-800">
-	<div class="bg-neutral-700 shadow-md">
+<div class="noise"></div>
+<div class="app h-full min-h-screen overflow-hidden bg-neutral-900">
+	<div class="bg-neutral-800 shadow-md">
 		<header class="site-wrapper">
 			<nav class="flex flex-col items-center justify-between gap-2 px-4 sm:flex-row sm:gap-4">
 				<Logo />
@@ -69,7 +70,7 @@
 		{@render children()}
 	</main>
 
-	<footer class=" bg-neutral-700 px-5 py-4 shadow-sm">
+	<footer class=" bg-neutral-800 px-5 py-4 shadow-sm">
 		<FooterMainItems />
 	</footer>
 </div>

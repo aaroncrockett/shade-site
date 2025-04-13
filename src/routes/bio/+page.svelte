@@ -1,5 +1,6 @@
 <script lang="ts">
 	import imgMe from '$lib/images/aaron.png?enhanced';
+	import bgImg from '$lib/images/heart-bg.png?enhanced';
 </script>
 
 <svelte:head>
@@ -18,7 +19,7 @@
 				class="mx-auto h-auto w-full max-w-[250px] md:w-[400px]"
 			/>
 		</div>
-		<div class="flex flex-col gap-4">
+		<div class="repeated-heart-bg flex flex-col gap-4">
 			<p>
 				Aaron (ShadeToShade) has been interested in art and drawing since childhood and loves
 				tattooing. He attended college for Graphic Design and Drawing. Then, an MFA in Painting.
