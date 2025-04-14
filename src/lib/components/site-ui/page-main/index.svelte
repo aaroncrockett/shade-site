@@ -20,8 +20,8 @@
 			> -->
 		</h1>
 		<h2>
-			Anytime, Feel Free To DM Me <em>@shade.to.shade.art</em> &nbsp; on Instagram , or email
-			shade.to.shade.art@proton.me -- to setup appointments for May.
+			Anytime, Feel Free To DM Me <em>@shade.to.shade.art</em> &nbsp; on BlueSky/Instagram , or
+			email shade.to.shade.art@proton.me -- to setup appointments for May.
 			<br />
 			<span>COMING IN MAY... I'll be tattooing @ </span>
 			<span class="text-neutral-400">
