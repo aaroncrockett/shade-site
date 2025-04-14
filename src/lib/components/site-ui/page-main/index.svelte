@@ -20,11 +20,9 @@
 			> -->
 		</h1>
 		<h2>
-			Feel Free To DM Me <em>@shade.to.shade.art</em> &nbsp; on Instagram for May tattoos.
+			Feel Free To DM Me <em>@shade.to.shade.art</em> &nbsp; on Instagram -- tattoos in May 2025.
 			<br />
-			<span class="!text-neutral-400"
-				>Where I'll be in <em class="text-white">a new studio</em> @
-			</span>
+			<span class="!text-neutral-400">COMING IN MAY... I'll be tattooing @ </span>
 			<span class="text-neutral-400">
 				<span class="text-neutral-300"> </span>Black Dahlia Tattoo Co<span class="text-neutral-300"
 					>.</span
