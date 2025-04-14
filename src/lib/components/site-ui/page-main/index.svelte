@@ -1,21 +1,17 @@
 <script lang="ts">
 	import NavMainItems from '$lib/components/site-ui/nav/main-items.svelte';
 	import snakeHero from '$lib/images/tattoos/snake.png?enhanced';
-	import s2sImgBg from '$lib/images/heart-bg-sm.png'; // no ?enhanced!
+	import h1ImgBg from '$lib/images/heart-bg-sm.png'; // no ?enhanced!
 </script>
 
 <section
 	class="flex flex-col gap-0 py-0 md:flex-row md:gap-4 md:py-4"
-	style={`background-image: url(${s2sImgBg}); background-repeat: repeat; background-position: center; background-size: 150px 150px;`}
+	style={`background-image: url(${h1ImgBg}); background-repeat: repeat; background-position: center; background-size: 150px 150px;`}
 >
 	<div class="order-2 flex w-full flex-col gap-6 p-4 md:order-1 md:w-1/2">
 		<h1 class="hero-hl text-100">
-			Coming Soon! <br /> <span class="!text-neutral-400"> Tattooing</span>
-			<span class="text-neutral-400">
-				<span class="text-neutral-300"> @ </span>Black Dahlia Tattoo Co<span
-					class="text-neutral-300">.</span
-				> In May</span
-			>
+			I'm on a little break rn.
+
 			<!-- <br class="hidden md:inline-block" />
 			<span class="text-neutral-400"> Social Media</span>
 			<span class="text-neutral-300"> & <br class="hidden md:inline-block" /></span>
@@ -23,14 +19,18 @@
 				><span class="text-neutral-300">(</span>Web<span class="text-neutral-300">)</span> Site</span
 			> -->
 		</h1>
-		<section class="flex flex-col gap-4">
-			<p>I am currently creating this site, so bear with me while the features are sparse.</p>
-			<!-- <p class="text-3xl">Scroll down to seem my tattoos :D</p> -->
-
-			<ul class="md: flex flex-col gap-6 text-center md:flex-row md:text-left">
-				<NavMainItems />
-			</ul>
-		</section>
+		<h2>
+			Feel Free To DM Me <em>@shade.to.shade.art</em> &nbsp; on Instagram for May tattoos.
+			<br />
+			<span class="!text-neutral-400"
+				>Where I'll be in <em class="text-white">a new studio</em> @
+			</span>
+			<span class="text-neutral-400">
+				<span class="text-neutral-300"> </span>Black Dahlia Tattoo Co<span class="text-neutral-300"
+					>.</span
+				>
+			</span>
+		</h2>
 	</div>
 	<div class="order-1 w-full md:order-2 md:w-1/2">
 		<enhanced:img
