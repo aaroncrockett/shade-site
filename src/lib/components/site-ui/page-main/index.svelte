@@ -19,17 +19,19 @@
 				><span class="text-neutral-300">(</span>Web<span class="text-neutral-300">)</span> Site</span
 			> -->
 		</h1>
-		<h2>
-			Anytime, Feel Free To DM Me <em>@shade.to.shade.art</em> &nbsp; on BlueSky/Instagram , or
-			email shade.to.shade.art@proton.me -- to setup appointments for May.
+		<h3 class="text-2xl leading-9 font-bold">
+			Feel Free To DM Me <em>@shade.to.shade.art</em> &nbsp; on BlueSky/Instagram, or email
+			shade.to.shade.art@proton.me -- to setup appointments for May.
 			<br />
-			<span>COMING IN MAY... I'll be tattooing @ </span>
-			<span class="text-neutral-400">
-				<span class="text-neutral-300"> </span>Black Dahlia Tattoo Co<span class="text-neutral-300"
-					>.</span
-				>
+			<span class="inline-block pt-4"
+				>COMING IN MAY... I'll be tattooing @
+
+				<span class=" text-neutral-400">
+					Black Dahlia Tattoo Co<span class="text-neutral-300">.</span>
+				</span> <br />
 			</span>
-		</h2>
+			<span class="inline-block pt-4"><em>Booking system coming soon.</em></span>
+		</h3>
 	</div>
 	<div class="order-1 w-full md:order-2 md:w-1/2">
 		<enhanced:img

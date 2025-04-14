@@ -27,7 +27,7 @@
 					open={drawerState}
 					onOpenChange={(e) => (drawerState = e.open)}
 					triggerBase="btn preset-outlined-surface-500 text-neutral-200 md:hidden"
-					contentBase="card bg-surface-900-100 p-4 space-y-4 shadow-xl w-2/3 h-full"
+					contentBase="card bg-surface-800 p-4 space-y-4 shadow-xl w-2/3 h-full"
 					positionerClasses="h-screen"
 					positionerJustify="justify-start"
 					transitionsPositionerIn={{ x: -480, duration: 200 }}
@@ -38,18 +38,17 @@
 					{/snippet}
 
 					{#snippet content()}
-						<header class="flex justify-between">
-							<h2 class="h2">Drawer Example</h2>
-						</header>
-						<NavMainItems onItemClick={drawerClose} />
+						<div class="relative h-full">
+							<NavMainItems onItemClick={drawerClose} />
 
-						<footer>
-							<button
-								type="button"
-								class="btn preset-outlined-surface-500 text-white"
-								onclick={drawerClose}>Close Drawer</button
-							>
-						</footer>
+							<footer class="absolute right-0 bottom-0">
+								<button
+									type="button"
+									class="btn preset-outlined-surface-500 text-white"
+									onclick={drawerClose}>X</button
+								>
+							</footer>
+						</div>
 					{/snippet}
 				</Modal>
 
