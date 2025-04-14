@@ -70,27 +70,29 @@
 							<li>Final price depends on complexity and placement.</li>
 							<li><b>Example:</b> “The tattoo will be between $300 and $400.”</li>
 							<li>
-								Pricing is fixed — not hourly — but it often averages around $100–$125 per hour of
+								Pricing is fixed — not hourly — but often averages around $100–$125 per hour of
 								tattoo time.
 							</li>
 						</ul>
 					</li>
 					<li>
-						A $75 deposit is required before I begin designing or conceptualizing the piece.
+						A $75 deposit is required before I begin designing or drawing the piece.
 						<ul class="list-disc pl-4">
 							<li>This deposit goes toward the final cost.</li>
 						</ul>
 					</li>
 					<li>
-						I recommend a free in-person placement session. This gives us a chance to see how the
-						tattoo looks on your body and make any needed adjustments.
+						After the initial drawing is complete, I recommend a free in-person placement session. I
+						will reach out to schedule (usually within several days, but within a week.) This gives
+						us a chance to see how the tattoo looks on your body and make any needed adjustments.
 					</li>
-					<li>At this point, I’ll confirm the total price within the original quoted range.</li>
 					<li>
-						Once the design is finalized, we’ll schedule your tattoo session(s).
-						<ul class="list-disc pl-4">
-							<li>If you’d like to request additional revisions, a rate of $25/hr may apply.</li>
-						</ul>
+						At this point, I’ll confirm the total price. If we are finished with the drawing, we can
+						schedule your tattoo session(s).
+					</li>
+					<li>
+						If there are additional changes, I will send you the completed drawing within a few
+						days, and then schedule the tattoo session.
 					</li>
 					<li>Final payment is due in cash at the start of the session.</li>
 				</ol>
