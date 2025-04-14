@@ -65,8 +65,16 @@
 							<li>I may ask you to send reference images or other resources.</li>
 						</ul>
 					</li>
+					<ul class="list-disc pl-4">
+						<li>
+							<em>Sometimes</em> custom tattoos are simple. And we can skip all the next steps. Cut your
+							desposit down to $25 (like the flash tattoo steps above), and immediately schedule the
+							tattoo and give you a price.
+						</li>
+					</ul>
 					<li>
-						We will discuss the tattoo design, size, placement, and any other details.
+						Otherwise... we will discuss the tattoo design, size, placement, and any other details.
+
 						<ul class="list-disc pl-4">
 							<li>I’ll give you a price range based on our conversation.</li>
 							<li>Pricing usually ranges within $100–$200 depending on size.</li>
