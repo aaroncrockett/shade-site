@@ -26,7 +26,7 @@
 		</div>
 		<div class="flex flex-col gap-4">
 			<div>
-				<h2>Appointment</h2>
+				<h2>Flash Appointment</h2>
 				<p>If you'd like to book one of my flash pieces, here's what to do:</p>
 
 				<ol class="ml-4 list-decimal space-y-2 pt-2 pl-4">
