@@ -29,6 +29,9 @@ h2 {
 	@apply pb-2 text-2xl font-bold sm:text-3xl lg:text-4xl;
 	font-family: 'acumin-pro-extra-condensed';
 }
+.acumin {
+	font-family: 'acumin-pro-extra-condensed' !important;
+}
 
 a {
 	@apply bg-gradient-to-r from-neutral-100 to-zinc-400 bg-clip-text font-bold text-transparent hover:cursor-pointer hover:text-zinc-400;
