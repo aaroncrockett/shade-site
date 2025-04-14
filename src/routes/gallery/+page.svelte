@@ -1,9 +1,10 @@
 <script lang="ts">
 	import { LightboxGallery, GalleryThumbnail, GalleryImage } from 'svelte-lightbox';
 
+	import h1ImgBg from '$lib/images/heart-bg-sm.png';
+
 	import imgFlashLg from '$lib/images/tattoos/flash.png?enhanced';
 	import imgFlashTn from '$lib/images/tattoos/flash-sq.png?enhanced';
-
 	import imgSnakeLg from '$lib/images/tattoos/snake.png?enhanced';
 	import imgSnakeTn from '$lib/images/tattoos/snake-sq.png?enhanced';
 	import imgDocLg from '$lib/images/tattoos/p-doc.png?enhanced';
@@ -90,7 +91,12 @@
 
 <div class="flex flex-col gap-4">
 	<div class="text-column">
-		<h1 class="text-center">TATTOOS</h1>
+		<h1
+			style={`background-image: url(${h1ImgBg}); background-repeat: repeat; background-position: center; background-size: 150px 150px;`}
+			class="p-4 text-center"
+		>
+			TATTOOS
+		</h1>
 	</div>
 
 	<div class="mx-auto grid grid-cols-3 gap-4 px-2 sm:gap-6 sm:px-4 lg:grid-cols-4">

@@ -1,6 +1,6 @@
 <script lang="ts">
 	import s2sImg from '$lib/images/shade-to-shade-heart-text.png?enhanced';
-	import s2sImgBg from '$lib/images/heart-bg-sm.png';
+	import h1ImgBg from '$lib/images/heart-bg-sm.png';
 </script>
 
 <svelte:head>
@@ -11,7 +11,7 @@
 <div class="text-column md: flex flex-col gap-4 md:gap-8">
 	<div
 		class=" p-4"
-		style={`background-image: url(${s2sImgBg}); background-repeat: repeat; background-position: center; background-size: 150px 150px;`}
+		style={`background-image: url(${h1ImgBg}); background-repeat: repeat; background-position: center; background-size: 150px 150px;`}
 	>
 		<h1 class="text-4xl">Steps for getting a tattoo with me.</h1>
 	</div>
