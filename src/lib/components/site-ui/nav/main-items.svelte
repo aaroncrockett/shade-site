@@ -6,6 +6,9 @@
 <li aria-current={$page.url.pathname === '/gallery' ? 'page' : undefined}>
 	<a class="text-white" href="/gallery" on:click={onItemClick}>Gallery</a>
 </li>
+<li aria-current={$page.url.pathname === '/flash' ? 'page' : undefined}>
+	<a class="text-white" href="/flash" on:click={onItemClick}>Flash</a>
+</li>
 <li aria-current={$page.url.pathname === '/bio' ? 'page' : undefined}>
 	<a class="text-white" href="/bio" on:click={onItemClick}>Bio</a>
 </li>

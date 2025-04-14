@@ -3,8 +3,6 @@
 
 	import h1ImgBg from '$lib/images/heart-bg-sm.png';
 
-	import imgFlashLg from '$lib/images/tattoos/flash.png?enhanced';
-	import imgFlashTn from '$lib/images/tattoos/flash-sq.png?enhanced';
 	import imgSnakeLg from '$lib/images/tattoos/snake.png?enhanced';
 	import imgSnakeTn from '$lib/images/tattoos/snake-sq.png?enhanced';
 	import imgDocLg from '$lib/images/tattoos/p-doc.png?enhanced';
@@ -21,48 +19,41 @@
 	const images = [
 		{
 			id: 0,
-			thumbnail: imgFlashTn,
-			full: imgFlashLg,
-			title: 'FLASH!',
-			description: 'Flash! Much more to come!'
-		},
-		{
-			id: 1,
 			thumbnail: imgSnakeTn,
 			full: imgSnakeLg,
 			title: 'Snake',
 			description: 'Black and grey, stipple shaded snake.'
 		},
 		{
-			id: 2,
+			id: 1,
 			thumbnail: imgDocTn,
 			full: imgDocLg,
 			title: 'Plague Doctor',
 			description: 'Black work P Doc.'
 		},
 		{
-			id: 3,
+			id: 2,
 			thumbnail: imgDragonTn,
 			full: imgDragonLg,
 			title: 'Dragon',
 			description: 'Black and grey, stipple shaded dragon.'
 		},
 		{
-			id: 4,
+			id: 3,
 			thumbnail: imgSkullTn,
 			full: imgSkullLg,
 			title: 'Skull',
 			description: 'Blackwork skull.'
 		},
 		{
-			id: 5,
+			id: 4,
 			thumbnail: imgFlowerTn,
 			full: imgFlowerLg,
 			title: 'Flower',
 			description: 'Black and grey, stipple shaded flower.'
 		},
 		{
-			id: 6,
+			id: 5,
 			thumbnail: imgAcornTn,
 			full: imgAcornLg,
 			title: 'Acorn',

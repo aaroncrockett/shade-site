@@ -4,8 +4,8 @@
 </script>
 
 <svelte:head>
-	<title>Bio</title>
-	<meta name="description" content="Artists Bio" />
+	<title>Get a Tattoo!</title>
+	<meta name="description" content="Info on getting a Tattoo" />
 </svelte:head>
 
 <div class="text-column md: flex flex-col gap-4 md:gap-8">
@@ -31,7 +31,7 @@
 
 				<ol class="ml-4 list-decimal space-y-2 pt-2 pl-4">
 					<li>
-						Pick a piece from my <a href="/bio">FLASH</a> collection.
+						Pick a piece from my <a href="/flash">FLASH</a> collection.
 					</li>
 					<li>
 						DM on Instagram @shade-to-shade-art or send me am email @ shade.to.shade.art@proton.me.
