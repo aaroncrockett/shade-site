@@ -43,7 +43,10 @@
 							<li>This goes toward the final cost of the tattoo.</li>
 						</ul>
 					</li>
-					<li>Final payment is due in cash at the beginning of your session.</li>
+					<li>
+						Final payment is due in cash at the start of the session. Tips are very much appreciated
+						and can be given when the session is completed.
+					</li>
 				</ol>
 			</div>
 
@@ -94,7 +97,10 @@
 						If there are additional changes, I will send you the completed drawing within a few
 						days, and then schedule the tattoo session.
 					</li>
-					<li>Final payment is due in cash at the start of the session.</li>
+					<li>
+						Final payment is due in cash at the start of the session. Tips are very much appreciated
+						and can be given when the session is completed.
+					</li>
 				</ol>
 			</div>
 		</div>
