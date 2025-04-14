@@ -23,7 +23,7 @@
 			Anytime, Feel Free To DM Me <em>@shade.to.shade.art</em> &nbsp; on Instagram , or email
 			shade.to.shade.art@proton.me -- to setup appointments for May.
 			<br />
-			<span class="!text-neutral-400">COMING IN MAY... I'll be tattooing @ </span>
+			<span>COMING IN MAY... I'll be tattooing @ </span>
 			<span class="text-neutral-400">
 				<span class="text-neutral-300"> </span>Black Dahlia Tattoo Co<span class="text-neutral-300"
 					>.</span
