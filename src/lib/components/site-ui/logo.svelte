@@ -1,7 +1,7 @@
 <script lang="ts">
-	import logo from '$lib/images/shade-to-shade-logo-gray.png';
+	import Logo from '$lib/components/svg/logo.svelte';
 </script>
 
-<a href="/">
-	<img src={logo} alt="Logo" width="250" height="auto" />
+<a href="/" class="block w-[250px]">
+	<Logo />
 </a>
