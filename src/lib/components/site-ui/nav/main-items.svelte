@@ -3,6 +3,13 @@
 	import { page } from '$app/stores';
 </script>
 
+<li
+	class="inline-block list-none md:hidden"
+	aria-current={$page.url.pathname === '/' ? 'page' : undefined}
+>
+	<a class="text-white" href="/" on:click={onItemClick}>Home</a>
+</li>
+
 <li class="list-none" aria-current={$page.url.pathname === '/tattoos' ? 'page' : undefined}>
 	<a class="text-white" href="/tatoos" on:click={onItemClick}>Tat Gallery</a>
 </li>
