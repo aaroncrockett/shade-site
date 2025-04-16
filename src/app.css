@@ -23,11 +23,11 @@ ol {
 }
 
 h1 {
-	@apply text-2xl sm:text-3xl lg:text-4xl;
+	@apply text-3xl md:text-4xl;
 	font-family: 'acumin-pro-extra-condensed';
 }
 h2 {
-	@apply pb-2 text-xl sm:text-2xl lg:text-3xl;
+	@apply pb-2 text-2xl md:text-3xl;
 	font-family: 'acumin-pro-extra-condensed';
 }
 
