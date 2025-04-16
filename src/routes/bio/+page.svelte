@@ -1,6 +1,7 @@
 <script lang="ts">
 	import imgMe from '$lib/images/aaron.png?enhanced';
 	import h1ImgBg from '$lib/images/heart-bg-sm.png';
+	import BgImgWrapper from '$lib/components/site-ui/background-image-wrapper.svelte';
 </script>
 
 <svelte:head>
@@ -9,19 +10,16 @@
 </svelte:head>
 
 <section class="page-section">
-	<div
-		class="p-4"
-		style={`background-image: url(${h1ImgBg}); background-repeat: repeat; background-position: center; background-size: 150px 150px;`}
-	>
-		<h1 class="text-4xl">My Bio, yo.</h1>
-	</div>
+	<BgImgWrapper bgImg={h1ImgBg}>
+		<h1>My Bio, yo.</h1>
+	</BgImgWrapper>
 
 	<div class="flex flex-col gap-4 md:flex-row md:gap-6">
 		<div>
 			<enhanced:img
 				src={imgMe}
 				alt="Image of the artist"
-				class="mx-auto h-auto w-full max-w-[250px] md:w-[400px]"
+				class="mx-auto h-auto w-full max-w-[250px] rounded-sm md:w-[400px]"
 			/>
 		</div>
 		<div class="repeated-heart-bg flex flex-col gap-4">

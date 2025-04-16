@@ -2,6 +2,7 @@
 	import { LightboxGallery, GalleryThumbnail, GalleryImage } from 'svelte-lightbox';
 
 	import h1ImgBg from '$lib/images/heart-bg-sm.png';
+	import BgImgWrapper from '$lib/components/site-ui/background-image-wrapper.svelte';
 
 	import imgFlashLg from '$lib/images/tattoos/flash.png?enhanced';
 	import imgFlashTn from '$lib/images/tattoos/flash-sq.png?enhanced';
@@ -36,14 +37,9 @@
 </svelte:head>
 
 <section class="page-section">
-	<div>
-		<h1
-			style={`background-image: url(${h1ImgBg}); background-repeat: repeat; background-position: center; background-size: 150px 150px;`}
-			class="p-4 text-center"
-		>
-			FLASH
-		</h1>
-	</div>
+	<BgImgWrapper bgImg={h1ImgBg}>
+		<h1>FLASH</h1>
+	</BgImgWrapper>
 
 	<div class="mx-auto grid grid-cols-3 gap-4 px-2 sm:gap-6 sm:px-4 lg:grid-cols-4">
 		<LightboxGallery enableClickToClose={true} customization={custom}>

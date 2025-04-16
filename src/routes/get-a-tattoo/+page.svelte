@@ -1,6 +1,7 @@
 <script lang="ts">
 	import s2sImg from '$lib/images/shade-to-shade-heart-text.png?enhanced';
 	import h1ImgBg from '$lib/images/heart-bg-sm.png';
+	import BgImgWrapper from '$lib/components/site-ui/background-image-wrapper.svelte';
 </script>
 
 <svelte:head>
@@ -9,19 +10,16 @@
 </svelte:head>
 
 <section class="page-section">
-	<div
-		class=" p-4"
-		style={`background-image: url(${h1ImgBg}); background-repeat: repeat; background-position: center; background-size: 150px 150px;`}
-	>
-		<h1 class="text-4xl">Steps for getting a tattoo with me.</h1>
-	</div>
+	<BgImgWrapper bgImg={h1ImgBg}>
+		<h1>Steps for getting a tattoo.</h1>
+	</BgImgWrapper>
 
 	<div class="flex flex-col gap-4 md:flex-row md:gap-6">
 		<div>
 			<enhanced:img
 				src={s2sImg}
 				alt="Heart graphic."
-				class="mx-auto h-auto w-full max-w-[250px] md:w-[400px]"
+				class="mx-auto h-auto w-full max-w-[250px] rounded-sm md:w-[400px]"
 			/>
 		</div>
 		<div class="flex flex-col gap-4">
