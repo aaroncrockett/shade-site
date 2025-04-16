@@ -60,11 +60,11 @@
 		</header>
 	</div>
 
-	<main class="site-wrapper px-5 py-4">
+	<main class="site-wrapper">
 		{@render children()}
 	</main>
 
-	<footer class=" px-5 py-2 shadow-sm">
+	<footer class=" px-5 shadow-sm">
 		<FooterMainItems />
 	</footer>
 </div>

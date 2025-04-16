@@ -60,7 +60,7 @@ h1.hero-hl {
 }
 
 .site-wrapper {
-	@apply mx-auto max-w-[1300px] py-3;
+	@apply mx-auto max-w-[1300px] p-4;
 }
 
 /* global gallert and lightbox */
@@ -113,5 +113,5 @@ h2 {
 /* individual pages */
 
 section.page-section {
-	@apply flex flex-col gap-2 rounded-sm py-4 md:gap-4;
+	@apply flex flex-col gap-4 rounded-sm px-4 md:gap-4;
 }
