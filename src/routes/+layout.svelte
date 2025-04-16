@@ -38,15 +38,17 @@
 					{/snippet}
 
 					{#snippet content()}
-						<NavMainItems onItemClick={drawerClose} />
+						<div class="relative h-full w-full">
+							<NavMainItems onItemClick={drawerClose} />
 
-						<footer>
-							<button
-								type="button"
-								class="btn preset-outlined-surface-500 text-white"
-								onclick={drawerClose}>Close Drawer</button
-							>
-						</footer>
+							<footer>
+								<button
+									type="button"
+									class="btn preset-outlined-surface-500 absolute right-0 bottom-0 text-white"
+									onclick={drawerClose}>X</button
+								>
+							</footer>
+						</div>
 					{/snippet}
 				</Modal>
 
