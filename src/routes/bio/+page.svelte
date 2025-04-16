@@ -5,8 +5,8 @@
 </script>
 
 <svelte:head>
-	<title>Bio</title>
-	<meta name="description" content="Artists Bio" />
+	<title>ShadeToShade Bio</title>
+	<meta name="description" content="Artists Biography" />
 </svelte:head>
 
 <section class="page-section">

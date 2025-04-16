@@ -83,7 +83,7 @@
 
 <section class="page-section">
 	<BgImgWrapper bgImg={h1ImgBg}>
-		<h1>TATTOOS</h1>
+		<h1>TATTOO GALLERY</h1>
 	</BgImgWrapper>
 
 	<div class="mx-auto grid grid-cols-3 gap-4 px-2 sm:gap-6 sm:px-4 lg:grid-cols-4">

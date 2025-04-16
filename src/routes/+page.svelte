@@ -23,7 +23,7 @@
 			DM Me <em>@shade.to.shade.art</em> &nbsp; on Instagram, or email shade.to.shade.art@proton.me
 		</h2>
 		<h3 class="text-2xl leading-9 font-bold">
-			I am taking consultations and booking Flash appointments for May.
+			I am taking consultations and booking flash appointments for May.
 			<br />
 			<span class="inline-block pt-4 leading-8"
 				>In May -- tattooing @

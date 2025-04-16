@@ -33,7 +33,7 @@
 
 <svelte:head>
 	<title>Flash Gallery</title>
-	<meta name="description" content="Shade To Shade flash" />
+	<meta name="description" content="Shade To Shade Flash" />
 </svelte:head>
 
 <section class="page-section">
