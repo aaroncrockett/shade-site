@@ -19,7 +19,7 @@
 
 <div class="noise"></div>
 <div class="app h-full min-h-screen overflow-hidden bg-neutral-900">
-	<div class="bg-neutral-800 shadow-md">
+	<div class="bg-neutral-800/30 shadow-md">
 		<header class="site-wrapper">
 			<nav class="flex flex-col items-center justify-between gap-2 px-4 sm:flex-row sm:gap-4">
 				<Logo />
@@ -27,7 +27,7 @@
 					open={drawerState}
 					onOpenChange={(e) => (drawerState = e.open)}
 					triggerBase="btn preset-outlined-surface-500 text-neutral-200 md:hidden"
-					contentBase="card bg-surface-800 p-4 space-y-4 shadow-xl w-2/3 h-full"
+					contentBase="card bg-surface-900 p-4 space-y-4 shadow-xl w-2/3 h-full"
 					positionerClasses="h-screen"
 					positionerJustify="justify-start"
 					transitionsPositionerIn={{ x: -480, duration: 200 }}
@@ -38,17 +38,15 @@
 					{/snippet}
 
 					{#snippet content()}
-						<div class="relative h-full">
-							<NavMainItems onItemClick={drawerClose} />
+						<NavMainItems onItemClick={drawerClose} />
 
-							<footer class="absolute right-0 bottom-0">
-								<button
-									type="button"
-									class="btn preset-outlined-surface-500 text-white"
-									onclick={drawerClose}>X</button
-								>
-							</footer>
-						</div>
+						<footer>
+							<button
+								type="button"
+								class="btn preset-outlined-surface-500 text-white"
+								onclick={drawerClose}>Close Drawer</button
+							>
+						</footer>
 					{/snippet}
 				</Modal>
 
@@ -64,7 +62,7 @@
 		{@render children()}
 	</main>
 
-	<footer class="bg-neutral-800 px-5 py-4 shadow-sm">
+	<footer class=" px-5 py-2 shadow-sm">
 		<FooterMainItems />
 	</footer>
 </div>
