@@ -80,8 +80,8 @@
 	<meta name="description" content="Shade To Shade gallery of tattoos" />
 </svelte:head>
 
-<div class="flex flex-col gap-4">
-	<div class="text-column">
+<section class="page-section">
+	<div>
 		<h1
 			style={`background-image: url(${h1ImgBg}); background-repeat: repeat; background-position: center; background-size: 150px 150px;`}
 			class="p-4 text-center"
@@ -112,4 +112,4 @@
 			{/each}
 		</LightboxGallery>
 	</div>
-</div>
+</section>

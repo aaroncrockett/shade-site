@@ -8,7 +8,7 @@
 	<meta name="description" content="Info on getting a Tattoo" />
 </svelte:head>
 
-<div class="text-column md: flex flex-col gap-4 md:gap-8">
+<section class="page-section">
 	<div
 		class=" p-4"
 		style={`background-image: url(${h1ImgBg}); background-repeat: repeat; background-position: center; background-size: 150px 150px;`}
@@ -113,4 +113,4 @@
 			</div>
 		</div>
 	</div>
-</div>
+</section>

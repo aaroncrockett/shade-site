@@ -8,9 +8,9 @@
 	<meta name="description" content="Artists Bio" />
 </svelte:head>
 
-<div class="text-column flex flex-col gap-4">
+<section class="page-section">
 	<div
-		class=" p-4"
+		class="p-4"
 		style={`background-image: url(${h1ImgBg}); background-repeat: repeat; background-position: center; background-size: 150px 150px;`}
 	>
 		<h1 class="text-4xl">My Bio, yo.</h1>
@@ -44,4 +44,4 @@
 			</p>
 		</div>
 	</div>
-</div>
+</section>
