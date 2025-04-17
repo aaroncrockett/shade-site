@@ -21,7 +21,7 @@
 
 <div class="noise"></div>
 <div class="app h-full min-h-screen overflow-hidden bg-neutral-900">
-	<div class="bg-neutral-800/30 shadow-md">
+	<div class="bg-neutral-800/20 shadow-md">
 		<header class="site-wrapper">
 			<nav class="flex flex-col items-center justify-between gap-2 px-4 sm:flex-row sm:gap-4">
 				<Logo />
@@ -65,7 +65,7 @@
 	</div>
 	{#if page.url.pathname === '/'}
 		<div
-			class="page-section absolute z-0 h-screen w-full bg-[length:190px_auto] [background-position:-50px_5%] bg-repeat opacity-70 md:!flex-row md:bg-[length:450px_auto] md:[background-position:-80px_5%] md:bg-repeat-x md:opacity-50 lg:bg-[length:550px_auto]"
+			class="page-section absolute z-0 h-screen w-full bg-[length:190px_auto] [background-position:-50px_5%] bg-repeat opacity-70 md:!flex-row md:bg-[length:350px_auto] md:[background-position:-80px_5%] md:bg-repeat md:opacity-50 lg:bg-[length:450px_auto]"
 			style={`background-image:url(${mothBg}); `}
 		></div>
 	{/if}
@@ -74,7 +74,7 @@
 		{@render children()}
 	</main>
 
-	<footer class="relative z-5 px-5 shadow-sm">
+	<footer class="relative z-5 h-auto w-full bg-neutral-800/60 px-5 shadow-sm">
 		<FooterMainItems />
 	</footer>
 </div>
