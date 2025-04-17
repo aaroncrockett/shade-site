@@ -1,6 +1,8 @@
 <script>
-	import { onMount } from 'svelte';
 	import { Modal } from '@skeletonlabs/skeleton-svelte';
+	import mothBg from '$lib/images/flash/moth.png';
+
+	import { page } from '$app/state';
 
 	import '../app.css';
 
@@ -61,12 +63,18 @@
 			</nav>
 		</header>
 	</div>
+	{#if page.url.pathname === '/'}
+		<div
+			class="page-section absolute z-0 h-screen w-full bg-[length:190px_auto] [background-position:-50px_5%] bg-repeat opacity-70 md:!flex-row md:bg-[length:450px_auto] md:[background-position:-80px_5%] md:bg-repeat-x md:opacity-50 lg:bg-[length:550px_auto]"
+			style={`background-image:url(${mothBg}); `}
+		></div>
+	{/if}
 
-	<main class="site-wrapper">
+	<main class="site-wrapper relative z-5">
 		{@render children()}
 	</main>
 
-	<footer class=" px-5 shadow-sm">
+	<footer class="relative z-5 px-5 shadow-sm">
 		<FooterMainItems />
 	</footer>
 </div>

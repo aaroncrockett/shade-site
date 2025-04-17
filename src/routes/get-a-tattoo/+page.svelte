@@ -11,7 +11,7 @@
 
 <section class="page-section">
 	<BgImgWrapper bgImg={h1ImgBg}>
-		<h1>Steps for getting a tattoo.</h1>
+		<h1 class="text-center">Steps for getting a tattoo.</h1>
 	</BgImgWrapper>
 
 	<div class="flex flex-col gap-4 md:flex-row md:gap-6">

@@ -11,7 +11,7 @@
 
 <section class="page-section">
 	<BgImgWrapper bgImg={h1ImgBg}>
-		<h1>My Bio, yo.</h1>
+		<h1 class="text-center">My Bio, yo.</h1>
 	</BgImgWrapper>
 
 	<div class="flex flex-col gap-4 md:flex-row md:gap-6">
