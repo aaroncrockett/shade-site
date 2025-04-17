@@ -2,7 +2,7 @@
 	const {
 		elementAs = 'div',
 		bgImg,
-		bgSize = '150px 150px',
+		bgSize = '75px 75px',
 		bgRepeat = 'repeat',
 		bgPosition = 'center',
 		baseCls = 'p-4 rounded-sm',
