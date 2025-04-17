@@ -4,20 +4,9 @@
 	import h1ImgBg from '$lib/images/heart-bg-sm.png';
 	import BgImgWrapper from '$lib/components/site-ui/background-image-wrapper.svelte';
 
-	import imgFlashLg from '$lib/images/tattoos/flash.png?enhanced';
-	import imgFlashTn from '$lib/images/tattoos/flash-sq.png?enhanced';
+	// Correct import — matching the name from your data file
+	import { flashImgData as images } from '$lib/data/images/flash';
 
-	const images = [
-		{
-			id: 0,
-			thumbnail: imgFlashTn,
-			full: imgFlashLg,
-			title: 'FLASH!',
-			description: 'Flash! Much more to come!'
-		}
-	];
-
-	// Custom lightbox settings
 	const custom = {
 		lightboxContentProps: {
 			style: 'display: flex; align-items: center; justify-content: center;'
@@ -38,7 +27,7 @@
 
 <section class="page-section">
 	<BgImgWrapper bgImg={h1ImgBg}>
-		<h1 class="text-center">FLASH</h1>
+		<h1 class="text-center">Flash!</h1>
 	</BgImgWrapper>
 
 	<div class="mx-auto grid grid-cols-3 gap-4 px-2 sm:gap-6 sm:px-4 lg:grid-cols-4">

@@ -1,8 +1,8 @@
+// Booking/Calendar
 export type AppointmentType = 'consult' | 'flash' | 'tat';
 
 export interface Appointment {
 	type: AppointmentType;
-
 	start: number;
 	end: number;
 	clientId: string;
@@ -11,32 +11,74 @@ export interface Appointment {
 	notes: string;
 }
 
-// Define the structure for each "bookedDate" entry
-export interface BookedDate {
-	date: number;
-	full: boolean;
-	appointments: Appointment[];
-}
-
-// Define the structure for "availableHours"
-export interface AvailableHours {
-	start: number;
-	end: number;
-	breaks: number[];
-}
-
-export type DayOfWeek = 'sun' | 'mon' | 'tue' | 'wed' | 'thu' | 'fri' | 'sat';
-
 export interface AppointmentData {
-	availableDays: DayOfWeek[]; // List of available days (e.g., ["thu", "fri"])
+	availableDays: DayOfWeek[];
 	availableHours: AvailableHours;
-	availableDates: AvailableDate[]; // Array of available dates with start and end time
-	nonAvailableDates: number[]; // List of dates that are non-available
-	bookedDates: BookedDate[]; // Array of booked dates with full status and appointments
+	availableDates: AvailableDate[];
+	nonAvailableDates: number[];
+	bookedDates: BookedDate[];
 }
 
 export interface AvailableDate {
 	date: string;
 	start: string;
 	end: string;
+}
+
+export interface AvailableHours {
+	start: number;
+	end: number;
+	breaks: number[];
+}
+
+export interface BookedDate {
+	date: number;
+	full: boolean;
+	appointments: Appointment[];
+}
+
+export type DayOfWeek = 'sun' | 'mon' | 'tue' | 'wed' | 'thu' | 'fri' | 'sat';
+
+// Tattoos and Flash
+
+export type Style =
+	| 'cartoon'
+	| 'blackwork'
+	| 'black-and-grey'
+	| 'color'
+	| 'engraving/woodcut/linocut'
+	| 'delicate'
+	| 'illustrative';
+
+export type Subject =
+	| 'animals'
+	| 'insects'
+	| 'abstract'
+	| 'pop-culture'
+	| 'symbols'
+	| 'botanical'
+	| 'weapons'
+	| 'fantasy'
+	| 'skulls';
+
+export type Technique =
+	| 'whip-shading'
+	| 'stipple'
+	| 'bold-line'
+	| 'fine-line'
+	| 'illustrative-line'
+	| 'dot-work'
+	| 'watercolor';
+
+export interface ImageData {
+	Date: string;
+	description: string;
+	full: string;
+	id: number;
+	price: number;
+	styles: Style[];
+	subjects: Subject[];
+	techniques: Technique[];
+	thumbnail: string;
+	title: string;
 }
