@@ -19,7 +19,7 @@ p,
 ul,
 ol {
 	@apply font-normal text-white;
-	font-family: 'futura-pt', sans-serif;
+	font-family: 'futura-pt', serif;
 }
 
 h1 {
@@ -33,7 +33,7 @@ h2 {
 
 a {
 	@apply bg-gradient-to-r from-neutral-100 to-zinc-400 bg-clip-text font-bold text-transparent hover:cursor-pointer hover:text-zinc-400;
-	font-family: 'futura-pt', sans-serif;
+	font-family: 'futura-pt', serif;
 }
 
 /* global  general classes */

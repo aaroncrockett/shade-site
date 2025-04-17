@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 // Booking/Calendar
 export type AppointmentType = 'consult' | 'flash' | 'tat';
 
@@ -46,7 +47,7 @@ export type Style =
 	| 'blackwork'
 	| 'black-and-grey'
 	| 'color'
-	| 'engraving/woodcut/linocut'
+	| 'linocut/woodcut'
 	| 'delicate'
 	| 'illustrative';
 
@@ -73,12 +74,12 @@ export type Technique =
 export interface ImageData {
 	Date: string;
 	description: string;
-	full: string;
+	full: any;
 	id: number;
 	price: number;
 	styles: Style[];
 	subjects: Subject[];
 	techniques: Technique[];
-	thumbnail: string;
+	thumbnail: any;
 	title: string;
 }
