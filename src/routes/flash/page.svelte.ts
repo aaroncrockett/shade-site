@@ -1,4 +1,4 @@
-import { flashImgData } from '$lib/data/images/flash.ts';
+import { flashImgData } from '../../flash';
 
 import type { Collection } from '$lib/types';
 
