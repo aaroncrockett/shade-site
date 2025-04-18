@@ -70,7 +70,13 @@ export type Technique =
 	| 'stipple'
 	| 'whip-shading';
 
-export type Collection = 'linocut/woodcut' | 'illustrative color' | 'illustrative black and b&g';
+export const Collections = [
+	'linocut/woodcut',
+	'illustrative color',
+	'illustrative black and b&g'
+] as const;
+
+export type Collection = (typeof Collections)[number];
 
 export interface ImageData {
 	collections: Collection[];

@@ -1,23 +1,43 @@
 <script lang="ts">
+	/* @ts-nocheck */
+
 	import { LightboxGallery, GalleryThumbnail, GalleryImage } from 'svelte-lightbox';
 
 	import h1ImgBg from '$lib/images/heart-bg-sm.png';
 	import BgImgWrapper from '$lib/components/site-ui/background-image-wrapper.svelte';
 
-	// Correct import — matching the name from your data file
-	import { flashImgData as images } from '$lib/data/images/flash';
+	import { Collections } from '$lib/types';
 
-	const custom = {
-		lightboxContentProps: {
-			style: 'display: flex; align-items: center; justify-content: center;'
-		},
-		lightboxProps: {
-			style: 'max-width: 75vw; max-height: 75vh;',
-			closeButton: {
-				style: 'color: #666666;'
-			}
+	import { localVars } from './page.svelte';
+
+	const { images, customLbStyles, localState } = localVars;
+
+	const filteredImages = $derived.by(() => {
+		return images.filter((img) => {
+			// Only show images if at least one collection is selected
+			if (localState.collections.length === 0) return false;
+
+			const matchesCollection = img.collections.some((collection) =>
+				localState.collections.includes(collection)
+			);
+
+			const matchesPrice =
+				!localState.priceFilter ||
+				(localState.priceFilter === 'under200' && img.price <= 200) ||
+				(localState.priceFilter === 'over200' && img.price > 200);
+
+			return matchesCollection && matchesPrice;
+		});
+	});
+
+	function toggleCollection(collection: (typeof Collections)[number]) {
+		const index = localState.collections.indexOf(collection);
+		if (index === -1) {
+			localState.collections = [...localState.collections, collection];
+		} else {
+			localState.collections = localState.collections.filter((c) => c !== collection);
 		}
-	};
+	}
 </script>
 
 <svelte:head>
@@ -29,51 +49,86 @@
 	<BgImgWrapper bgImg={h1ImgBg}>
 		<h1 class="text-center">Flash!</h1>
 	</BgImgWrapper>
-	<section class="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4">
-		<!-- Column -->
-		<div class="grid gap-4">
-			<img class="bg-surface-500 rounded-container" src="https://picsum.photos/220/320?random=1" />
-			<img class="bg-surface-500 rounded-container" src="https://picsum.photos/220/120?random=2" />
-			<img class="bg-surface-500 rounded-container" src="https://picsum.photos/220/280?random=3" />
-		</div>
-		<!-- Column -->
-		<div class="grid gap-4">
-			<img class="bg-surface-500 rounded-container" src="https://picsum.photos/220/300?random=4" />
-			<img class="bg-surface-500 rounded-container" src="https://picsum.photos/220/280?random=5" />
-			<img class="bg-surface-500 rounded-container" src="https://picsum.photos/220/140?random=6" />
-		</div>
-		<!-- Column -->
-		<div class="grid gap-4">
-			<img class="bg-surface-500 rounded-container" src="https://picsum.photos/220/380?random=7" />
-			<img class="bg-surface-500 rounded-container" src="https://picsum.photos/300/320?random=8" />
-			<img class="bg-surface-500 rounded-container" src="https://picsum.photos/220/140?random=9" />
-		</div>
-		<!-- Column -->
-		<div class="grid gap-4">
-			<img class="bg-surface-500 rounded-container" src="https://picsum.photos/220/320?random=10" />
-			<img class="bg-surface-500 rounded-container" src="https://picsum.photos/220/140?random=11" />
-			<img class="bg-surface-500 rounded-container" src="https://picsum.photos/220/280?random=12" />
-		</div>
-	</section>
 
-	<div class="mx-auto grid grid-cols-3 gap-4 px-2 sm:gap-6 sm:px-4 lg:grid-cols-4">
-		<LightboxGallery enableClickToClose={true} customization={custom}>
+	<div>
+		<h2 class=" ">Filter by Collection</h2>
+		<div class="flex flex-wrap gap-2">
+			{#each Collections as collection}
+				<button
+					type="button"
+					class={`btn   ${
+						localState.collections.includes(collection)
+							? 'bg-neutral-200 text-black'
+							: 'bg-neutral-900 text-white'
+					}`}
+					onclick={() => toggleCollection(collection)}
+				>
+					{collection}
+				</button>
+			{/each}
+		</div>
+	</div>
+
+	<div>
+		<h2 class="">Filter by Price</h2>
+		<div class="flex gap-2">
+			<label class="flex items-center">
+				<input
+					type="radio"
+					name="priceFilter"
+					class="mr-2"
+					checked={localState.priceFilter === null}
+					onclick={() => (localState.priceFilter = null)}
+				/>
+				<span>All Prices</span>
+			</label>
+
+			<label class="flex items-center">
+				<input
+					type="radio"
+					name="priceFilter"
+					class="mr-2"
+					checked={localState.priceFilter === 'under200'}
+					onclick={() => (localState.priceFilter = 'under200')}
+				/>
+				<span>Under $200</span>
+			</label>
+
+			<label class="flex items-center">
+				<input
+					type="radio"
+					name="priceFilter"
+					class="mr-2"
+					checked={localState.priceFilter === 'over200'}
+					onclick={() => (localState.priceFilter = 'over200')}
+				/>
+				<span>Over $200</span>
+			</label>
+		</div>
+	</div>
+
+	<div
+		class="noise-gallery-bg flash-gallery-grid grid auto-rows-auto gap-4 rounded-sm p-1 shadow-sm sm:p-3 md:p-6"
+	>
+		<LightboxGallery enableClickToClose={true} customization={customLbStyles}>
 			<svelte:fragment slot="thumbnail">
-				{#each images as { id, thumbnail, title, description }}
+				{#each filteredImages as { id, thumbnail, title, description, rotation }}
 					<GalleryThumbnail {id}>
-						<enhanced:img
-							class="aspect-square w-full max-w-[260px] cursor-pointer rounded-sm object-cover"
-							src={thumbnail}
-							alt={`${title} - ${description}`}
-							{title}
-						/>
+						<div>
+							<enhanced:img
+								class={`cursor-pointer rounded-sm p-2 transition-transform duration-300 ease-in-out lg:p-4 ${rotation}`}
+								src={thumbnail}
+								alt={`${title} - ${description}`}
+								{title}
+							/>
+						</div>
 					</GalleryThumbnail>
 				{/each}
 			</svelte:fragment>
 
-			{#each images as { id, full, title, description }}
+			{#each filteredImages as { id, full, title, description }}
 				<GalleryImage {id} {title} {description}>
-					<enhanced:img src={full} alt={title} />
+					<enhanced:img class="rounded-sm bg-slate-50 p-2 sm:p-4" src={full} alt={title} />
 				</GalleryImage>
 			{/each}
 		</LightboxGallery>

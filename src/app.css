@@ -17,7 +17,8 @@ h5,
 h6,
 p,
 ul,
-ol {
+ol,
+label {
 	@apply font-normal text-white;
 	font-family: 'futura-pt', serif;
 }
