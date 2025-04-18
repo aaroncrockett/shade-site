@@ -43,35 +43,37 @@ export type DayOfWeek = 'sun' | 'mon' | 'tue' | 'wed' | 'thu' | 'fri' | 'sat';
 // Tattoos and Flash
 
 export type Style =
-	| 'cartoon'
-	| 'blackwork'
 	| 'black-and-grey'
+	| 'blackwork'
+	| 'cartoon'
 	| 'color'
-	| 'linocut/woodcut'
 	| 'delicate'
-	| 'illustrative';
+	| 'illustrative'
+	| 'linocut/woodcut';
 
 export type Subject =
-	| 'animals'
-	| 'insects'
 	| 'abstract'
-	| 'pop-culture'
-	| 'symbols'
+	| 'animals'
 	| 'botanical'
-	| 'weapons'
 	| 'fantasy'
-	| 'skulls';
+	| 'insects'
+	| 'pop-culture'
+	| 'skulls'
+	| 'symbols'
+	| 'weapons';
 
 export type Technique =
-	| 'whip-shading'
-	| 'stipple'
 	| 'bold-line'
+	| 'dot-work'
 	| 'fine-line'
 	| 'illustrative-line'
-	| 'dot-work'
-	| 'watercolor';
+	| 'stipple'
+	| 'whip-shading';
+
+export type Collection = 'linocut/woodcut' | 'illustrative color' | 'illustrative black and b&g';
 
 export interface ImageData {
+	collections: Collection[];
 	Date: string;
 	description: string;
 	full: any;
