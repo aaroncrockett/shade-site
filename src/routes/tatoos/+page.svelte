@@ -4,7 +4,7 @@
 	import h1ImgBg from '$lib/images/heart-bg-sm.png';
 	import BgImgWrapper from '$lib/components/site-ui/background-image-wrapper.svelte';
 
-	import { images } from '$lib/data/images/tattoos';
+	import { images } from '$lib/data/images/tattoos.ts';
 
 	// Custom lightbox settings
 	const custom = {

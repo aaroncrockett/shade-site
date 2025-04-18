@@ -8,7 +8,7 @@
 
 	import { Collections } from '$lib/types';
 
-	import { localVars } from './page.svelte';
+	import { localVars } from './page.svelte.ts';
 
 	const { images, customLbStyles, localState } = localVars;
 
