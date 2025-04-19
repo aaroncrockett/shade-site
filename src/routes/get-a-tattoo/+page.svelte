@@ -22,92 +22,69 @@
 				class="mx-auto h-auto w-full max-w-[250px] rounded-sm md:w-[400px]"
 			/>
 		</div>
-		<div class="flex flex-col gap-4">
-			<div>
-				<h2>Flash Appointment</h2>
-				<p>If you'd like to book one of my flash pieces, here's what to do:</p>
+		<div class="flex flex-col gap-4 rounded-sm bg-neutral-700 p-4">
+			<h2>Instructions for getting a tattoo.</h2>
 
-				<ol class="ml-4 list-decimal space-y-2 pt-2 pl-4">
-					<li>
-						Pick a piece from my <a href="/flash">FLASH</a> collection.
-					</li>
-					<li>
-						DM on Instagram @shade-to-shade-art or send me am email @ shade.to.shade.art@proton.me.
-					</li>
-					<li>We’ll pick a time that works for your session.</li>
-					<li>
-						A $25 deposit is required to book your appointment.
-						<ul class="list-disc pl-4">
-							<li>This goes toward the final cost of the tattoo.</li>
-						</ul>
-					</li>
-					<li>
-						Final payment is due in cash at the start of the session. Tips are very much appreciated
-						and can be given when the session is completed.
-					</li>
-				</ol>
+			<div class="pl-4">
+				<p>
+					<a href="">Flash</a>.
+				</p>
+				<p><a href="">Prep instructions</a>.</p>
+				<p><a href="">Aftercare instructions</a>.</p>
 			</div>
 
-			<div>
-				<h2>Custom Tattoo</h2>
-				<p>If you're interested in a custom piece, here’s how the process works:</p>
+			<p>
+				If interested in getting a tattoo, or if you have any questions, DM on Instagram or send me
+				an email.
+			</p>
 
-				<ol class="list-decimal space-y-2 pt-2 pl-4">
-					<li>
-						Send me a DM on Instagram @shade-to-shade-art or email me @
-						shade.to.shade.art@proton.me.
-					</li>
-					<li>
-						We’ll schedule a free phone consultation.
-						<ul class="list-disc pl-4">
-							<li>I may ask you to send reference images or other resources.</li>
-						</ul>
-					</li>
-					<ul class="list-disc pl-4">
+			<div class="ml-4 rounded-md bg-neutral-900/80 p-4">
+				<p>@shade-to-shade-art</p>
+				<p>email: shade.to.shade.art@proton.me</p>
+			</div>
+
+			<ul class="list-disc pl-4">
+				<li>Flash: $25 deposit, to book.</li>
+				<li>
+					Designs you supply: $25 deposit, to book. Some designs I may suggest a free in-person
+					placement session to ensure the design flows correctly.
+				</li>
+				<li>
+					I won't copy another tattoo artist's original work! If the design is super common, then I
+					don't have a problem using it as is. Otherwise I will have to redesign the piece with my
+					own spin.
+				</li>
+			</ul>
+			<p>Deposits will be applied to the final cost.</p>
+			<p>
+				Final payment is due in cash at your appointment before tattooing. Tips are always
+				appreciated and can be given at the end of the session.
+			</p>
+
+			<div class="flex flex-col gap-8">
+				<div>
+					<h2>Custom Tattoo</h2>
+
+					<ol class="list-decimal space-y-2 pt-2 pl-4">
 						<li>
-							<em>Sometimes</em> custom tattoos are simple. And we can skip all the next steps. Cut your
-							desposit down to $25 (like the flash tattoo steps above), and immediately schedule the
-							tattoo and give you a price.
+							Schedule a free phone session where we talk about the design, size, placement, and any
+							other details. I’ll give you a price range — usually between $100–$200. (IE: "Your
+							tattoo will cost between $300 and $400.")
 						</li>
-					</ul>
-					<li>
-						Otherwise... we will discuss the tattoo design, size, placement, and any other details.
 
-						<ul class="list-disc pl-4">
-							<li>I’ll give you a price range based on our conversation.</li>
-							<li>Pricing usually ranges within $100–$200 depending on size.</li>
-							<li>Final price depends on complexity and placement.</li>
-							<li><b>Example:</b> “The tattoo will be between $300 and $400.”</li>
-							<li>
-								Pricing is fixed — not hourly — but often averages around $100–$125 per hour of
-								tattoo time.
-							</li>
-						</ul>
-					</li>
-					<li>
-						A $75 deposit is required before I begin designing or drawing the piece.
-						<ul class="list-disc pl-4">
-							<li>This deposit goes toward the final cost.</li>
-						</ul>
-					</li>
-					<li>
-						After the initial drawing is complete, I recommend a free in-person placement session. I
-						will reach out to schedule (usually within several days, but within a week.) This gives
-						us a chance to see how the tattoo looks on your body and make any needed adjustments.
-					</li>
-					<li>
-						At this point, I’ll confirm the total price. If we are finished with the drawing, we can
-						schedule your tattoo session(s).
-					</li>
-					<li>
-						If there are additional changes, I will send you the completed drawing within a few
-						days, and then schedule the tattoo session.
-					</li>
-					<li>
-						Final payment is due in cash at the start of the session. Tips are very much appreciated
-						and can be given when the session is completed.
-					</li>
-				</ol>
+						<li>
+							A $75 deposit is required before I start designing. This goes toward your final total.
+						</li>
+						<li>
+							Once the first drawing is ready, we’ll schedule a free in-person placement session to
+							see how it flows and make any adjustments.
+						</li>
+						<li>
+							If revisions are needed, I’ll send the updated version before we book. Once we
+							finalize the design, I’ll confirm your price and we’ll book your tattoo.
+						</li>
+					</ol>
+				</div>
 			</div>
 		</div>
 	</div>

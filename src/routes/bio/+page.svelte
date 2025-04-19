@@ -14,7 +14,7 @@
 		<h1 class="text-center">My Bio, yo.</h1>
 	</BgImgWrapper>
 
-	<div class="flex flex-col gap-4 md:flex-row md:gap-6">
+	<div class="flex flex-col gap-4 rounded-sm bg-neutral-700 p-4 md:flex-row md:gap-6">
 		<div>
 			<enhanced:img
 				src={imgMe}

@@ -51,15 +51,15 @@
 	</BgImgWrapper>
 
 	<div>
-		<h2 class=" ">Filter by Collection</h2>
+		<h2>Filter by Collection</h2>
 		<div class="flex flex-wrap gap-2">
 			{#each Collections as collection}
 				<button
 					type="button"
-					class={`btn   ${
+					class={`btn rounded-sm  ${
 						localState.collections.includes(collection)
-							? 'bg-neutral-200 text-black'
-							: 'bg-neutral-900 text-white'
+							? 'border-success-500 text-success-500 border-2 bg-neutral-950/50'
+							: ' text-surface-100 border-2 border-neutral-800'
 					}`}
 					onclick={() => toggleCollection(collection)}
 				>
