@@ -34,8 +34,12 @@ h2 {
 }
 
 a {
-	@apply bg-gradient-to-r from-neutral-100 to-zinc-400 bg-clip-text font-bold text-transparent hover:cursor-pointer hover:text-zinc-400;
+	@apply text-secondary-500 font-bold hover:cursor-pointer hover:text-zinc-400;
 	font-family: 'futura-pt', serif;
+}
+
+.main-nav-li a {
+	@apply bg-gradient-to-r from-neutral-100 to-zinc-400 bg-clip-text text-transparent hover:cursor-pointer hover:text-zinc-400;
 }
 
 /* global  general classes */
