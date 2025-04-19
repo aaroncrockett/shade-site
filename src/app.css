@@ -2,9 +2,10 @@
 
 @import '@skeletonlabs/skeleton';
 @import '@skeletonlabs/skeleton/optional/presets';
-@import './shade-theme.css';
 
-@source '../node_modules/@skeletonlabs/skeleton-svelte/dist';
+@import './shade';
+
+/* @source '../node_modules/@skeletonlabs/skeleton-svelte/dist'; */
 
 /*** GLOBAL ***/
 
