@@ -20,8 +20,8 @@
 </script>
 
 <div class="noise"></div>
-<div class="app h-full min-h-screen overflow-hidden bg-neutral-900">
-	<div class="bg-neutral-800/20 shadow-md">
+<div class="app h-full min-h-screen overflow-hidden bg-neutral-950/90">
+	<div class="bg-neutral-900/80 shadow-md">
 		<header class="site-wrapper">
 			<nav class="flex flex-col items-center justify-between gap-2 px-4 sm:flex-row sm:gap-4">
 				<Logo />
@@ -74,7 +74,7 @@
 		{@render children()}
 	</main>
 
-	<footer class="relative z-5 h-auto w-full bg-neutral-800/60 px-5 shadow-sm">
+	<footer class="relative z-5 h-auto w-full bg-neutral-900/60 px-5 shadow-sm">
 		<FooterMainItems />
 	</footer>
 </div>
