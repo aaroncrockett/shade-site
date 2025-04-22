@@ -24,21 +24,22 @@
 		</div>
 		<div class="repeated-heart-bg flex flex-col gap-4">
 			<p>
-				Aaron (ShadeToShade) has been interested in art and drawing since childhood and loves
-				tattooing. He attended college for Graphic Design and Drawing. Then, an MFA in Painting.
-				Over the years, he has worked as a web designer and developer, and taught 2D design at
-				SIU-Edwardsville as a graduate student.
+				When it comes to tattooing, I try to strike a balance: I take the work seriously, but I also
+				believe it’s important to have fun. I’m not a fan of condescending attitudes or inflated
+				egos — there’s too much of that in the tattoo industry. At the same time, I stay deeply
+				committed to my craft and approach it with focus and intention.
 			</p>
 			<p>
-				Aaron welcomes everyone, with a special shoutout to the queer and neurodivergent communities
-				(he is queer and has ADHD himself). He loves hiking, jogging, being outdoors, and exploring
-				all the food and food carts around Portland. He has variety of interest that include
-				TV/film, music, Buddhism, and video games when he has the time.
+				I love hiking, jogging, being outdoors, and exploring the endless food carts and restaurants
+				around Portland. I’ve got a wide range of interests that include TV/film, music, Buddhism,
+				and video games — when I can find the time.
 			</p>
+			<p>I live in SE Portland with my husband Nick and our dog Jasper.</p>
 			<p>
-				During the early portion of a session, Aaron tends to stay quiet in order to focus. He’s
-				often able to chat more as the tattoo progresses (if you prefer), but he never minds others
-				talking. Clients are also welcome to bring a friend.
+				When it comes to tattooing, I try to strike a balance: I take the work seriously, but I also
+				believe it’s important to have fun. I’m not a fan of condescending attitudes or inflated
+				egos — there’s too much of that in the tattoo industry. At the same time, I stay deeply
+				committed to my craft and approach it with focus and intention.
 			</p>
 		</div>
 	</div>
