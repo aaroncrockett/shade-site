@@ -4,8 +4,17 @@
 	import s2sImg from '$lib/images/shade-to-shade-heart-text.png?enhanced';
 	import h1ImgBg from '$lib/images/heart-bg-sm.png';
 	import BgImgWrapper from '$lib/components/site-ui/background-image-wrapper.svelte';
+	import Aftercare from '$lib/components/site-ui/aftercare.svelte';
+	import CustomTattoo from '$lib/components/site-ui/custom-tattoo.svelte';
+	import TattooPrep from '$lib/components/site-ui/tattoo-prep.svelte';
 
 	let accordionValue: string[] = $state([]);
+
+	const accordionSectionData = [
+		{ id: 'custom', hl: 'Custom Tattoo' },
+		{ id: 'prep', hl: 'Tattoo Prep' },
+		{ id: 'aftercare', hl: 'Aftercare' }
+	];
 
 	function toggleAccordion(item: string) {
 		if (accordionValue.includes(item)) {
@@ -67,13 +76,20 @@
 					Final payment is due in cash at your appointment before tattooing. Tips are always
 					appreciated and can be given at the end of the session.
 				</p>
+				<p>
+					Before getting your tattoo, ensure to read the Tattoo Prep and Aftercare <span
+						class="hidden lg:inline"
+					>
+						sections.</span
+					> <span class="inline lg:hidden"> sections bellow.</span>
+				</p>
 			</div>
 		</div>
 
 		<Accordion spaceY="2" value={accordionValue} onValueChange={(e) => (value = e.value)}>
 			<Accordion.Item
 				value="custom"
-				controlBase="p-4 w-full text-left bg-neutral-800"
+				controlBase="p-4 w-full bg-neutral-800 flex flex-row "
 				controlHover="hover:bg-neutral-700 hover:text-white"
 				controlRounded="rounded-sm"
 				controlClasses="transition-colors duration-300"
@@ -81,42 +97,22 @@
 				{#snippet control()}
 					<button
 						type="button"
-						onclick={() => toggleAccordion('custom')}
-						aria-expanded={accordionValue.includes('custom')}
-						class="w-full"
+						onclick={() => toggleAccordion(accordionSectionData[0].id)}
+						aria-expanded={accordionValue.includes(accordionSectionData[0].id)}
+						class="acumin w-full text-2xl md:text-3xl"
 					>
-						<h2>Custom Tattoo.</h2>
+						{accordionSectionData[0].hl}
 					</button>
 				{/snippet}
-				<!-- Panel -->
-				{#snippet panel()}
-					<ol class="list-decimal space-y-2 pl-8">
-						<li>
-							Schedule a free phone session where we talk about the design, size, placement, and any
-							other details. I’ll give you a price range — usually between $100–$200. (IE: "Your
-							tattoo will cost between $300 and $400.")
-						</li>
 
-						<li>
-							A $75 deposit is required before I start designing. This goes toward your final total.
-						</li>
-						<li>
-							Once the first drawing is ready, we’ll schedule a free in-person placement session to
-							see how it flows and make any adjustments.
-						</li>
-						<li>
-							If revisions are needed, I’ll send the updated version before we book. Once we
-							finalize the design, I’ll give you a fixed price and we’ll book your tattoo. After
-							this point, if anymore revisions are requested, I will do so with prepaid $25 an hour
-							increments.
-						</li>
-					</ol>
+				{#snippet panel()}
+					<CustomTattoo />
 				{/snippet}
 			</Accordion.Item>
 
 			<Accordion.Item
 				value="prep"
-				controlBase="p-4 w-full text-left bg-neutral-800"
+				controlBase="p-4 w-full bg-neutral-800 flex flex-row "
 				controlHover="hover:bg-neutral-700 hover:text-white"
 				controlRounded="rounded-sm"
 				controlClasses="transition-colors duration-300"
@@ -124,47 +120,38 @@
 				{#snippet control()}
 					<button
 						type="button"
-						onclick={() => toggleAccordion('prep')}
-						aria-expanded={accordionValue.includes('prep')}
-						class="w-full"
+						onclick={() => toggleAccordion(accordionSectionData[1].id)}
+						aria-expanded={accordionValue.includes(accordionSectionData[1].id)}
+						class="acumin w-full text-2xl md:text-3xl"
 					>
-						<h2>Tattoo Prep</h2>
+						{accordionSectionData[1].hl}
 					</button>
 				{/snippet}
-				<!-- Panel -->
+
 				{#snippet panel()}
-					<p>
-						<span class="mr-1">☀️</span> Don’t tan or get sunburned on or near the area being tattooed
-						in the days leading up to your appointment. If you have a rash, breakout, or cut on the area,
-						let me know and will likely have to reschedule.
-					</p>
-					<p>
-						<span class="mr-1"> 💧</span> Drink plenty of water in the days before your appointment.
-					</p>
-					<p>
-						<span class="mr-1"> 🍽️ </span> I recommend not coming in on an empty stomach to keep your
-						blood sugar stable.
-					</p>
-					<p>
-						<span class="mr-1"> 🪪 </span> You’ll need a valid government-issued photo ID and need to
-						be at least 18 years of age.
-					</p>
-					<p>
-						<span class="mr-1"> 🍺 </span>
-						Per OR law -- be sober for your tattoo. You cannot "shows signs of being inebriated or appears
-						to be incapacitated by the use of alcohol or drugs".
-					</p>
-					<p>
-						<span class="mr-1"> 🧘 </span>
-						During the early — and often middle — stages of your tattoo, I tend to be quiet and focused.
-						I may not always be able to answer or hold a conversation — I need to give the tattoo my
-						full attention at this stage. That said, as we get further along, I usually become more talkative
-						and would genuinely enjoy getting to know you if you’re up for it! Of course, you’re just
-						as welcome to stay quiet, relax, listen to headphones, etc. My priority is making sure you're
-						as comfortable as possible, as long as it doesn’t interfere with the tattoo process. Also,
-						though I may not be able to converse initially, talking around me doesn't distract me. You
-						are welcome to bring a friend, or talk to others in the studio.
-					</p>
+					<TattooPrep />
+				{/snippet}
+			</Accordion.Item>
+			<Accordion.Item
+				value="aftercare"
+				controlBase="p-4 w-full bg-neutral-800 flex flex-row "
+				controlHover="hover:bg-neutral-700 hover:text-white"
+				controlRounded="rounded-sm"
+				controlClasses="transition-colors duration-300"
+			>
+				{#snippet control()}
+					<button
+						type="button"
+						onclick={() => toggleAccordion(accordionSectionData[2].id)}
+						aria-expanded={accordionValue.includes(accordionSectionData[2].id)}
+						class="acumin w-full text-2xl md:text-3xl"
+					>
+						{accordionSectionData[2].hl}
+					</button>
+				{/snippet}
+
+				{#snippet panel()}
+					<Aftercare />
 				{/snippet}
 			</Accordion.Item>
 		</Accordion>
@@ -177,9 +164,8 @@
 			<div class="flex flex-col gap-2">
 				<a href="/flash">Flash Gallery.</a>
 				<a href="/bio">Bio.</a>
+				<a href="/read-prior-to-tattoo">Prior To Tattoo.</a>
 			</div>
-			<!-- <p><a href="">Prep instructions.</a></p>
-			<p><a href="">Aftercare instructions.</a></p> -->
 		</div>
 	</div>
 </section>
