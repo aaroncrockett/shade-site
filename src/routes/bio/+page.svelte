@@ -22,12 +22,12 @@
 				class="mx-auto h-auto w-full max-w-[250px] rounded-sm md:w-[400px]"
 			/>
 		</div>
-		<div class="repeated-heart-bg flex flex-col gap-4">
+		<div class=" flex flex-col gap-4">
 			<p>
-				When it comes to tattooing, I try to strike a balance: I take the work seriously, but I also
-				believe it’s important to have fun. I’m not a fan of condescending attitudes or inflated
-				egos — there’s too much of that in the tattoo industry. At the same time, I stay deeply
-				committed to my craft and approach it with focus and intention.
+				I've been drawing and interested in art since I was a child. In addition to tattooing, I
+				have worked as a web designer (and developer). I taught 2D design to college students when I
+				was a graduate student in Painting, as well. My undergrad was in Drawing and Graphic Design.
+				In my spare time I work on my own art. I also designed and developed this web application.
 			</p>
 			<p>
 				I love hiking, jogging, being outdoors, and exploring the endless food carts and restaurants
@@ -36,10 +36,10 @@
 			</p>
 			<p>I live in SE Portland with my husband Nick and our dog Jasper.</p>
 			<p>
-				When it comes to tattooing, I try to strike a balance: I take the work seriously, but I also
-				believe it’s important to have fun. I’m not a fan of condescending attitudes or inflated
-				egos — there’s too much of that in the tattoo industry. At the same time, I stay deeply
-				committed to my craft and approach it with focus and intention.
+				Tattooing is something I care deeply about, and I bring a lot of focus and intention to
+				every piece I do. That said, I think it’s just as important to keep the vibe relaxed and
+				fun. I don’t have much patience for ego or gatekeeping — I’d rather create a space where
+				people feel welcome.
 			</p>
 		</div>
 	</div>
