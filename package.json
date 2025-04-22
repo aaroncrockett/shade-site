@@ -50,6 +50,7 @@
 		"@supabase/ssr": "^0.5.2",
 		"@supabase/supabase-js": "^2.49.1",
 		"@sveltejs/enhanced-img": "^0.4.4",
+		"dayjs": "^1.11.13",
 		"svelte-lightbox": "^1.1.6"
 	}
 }
