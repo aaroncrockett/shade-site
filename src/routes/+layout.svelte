@@ -6,9 +6,9 @@
 
 	import '../app.css';
 
-	import Logo from '$lib/components/site-ui/logo.svelte';
-	import NavMainItems from '$lib/components/site-ui/nav/main-items.svelte';
-	import FooterMainItems from '$lib/components/site-ui/footer/main-items.svelte';
+	import Logo from '$lib/components/ui/logo.svelte';
+	import NavMainItems from '$lib/components/ui/nav/main-items.svelte';
+	import FooterMainItems from '$lib/components/ui/footer/main-items.svelte';
 
 	let { children } = $props();
 

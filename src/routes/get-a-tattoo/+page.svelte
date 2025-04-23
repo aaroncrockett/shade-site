@@ -3,10 +3,10 @@
 
 	import s2sImg from '$lib/images/shade-to-shade-heart-text.png?enhanced';
 	import h1ImgBg from '$lib/images/heart-bg-sm.png';
-	import BgImgWrapper from '$lib/components/site-ui/background-image-wrapper.svelte';
-	import Aftercare from '$lib/components/site-ui/aftercare.svelte';
-	import CustomTattoo from '$lib/components/site-ui/custom-tattoo.svelte';
-	import TattooPrep from '$lib/components/site-ui/tattoo-prep.svelte';
+	import BgImgWrapper from '$lib/components/ui/background-image-wrapper.svelte';
+	import Aftercare from '$lib/components/ui/aftercare.svelte';
+	import CustomTattoo from '$lib/components/ui/custom-tattoo.svelte';
+	import TattooPrep from '$lib/components/ui/tattoo-prep.svelte';
 
 	let accordionValue: string[] = $state([]);
 

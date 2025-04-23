@@ -1,7 +1,7 @@
 <script lang="ts">
 	import imgMe from '$lib/images/aaron.png?enhanced';
 	import h1ImgBg from '$lib/images/heart-bg-sm.png';
-	import BgImgWrapper from '$lib/components/site-ui/background-image-wrapper.svelte';
+	import BgImgWrapper from '$lib/components/ui/background-image-wrapper.svelte';
 </script>
 
 <svelte:head>

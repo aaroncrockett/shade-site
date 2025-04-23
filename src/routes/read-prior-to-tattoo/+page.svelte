@@ -1,10 +1,10 @@
 <script lang="ts">
 	import h1ImgBg from '$lib/images/heart-bg-sm.png';
-	import BgImgWrapper from '$lib/components/site-ui/background-image-wrapper.svelte';
+	import BgImgWrapper from '$lib/components/ui/background-image-wrapper.svelte';
 
-	import Aftercare from '$lib/components/site-ui/aftercare.svelte';
+	import Aftercare from '$lib/components/ui/aftercare.svelte';
 
-	import TattooPrep from '$lib/components/site-ui/tattoo-prep.svelte';
+	import TattooPrep from '$lib/components/ui/tattoo-prep.svelte';
 </script>
 
 <svelte:head>
