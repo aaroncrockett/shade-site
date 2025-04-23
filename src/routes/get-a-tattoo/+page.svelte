@@ -35,12 +35,12 @@
 		<h1 class="text-center">Steps for getting a tattoo.</h1>
 	</BgImgWrapper>
 
-	<div class="flex flex-col gap-4 lg:flex-row lg:gap-6">
-		<div>
+	<div class="flex flex-col gap-6 md:grid md:grid-cols-[1fr_2fr] xl:grid-cols-[1fr_2fr_2fr]">
+		<div class="col-start-1 mx-auto flex flex-col">
 			<enhanced:img
 				src={s2sImg}
 				alt="Heart graphic."
-				class="mx-auto h-auto w-full max-w-[400px] rounded-sm lg:w-[200px]"
+				class="mx-auto h-auto w-full max-w-[200px] rounded-sm"
 			/>
 		</div>
 
@@ -78,15 +78,20 @@
 				</p>
 				<p>
 					Before getting your tattoo, ensure to read the Tattoo Prep and Aftercare <span
-						class="hidden lg:inline"
+						class="hidden xl:inline"
 					>
 						sections.</span
-					> <span class="inline lg:hidden"> sections bellow.</span>
+					> <span class="inline xl:hidden"> sections bellow.</span>
 				</p>
 			</div>
 		</div>
 
-		<Accordion spaceY="2" value={accordionValue} onValueChange={(e) => (value = e.value)}>
+		<Accordion
+			classes="ol-start-2 col-start-2 xl:col-start-3"
+			spaceY="2"
+			value={accordionValue}
+			onValueChange={(e) => (value = e.value)}
+		>
 			<Accordion.Item
 				value="custom"
 				controlBase="p-4 w-full bg-neutral-800 flex flex-row "
@@ -155,17 +160,5 @@
 				{/snippet}
 			</Accordion.Item>
 		</Accordion>
-
-		<div
-			class="order-2 flex flex-col gap-2 rounded-sm bg-neutral-800/80 p-4 lg:order-3 lg:min-w-[170px] xl:min-w-[220px]"
-		>
-			<h4 class="mb-2 font-bold">Helpful Links</h4>
-
-			<div class="flex flex-col gap-2">
-				<a href="/flash">Flash Gallery.</a>
-				<a href="/bio">Bio.</a>
-				<a href="/read-prior-to-tattoo">Prior To Tattoo.</a>
-			</div>
-		</div>
 	</div>
 </section>
