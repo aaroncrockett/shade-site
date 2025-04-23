@@ -14,9 +14,13 @@ export const daysMap: Record<string, number> = {
 	sat: 6
 };
 
+export const DEFAULT_START_HOUR = 12;
+export const DEFAULT_END_HOUR = 20;
+export const HOUR_SUFFIX = ':00';
+
 // paths
 
 export const AUTH_CB_SEG = '/auth/callback';
 export const ADMIN_SEG = '/admin';
 
-export const DIR_APPOINTMENTS = path.resolve('src/lib/data/appointments');
+// export const DIR_APPOINTMENTS = path.resolve('src/lib/data/appointments');
