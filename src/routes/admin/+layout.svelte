@@ -1,4 +1,4 @@
-<!-- <script>
+<script>
 	import { logout } from '$lib/logic';
 
 	let { data, children } = $props();
@@ -12,4 +12,4 @@
 </header>
 <main>
 	{@render children()}
-</main> -->
+</main>
