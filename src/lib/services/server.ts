@@ -49,3 +49,21 @@ export function handleDbError(
 		body: { error: error.message }
 	};
 }
+
+export function detectBotSubmission(formData: FormData): string | null {
+	// 🕵️‍♀️ Honeypot check
+	const honeypot = formData.get('twitter');
+	if (honeypot) {
+		return 'Ugh.';
+	}
+
+	// ⏱️ Submission speed check
+	const renderedAt = Number(formData.get('form_rendered_at'));
+	const now = Date.now();
+
+	if (!renderedAt || now - renderedAt < 3000) {
+		return 'Submission too fast, try again.';
+	}
+
+	return null;
+}

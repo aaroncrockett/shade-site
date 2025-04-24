@@ -1,11 +1,18 @@
 import { fail } from '@sveltejs/kit';
 import type { Actions } from './$types';
-import { validateRequiredFields, handleDbError } from '$lib/services/server.ts';
+import {
+	validateRequiredFields,
+	handleDbError,
+	detectBotSubmission
+} from '$lib/services/server.ts';
 import { extractFormData } from '$lib/utils/server.ts';
 
 export const actions: Actions = {
 	default: async ({ request, locals }) => {
 		const formData = await request.formData();
+		const botError = detectBotSubmission(formData);
+
+		if (botError) return fail(400, { error: botError });
 
 		const required = ['first_name', 'last_name', 'email', 'phone'];
 		const optional = ['instagram'];
@@ -14,6 +21,7 @@ export const actions: Actions = {
 		const values = extractFormData(formData, allFields);
 
 		const validation = validateRequiredFields(values, required);
+
 		if (!validation.success) {
 			return fail(validation.error.status, validation.error.body);
 		}
