@@ -4,7 +4,7 @@
 </script>
 
 {#if form?.error}
-	<p class="text-red-600">{form.error}</p>
+	<p class="!text-error-500">{form.error}</p>
 {/if}
 
 {#if form?.success}
@@ -45,6 +45,13 @@
 			<p>Whats up new client?</p>
 			<label for="twitter">Twitter</label>
 			<input id="twitter" name="twitter" type="text" tabindex="-1" autocomplete="off" />
+		</div>
+		<div>
+			<label for="logo_answer" class="block font-semibold"
+				>To help avoid bot submissions, what is the image/icon within my logo in the top left of the
+				website?</label
+			>
+			<input id="logo_answer" name="logo_answer" type="text" required class="input w-full" />
 		</div>
 
 		<button type="submit" class="btn bg-primary-500">Submit</button>

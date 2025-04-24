@@ -2,7 +2,7 @@
 import type { ExtractedFormResult } from '$lib/types';
 
 export function validateRequiredFields(
-	values: Record<string, string>,
+	values: Record<string, string | null>,
 	requiredFields: string[]
 ): ExtractedFormResult {
 	const missing = requiredFields.filter((field) => !values[field]);
@@ -51,18 +51,15 @@ export function handleDbError(
 }
 
 export function detectBotSubmission(formData: FormData): string | null {
-	// 🕵️‍♀️ Honeypot check
 	const honeypot = formData.get('twitter');
 	if (honeypot) {
-		return 'Ugh.';
+		return 'Ugh. Are you a bot?';
 	}
 
-	// ⏱️ Submission speed check
-	const renderedAt = Number(formData.get('form_rendered_at'));
-	const now = Date.now();
+	const logoAnswer = formData.get('logo_answer')?.toString().trim().toLowerCase();
 
-	if (!renderedAt || now - renderedAt < 3000) {
-		return 'Submission too fast, try again.';
+	if (logoAnswer !== 'heart') {
+		return 'Ugh. Are you a bot? Incorrect answer to the logo question.';
 	}
 
 	return null;

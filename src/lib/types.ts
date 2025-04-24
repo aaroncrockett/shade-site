@@ -3,8 +3,8 @@
 // Db related
 
 export type ExtractedFormResult =
-	| { success: true; values: Record<string, string> }
-	| { success: false; error: { status: number; body: Record<string, string> } };
+	| { success: true; values: Record<string, string | null> }
+	| { success: false; error: { status: number; body: { error: string } } };
 
 // User related
 
