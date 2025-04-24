@@ -1,4 +1,15 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+
+// User related
+
+export interface TempUserForm {
+	id: string;
+	access_key: string;
+	expires_at: string;
+	revoked: boolean;
+	created_at: string;
+}
+
 // Booking/Calendar
 export type AppointmentType = 'consult' | 'flash' | 'tat';
 

@@ -27,28 +27,21 @@ const supabase: Handle = async ({ event, resolve }) => {
 	});
 
 	/**
-	 * Unlike `supabase.auth.getSession()`, which returns the session _without_
-	 * validating the JWT, this function also calls `getUser()` to validate the
-	 * JWT before returning the session.
+	 * Calls `getUser()` to validate the JWT and safely get the authenticated user.
 	 */
 	event.locals.safeGetSession = async () => {
-		const {
-			data: { session }
-		} = await event.locals.supabase.auth.getSession();
-		if (!session) {
-			return { session: null, user: null };
-		}
-
 		const {
 			data: { user },
 			error
 		} = await event.locals.supabase.auth.getUser();
-		if (error) {
-			// JWT validation has failed
+
+		if (error || !user) {
+			// JWT validation has failed or no user
 			return { session: null, user: null };
 		}
 
-		return { session, user };
+		// If you want to maintain a `session` object, mimic it like this
+		return { session: { user }, user };
 	};
 
 	return resolve(event, {
@@ -69,20 +62,12 @@ const authGuard: Handle = async ({ event, resolve }) => {
 
 	// don't allow anyone to go to admin or auth until this is ready
 
-	// if (!event.locals.session && event.url.pathname.startsWith('/admin')) {
-	// 	redirect(303, '/');
-	// }
-
-	if (event.url.pathname.startsWith('/admin')) {
+	if (!event.locals.session && event.url.pathname.startsWith('/admin')) {
 		redirect(303, '/');
 	}
 
-	// if (event.locals.session && event.url.pathname === '/auth') {
-	// 	redirect(303, '/admin');
-	// }
-
-	if (event.url.pathname === '/auth') {
-		redirect(303, '/');
+	if (event.locals.session && event.url.pathname === '/auth') {
+		redirect(303, '/admin');
 	}
 
 	return resolve(event);

@@ -1,37 +1,24 @@
-<!-- <script lang="ts">
-	import { invalidate } from '$app/navigation';
-	import type { EventHandler } from 'svelte/elements';
+<script lang="ts">
+	import type { PageProps } from './$types';
 
-	let { data } = $props();
-	let { notes, supabase, user } = $derived(data);
-
-	const handleSubmit: EventHandler<SubmitEvent, HTMLFormElement> = async (evt) => {
-		evt.preventDefault();
-		if (!evt.target) return;
-
-		const form = evt.target as HTMLFormElement;
-
-		const note = (new FormData(form).get('note') ?? '') as string;
-		if (!note) return;
-
-		const { error } = await supabase.from('notes').insert({ note });
-		if (error) console.error(error);
-
-		invalidate('supabase:db:notes');
-		form.reset();
-	};
+	let { data, form }: PageProps = $props();
+	let { user } = $derived(data);
 </script>
 
-<h1>Admin page for user: {user?.email}</h1>
-<h2>Notes</h2>
-<ul>
-	{#each notes as note}
-		<li>{note.note}</li>
-	{/each}
-</ul>
-<form onsubmit={handleSubmit}>
-	<label>
-		Add a note
-		<input name="note" type="text" />
-	</label>
-</form> -->
+<h1>Welcome, {user?.email ?? 'Guest'}!</h1>
+
+{#if user}
+	<p>You are logged in with Google.</p>
+
+	<h2>Create a New Temp User Form</h2>
+	<form method="POST">
+		<button class="btn bg-secondary-500" type="submit">Create Form</button>
+	</form>
+
+	{#if form?.success}
+		<p class="mt-4 font-medium text-green-600">Share this link with your client:</p>
+		<pre class="mt-2 rounded bg-gray-100 p-3 text-sm">{form.link}</pre>
+	{/if}
+{:else}
+	<p>You are not logged in.</p>
+{/if}
