@@ -1,5 +1,11 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
+// Db related
+
+export type ExtractedFormResult =
+	| { success: true; values: Record<string, string> }
+	| { success: false; error: { status: number; body: Record<string, string> } };
+
 // User related
 
 export interface TempUserForm {

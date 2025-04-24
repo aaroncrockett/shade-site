@@ -1,10 +1,10 @@
 <script>
-	import { logout } from '$lib/logic';
+	import { logout } from '$lib/services/client';
 
 	let { data, children } = $props();
-	let { supabase } = $derived(data);
+	let { db } = $derived(data);
 
-	const handleLogout = () => logout(supabase);
+	const handleLogout = () => logout(db);
 </script>
 
 <header>

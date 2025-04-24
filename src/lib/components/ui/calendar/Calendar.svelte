@@ -1,7 +1,7 @@
 <script lang="ts">
 	import CalendarControls from './Controls.svelte';
 	import CalendarBody from './Body.svelte';
-	import { getCurrentMonth, getMonthDays, getNextMonth, getPrevMonth } from '$lib/calendar';
+	import { getCurrentMonth, getMonthDays, getNextMonth, getPrevMonth } from '$lib/utils/calendar';
 
 	let currentMonth = getCurrentMonth();
 	let days = getMonthDays(currentMonth);

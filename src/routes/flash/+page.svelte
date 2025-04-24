@@ -6,7 +6,7 @@
 	import h1ImgBg from '$lib/images/heart-bg-sm.png';
 	import BgImgWrapper from '$lib/components/ui/background-image-wrapper.svelte';
 
-	import { Collections } from '$lib/types';
+	import { Collections } from '$lib/types.ts';
 
 	import { localVars } from './page.svelte.ts';
 

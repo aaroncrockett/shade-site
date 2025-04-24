@@ -1,33 +1,34 @@
-import { redirect } from '@sveltejs/kit';
-import type { PageServerLoad } from './$types';
+import { fail } from '@sveltejs/kit';
+import type { Actions } from './$types';
+import { validateRequiredFields, handleDbError } from '$lib/services/server.ts';
+import { extractFormData } from '$lib/utils/server.ts';
 
-export const load: PageServerLoad = async ({ url, locals }) => {
-	const access_key = url.searchParams.get('key');
+export const actions: Actions = {
+	default: async ({ request, locals }) => {
+		const formData = await request.formData();
 
-	if (!access_key) {
-		throw redirect(302, '/error?reason=missing-key');
+		const required = ['first_name', 'last_name', 'email', 'phone'];
+		const optional = ['instagram'];
+		const allFields = [...required, ...optional];
+
+		const values = extractFormData(formData, allFields);
+
+		const validation = validateRequiredFields(values, required);
+		if (!validation.success) {
+			return fail(validation.error.status, validation.error.body);
+		}
+
+		const { error } = await locals.db.from('users').insert(values);
+
+		if (error) {
+			const dbError = handleDbError(error, {
+				email: 'This email is already registered',
+				phone: 'This phone number is already registered'
+			});
+
+			return fail(dbError.status, dbError.body);
+		}
+
+		return { success: true };
 	}
-
-	const { data, error } = await locals.supabase
-		.from('temp_user_form')
-		.select('*')
-		.eq('access_key', access_key)
-		.single();
-
-	if (error || !data) {
-		throw redirect(302, '/error?reason=invalid-key');
-	}
-
-	const now = new Date();
-	const expires_on = new Date(data.expires_on);
-
-	if (expires_on < now) {
-		throw redirect(302, '/error?reason=expired');
-	}
-
-	// Everything is good — pass data to the page
-	return {
-		access_key: data.access_key,
-		expires_on: data.expires_on
-	};
 };

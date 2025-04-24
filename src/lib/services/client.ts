@@ -3,8 +3,8 @@
 // 🟢 Auth
 // ===============================
 
-export async function logout(supabase: any) {
-	const { error } = await supabase.auth.signOut();
+export async function logout(db: any) {
+	const { error } = await db.auth.signOut();
 	if (error) {
 		console.error('Logout error:', error);
 		return;

@@ -7,9 +7,9 @@ export const load: LayoutLoad = async ({ data, depends, fetch }) => {
 	 * Declare a dependency so the layout can be invalidated, for example, on
 	 * session refresh.
 	 */
-	depends('supabase:auth');
+	depends('db:auth');
 
-	const supabase = isBrowser()
+	const db = isBrowser()
 		? createBrowserClient(PUBLIC_SUPABASE_URL, PUBLIC_SUPABASE_ANON_KEY, {
 				global: {
 					fetch
@@ -33,11 +33,11 @@ export const load: LayoutLoad = async ({ data, depends, fetch }) => {
 	 */
 	const {
 		data: { session }
-	} = await supabase.auth.getSession();
+	} = await db.auth.getSession();
 
 	const {
 		data: { user }
-	} = await supabase.auth.getUser();
+	} = await db.auth.getUser();
 
-	return { session, supabase, user };
+	return { session, db, user };
 };

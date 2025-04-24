@@ -7,7 +7,7 @@ import {
 	subtractMonths,
 	isSameDay,
 	type DateObj
-} from './dateAdapter';
+} from '../dateAdapter';
 
 import { DEFAULT_START_HOUR, DEFAULT_END_HOUR, HOUR_SUFFIX } from '$lib/config.ts';
 

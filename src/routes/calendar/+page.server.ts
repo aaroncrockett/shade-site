@@ -7,7 +7,7 @@ export const load: ServerLoad = async ({ url, locals }) => {
 		throw redirect(303, '/');
 	}
 
-	const { data, error } = await locals.supabase
+	const { data, error } = await locals.db
 		.from('calendar_keys')
 		.select('key')
 		.eq('key', accessKey)

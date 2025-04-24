@@ -6,13 +6,13 @@ import type { RequestEvent } from '@sveltejs/kit';
 export const GET = async (event: RequestEvent) => {
 	const {
 		url,
-		locals: { supabase }
+		locals: { db }
 	} = event;
 	const code = url.searchParams.get('code') as string;
 	const next = url.searchParams.get('next') ?? ADMIN_SEG;
 
 	if (code) {
-		const { error } = await supabase.auth.exchangeCodeForSession(code);
+		const { error } = await db.auth.exchangeCodeForSession(code);
 		if (!error) {
 			throw redirect(303, `/${next.slice(1)}`);
 		}

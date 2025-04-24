@@ -4,13 +4,13 @@ import { sequence } from '@sveltejs/kit/hooks';
 
 import { PUBLIC_SUPABASE_URL, PUBLIC_SUPABASE_ANON_KEY } from '$env/static/public';
 
-const supabase: Handle = async ({ event, resolve }) => {
+const db: Handle = async ({ event, resolve }) => {
 	/**
-	 * Creates a Supabase client specific to this server request.
+	 * Creates a DB client specific to this server request.
 	 *
-	 * The Supabase client gets the Auth token from the request cookies.
+	 * The DB client gets the Auth token from the request cookies.
 	 */
-	event.locals.supabase = createServerClient(PUBLIC_SUPABASE_URL, PUBLIC_SUPABASE_ANON_KEY, {
+	event.locals.db = createServerClient(PUBLIC_SUPABASE_URL, PUBLIC_SUPABASE_ANON_KEY, {
 		cookies: {
 			getAll: () => event.cookies.getAll(),
 			/**
@@ -33,15 +33,16 @@ const supabase: Handle = async ({ event, resolve }) => {
 		const {
 			data: { user },
 			error
-		} = await event.locals.supabase.auth.getUser();
+		} = await event.locals.db.auth.getUser();
 
 		if (error || !user) {
 			// JWT validation has failed or no user
 			return { session: null, user: null };
 		}
 
-		// If you want to maintain a `session` object, mimic it like this
-		return { session: { user }, user };
+		// Return the full session object as expected by Supabase
+		const { data } = await event.locals.db.auth.getSession();
+		return { session: data.session, user };
 	};
 
 	return resolve(event, {
@@ -73,4 +74,4 @@ const authGuard: Handle = async ({ event, resolve }) => {
 	return resolve(event);
 };
 
-export const handle: Handle = sequence(supabase, authGuard);
+export const handle: Handle = sequence(db, authGuard);
