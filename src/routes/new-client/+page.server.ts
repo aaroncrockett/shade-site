@@ -1,11 +1,51 @@
 import { fail } from '@sveltejs/kit';
 import type { Actions } from './$types';
-import {
-	validateRequiredFields,
-	handleDbError,
-	detectBotSubmission
-} from '$lib/services/server.ts';
+import { validateRequiredFields } from '$lib/services/server.ts';
 import { extractFormData } from '$lib/utils/server.ts';
+
+function handleDbError(
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
+	error: any,
+	constraintMap: Record<string, string>
+): { status: number; body: { error: string } } {
+	if (error.code === '23505') {
+		const constraint = error.constraint ?? '';
+		let message = 'Duplicate entry';
+
+		for (const key in constraintMap) {
+			if (constraint.includes(key)) {
+				message = constraintMap[key];
+				break;
+			}
+		}
+
+		return {
+			status: 400,
+			body: { error: message }
+		};
+	}
+
+	console.error('Insert error:', error.message);
+	return {
+		status: 500,
+		body: { error: error.message }
+	};
+}
+
+function detectBotSubmission(formData: FormData): string | null {
+	const honeypot = formData.get('twitter');
+	if (honeypot) {
+		return 'Ugh. Are you a bot?';
+	}
+
+	const logoAnswer = formData.get('logo_answer')?.toString().trim().toLowerCase();
+
+	if (logoAnswer !== 'heart') {
+		return 'Ugh. Are you a bot? Incorrect answer to the logo question.';
+	}
+
+	return null;
+}
 
 export const actions: Actions = {
 	default: async ({ request, locals }) => {
