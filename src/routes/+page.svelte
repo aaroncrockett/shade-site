@@ -12,7 +12,7 @@
 	<div class="order-2 flex w-full flex-col gap-4 pb-4 leading-12 tracking-wide md:order-1 md:w-1/2">
 		<h1 class="hero-hl text-100 text-center font-light md:text-left">Booking for May!</h1>
 		<h2
-			class="rounded-sm bg-neutral-900/50 p-4 text-2xl leading-10 font-bold uppercase sm:text-3xl sm:leading-11"
+			class=" rounded-sm bg-neutral-900/50 p-4 text-xl leading-10 font-bold uppercase sm:text-2xl sm:leading-11"
 		>
 			DM Me <em>@shade.to.shade.art</em> &nbsp; on Instagram, or email shade.to.shade.art@proton.me
 		</h2>
