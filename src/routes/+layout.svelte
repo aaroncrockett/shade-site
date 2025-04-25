@@ -10,13 +10,29 @@
 	import NavMainItems from '$lib/components/ui/nav/main-items.svelte';
 	import FooterMainItems from '$lib/components/ui/footer/main-items.svelte';
 
-	let { children } = $props();
+	import { invalidate } from '$app/navigation';
+	import { onMount } from 'svelte';
+
+	let { data, children } = $props();
+	// @ts-ignore
+	let { session, db } = $derived(data);
 
 	let drawerState = $state(false);
 
 	function drawerClose() {
 		drawerState = !drawerState;
 	}
+
+	onMount(() => {
+		// @ts-ignore
+		const { data } = supabase.auth.onAuthStateChange((_, newSession) => {
+			if (newSession?.expires_at !== session?.expires_at) {
+				invalidate('supabase:auth');
+			}
+		});
+
+		return () => data.subscription.unsubscribe();
+	});
 </script>
 
 <div class="noise"></div>

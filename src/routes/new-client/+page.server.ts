@@ -14,7 +14,7 @@ export const actions: Actions = {
 
 		if (botError) return fail(400, { error: botError });
 
-		const required = ['first_name', 'last_name', 'email', 'phone'];
+		const required = ['first_name', 'last_name', 'email', 'preferred_contact'];
 		const optional = ['instagram'];
 		const allFields = [...required, ...optional];
 
@@ -26,12 +26,11 @@ export const actions: Actions = {
 			return fail(validation.error.status, validation.error.body);
 		}
 
-		const { error } = await locals.db.from('users').insert(values);
+		const { error } = await locals.db.from('smurfs').insert(values);
 
 		if (error) {
 			const dbError = handleDbError(error, {
-				email: 'This email is already registered',
-				phone: 'This phone number is already registered'
+				email: 'This email is already registered'
 			});
 
 			return fail(dbError.status, dbError.body);

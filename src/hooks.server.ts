@@ -31,18 +31,20 @@ const db: Handle = async ({ event, resolve }) => {
 	 */
 	event.locals.safeGetSession = async () => {
 		const {
+			data: { session }
+		} = await event.locals.db.auth.getSession();
+		if (!session) {
+			return { session: null, user: null };
+		}
+		const {
 			data: { user },
 			error
 		} = await event.locals.db.auth.getUser();
-
-		if (error || !user) {
-			// JWT validation has failed or no user
+		if (error) {
+			// JWT validation has failed
 			return { session: null, user: null };
 		}
-
-		// Return the full session object as expected by Supabase
-		const { data } = await event.locals.db.auth.getSession();
-		return { session: data.session, user };
+		return { session, user };
 	};
 
 	return resolve(event, {

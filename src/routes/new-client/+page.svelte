@@ -27,11 +27,6 @@
 		</div>
 
 		<div>
-			<label for="phone" class="block font-semibold">Phone</label>
-			<input id="phone" name="phone" type="tel" required class="input w-full" />
-		</div>
-
-		<div>
 			<label for="instagram" class="block font-semibold">Instagram Handle (optional)</label>
 			<input
 				id="instagram"
@@ -46,6 +41,8 @@
 			<label for="twitter">Twitter</label>
 			<input id="twitter" name="twitter" type="text" tabindex="-1" autocomplete="off" />
 		</div>
+		<!-- Hidden field to set preferred_contact to 'email' -->
+		<input type="hidden" name="preferred_contact" value="email" />
 		<div>
 			<label for="logo_answer" class="block font-semibold"
 				>To help avoid bot submissions, what is the image/icon within my logo in the top left of the
