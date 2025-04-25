@@ -14,7 +14,9 @@
 		<h1 class="text-center">My Bio, yo.</h1>
 	</BgImgWrapper>
 
-	<div class="flex flex-col gap-4 rounded-sm bg-neutral-700 p-4 md:flex-row md:gap-6">
+	<div
+		class="mx-auto flex max-w-[900px] flex-col gap-4 rounded-sm bg-neutral-700 p-4 md:flex-row md:gap-6"
+	>
 		<div>
 			<enhanced:img
 				src={imgMe}
@@ -26,8 +28,8 @@
 			<p>
 				I've been drawing and interested in art since I was a child. In addition to tattooing, I
 				have worked as a web designer (and developer). I taught 2D design to college students when I
-				was a graduate student in Painting, as well. My undergrad was in Drawing and Graphic Design.
-				In my spare time I work on my own art. I also designed and developed this web application.
+				was a graduate student in Painting, as well. I also designed and developed this web
+				application.
 			</p>
 			<p>
 				I love hiking, jogging, being outdoors, and exploring the endless food carts and restaurants
