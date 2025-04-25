@@ -5,7 +5,7 @@ export function extractFormData(
 	const values: Record<string, string | null> = {};
 
 	for (const field of fields) {
-		const value = formData.get(field)?.toString() ?? '';
+		const value = formData.get(field)?.toString().trim() ?? '';
 		values[field] = value === '' ? null : value;
 	}
 
