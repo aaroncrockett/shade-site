@@ -18,7 +18,8 @@
 </script>
 
 <div>
-	<CalendarControls {currentMonth} onPrevMonth={prevMonth} onNextMonth={nextMonth} />
+	<slot name="header" />
+	<!-- <CalendarControls {currentMonth} onPrevMonth={prevMonth} onNextMonth={nextMonth} />
 
-	<CalendarBody {days} />
+	<CalendarBody {days} /> -->
 </div>

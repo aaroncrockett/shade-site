@@ -36,8 +36,8 @@
 </script>
 
 <div class="noise"></div>
-<div class="app h-full min-h-screen overflow-hidden bg-neutral-950/90">
-	<div class="bg-neutral-900/80 shadow-md">
+<div class="app h-full min-h-screen overflow-hidden bg-neutral-950/85">
+	<div class="bg-neutral-900/90 shadow-md">
 		<header class="site-wrapper">
 			<nav class="flex flex-col items-center justify-between gap-2 px-4 sm:flex-row sm:gap-4">
 				<Logo />

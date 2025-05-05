@@ -9,6 +9,7 @@
 	import TattooPrep from '$lib/components/ui/tattoo-prep.svelte';
 
 	let accordionValue: string[] = $state([]);
+	let customTattooRef: HTMLElement | null = null;
 
 	const accordionSectionData = [
 		{ id: 'custom', hl: 'Custom Tattoo' },
@@ -16,11 +17,18 @@
 		{ id: 'aftercare', hl: 'Aftercare' }
 	];
 
-	function toggleAccordion(item: string) {
+	function toggleAccordion(item: string, scrollToEl?: HTMLElement | null) {
 		if (accordionValue.includes(item)) {
-			accordionValue = accordionValue.filter((value) => value !== item);
+			if (!scrollToEl) {
+				accordionValue = accordionValue.filter((value) => value !== item);
+			} else {
+				scrollToEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+			}
 		} else {
 			accordionValue = [...accordionValue, item];
+			if (scrollToEl) {
+				scrollToEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+			}
 		}
 	}
 </script>
@@ -58,16 +66,45 @@
 					<p>email: shade.to.shade.art@proton.me</p>
 				</div>
 
-				<p><a href="/flash">Flash:</a> $25 deposit, to book the appointment. <span>*</span></p>
+				<p><a href="/flash">Flash:</a> $25 deposit, to book the appointment.</p>
 
 				<p>
-					Customer Supplied designs: $25 deposit to book the appointment. <span>*</span>
+					Customer Supplied designs: $25 deposit to book the appointment if little or no custom
+					drawing is needed. We can determine this in a free phone or DM consultation. Otherwise we
+					will have to do a <span
+						role="button"
+						tabindex="0"
+						class="!text-secondary-500 cursor-pointer"
+						onclick={() => toggleAccordion('custom', customTattooRef)}
+						onkeydown={(e) => {
+							if (e.key === 'Enter' || e.key === ' ') {
+								e.preventDefault();
+								toggleAccordion('custom', customTattooRef);
+							}
+						}}
+					>
+						custom tattoo
+					</span>.
 				</p>
 				<ul class="ml-4 rounded-sm bg-neutral-800/80 p-4">
 					<li>
 						I won't copy another tattoo artist's original work! If the design is super common, then
 						I don't have a problem using it as is. Otherwise I will have to redesign the piece with
-						my own spin, and we will have to do a custom tattoo.
+						my own spin, and we will have to do a
+						<span
+							role="button"
+							tabindex="0"
+							class="!text-secondary-500 cursor-pointer"
+							onclick={() => toggleAccordion('custom', customTattooRef)}
+							onkeydown={(e) => {
+								if (e.key === 'Enter' || e.key === ' ') {
+									e.preventDefault();
+									toggleAccordion('custom', customTattooRef);
+								}
+							}}
+						>
+							custom tattoo
+						</span>.
 					</li>
 				</ul>
 
@@ -75,13 +112,6 @@
 				<p>
 					Final payment is due in cash at your appointment before tattooing. Tips are always
 					appreciated and can be given at the end of the session.
-				</p>
-				<p>
-					Before getting your tattoo, ensure to read the Tattoo Prep and Aftercare <span
-						class="hidden xl:inline"
-					>
-						sections.</span
-					> <span class="inline xl:hidden"> sections bellow.</span>
 				</p>
 			</div>
 		</div>
@@ -92,6 +122,7 @@
 			value={accordionValue}
 			onValueChange={(e) => (value = e.value)}
 		>
+			<div bind:this={customTattooRef}></div>
 			<Accordion.Item
 				value="custom"
 				controlBase="p-4 w-full bg-neutral-800 flex flex-row "
