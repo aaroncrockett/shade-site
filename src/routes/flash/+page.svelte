@@ -52,6 +52,8 @@
 
 	<div>
 		<h2>Filter by Collection</h2>
+		<p>this feature is coming REALLY soon!</p>
+
 		<div class="flex flex-wrap gap-2">
 			{#each Collections as collection}
 				<button
@@ -69,7 +71,7 @@
 		</div>
 	</div>
 
-	<div>
+	<!-- <div>
 		<h2 class="">Filter by Price</h2>
 		<div class="flex gap-2">
 			<label class="flex items-center">
@@ -132,5 +134,5 @@
 				</GalleryImage>
 			{/each}
 		</LightboxGallery>
-	</div>
+	</div> -->
 </section>
