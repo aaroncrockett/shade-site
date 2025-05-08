@@ -54,8 +54,20 @@ export const actions: Actions = {
 
 		if (botError) return fail(400, { error: botError });
 
-		const required = ['first_name', 'last_name', 'email', 'preferred_contact'];
-		const optional = ['instagram'];
+		const required = ['first_name', 'last_name', 'email', 'preferred_contact', 'telephone'];
+
+		const optional = [
+			'instagram',
+			'address',
+			'city',
+			'state',
+			'zip',
+			'dob',
+			'dl_or_id_number',
+			'dl_or_id_exp',
+			'preferred_name',
+			'pronouns'
+		];
 		const allFields = [...required, ...optional];
 
 		const values = extractFormData(formData, allFields);
@@ -70,7 +82,8 @@ export const actions: Actions = {
 
 		if (error) {
 			const dbError = handleDbError(error, {
-				email: 'This email is already registered'
+				email: 'This email is already registered',
+				telephone: 'This phone number is already registered'
 			});
 
 			return fail(dbError.status, dbError.body);

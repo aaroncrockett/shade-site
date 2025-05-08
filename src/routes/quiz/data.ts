@@ -856,5 +856,280 @@ export const quizData = [
 			'Cells adapted to transmit signals, respond to stimuli, and regulate both voluntary and involuntary activities'
 		],
 		correctAnswer: 3
+	},
+	{
+		question: 'Diabetics can be tattooed with proper preparation , but they have an increased chance of:',
+		answers: [
+			'Ink rejection',
+			'Infection spreading to other clients',
+			'Bleeding that can’t be stopped',
+			'Fainting'
+		],
+		correctAnswer: 3
+	},
+	{
+		question: 'How does the armature bar hit the front coil core?',
+		answers: [
+			'At an angle to reduce spark',
+			'With a glancing edge motion',
+			'Flat, full contact',
+			'Centered but not flush'
+		],
+		correctAnswer: 2
+	},
+	{
+		question: 'When setting up your machine, why would you "snug" down the eye of the needle bar?',
+		answers: [
+			'lines Helps prevent weak or jumpy',
+			'Helps prevent weak or jumpy lines',
+			'jumpy lines Helps prevent weak or',
+			'or jumpy lines Helps prevent weak'
+		],
+		correctAnswer: 1
+	},
+	{
+		question: 'Why is a one-piece contact screw the best choice?',
+		answers: [
+			'vibration Screws with additional elements can can add',
+			'add vibration Screws with additional elements can can',
+			'Screws with additional elements can can add vibration',
+			'can add vibration Screws with additional elements can'
+		],
+		correctAnswer: 2
+	},
+	{
+		question: 'What happens when your machine is conductive or electrified?',
+		answers: [
+			'setting The armature bar sticks to the coils causing the machine to stay in an "on"',
+			'The armature bar sticks to the coils causing the machine to stay in an "on" setting',
+			'"on" setting The armature bar sticks to the coils causing the machine to stay in an',
+			'an "on" setting The armature bar sticks to the coils causing the machine to stay in'
+		],
+		correctAnswer: 1
+	},
+	{
+		question: 'The region of the world that Tribal Tattoo is derived from is',
+		answers: [
+			'Africa',
+			'South America',
+			'Middle East',
+			'South Pacific'
+		],
+		correctAnswer: 3
+	},
+	{
+		question: 'What is the ideal width of the springs used on the machine?',
+		answers: [
+			'The springs should be just as wide as the part that they are attached to',
+			'to The springs should be just as wide as the part that they are attached',
+			'attached to The springs should be just as wide as the part that they are',
+			'are attached to The springs should be just as wide as the part that they'
+		],
+		correctAnswer: 0
+	},
+	{
+		question: 'What can cause the coils to be in a constant "on" position?',
+		answers: [
+			'frame A coil wire, soldering lug, or any of the electrical circuit is touching the',
+			'the frame A coil wire, soldering lug, or any of the electrical circuit is touching',
+			'touching the frame A coil wire, soldering lug, or any of the electrical circuit is',
+			'A coil wire, soldering lug, or any of the electrical circuit is touching the frame'
+		],
+		correctAnswer: 3
+	},
+	{
+		question:
+			'In what instance can a licensee use a stainless-steel reusable tube on more than one client?',
+		answers: [
+			'use Once it has been sterilized using the ultrasonic and autoclave, and stored properly until the next',
+			'next use Once it has been sterilized using the ultrasonic and autoclave, and stored properly until the',
+			'Once it has been sterilized using the ultrasonic and autoclave, and stored properly until the next use',
+			'the next use Once it has been sterilized using the ultrasonic and autoclave, and stored properly until'
+		],
+		correctAnswer: 2
+	},
+	{
+		question: 'How long is a temporary facility license good for?',
+		answers: [
+			'7 days',
+			'30 days',
+			'10 days',
+			'15 days'
+		],
+		correctAnswer: 3
+	}
+	{
+		question:
+			'What information must be provided to each client receiving services at a mobile facility?',
+		answers: [
+			'Each client must be given the mobile facility name, mobile facility license number, license number and name of person providing service, and the permanent address and phone number that is on file with the Health Licensing Office',
+			'Office Each client must be given the mobile facility name, mobile facility license number, license number and name of person providing service, and the permanent address and phone number that is on file with the Health Licensing',
+			'Licensing Office Each client must be given the mobile facility name, mobile facility license number, license number and name of person providing service, and the permanent address and phone number that is on file with the Health',
+			'Health Licensing Office Each client must be given the mobile facility name, mobile facility license number, license number and name of person providing service, and the permanent address and phone number that is on file with the'
+		],
+		correctAnswer: 0
+	},
+	{
+		question: 'What is something that the event facility owners must provide?',
+		answers: [
+			'A hot and cold running water station for every 10 licensed individuals',
+			'individuals A hot and cold running water station for every 10 licensed',
+			'licensed individuals A hot and cold running water station for every 10',
+			'10 licensed individuals A hot and cold running water station for every'
+		],
+		correctAnswer: 0
+	},
+	{
+		question: 'How far away from the door does anyone smoking have to stand?',
+		answers: ['5 feet', '20 feet', '15 feet', '10 feet'],
+		correctAnswer: 3
+	},
+	{
+		question: 'What must a facility located in a residence have?',
+		answers: [
+			'ceiling An identifying house number or a sign; equipped with all the same structures, accommodations, and equipment that the Health Licensing Office requires for all facilities; the living area must be separated from the facility by solid walls extending from floor to',
+			'to ceiling An identifying house number or a sign; equipped with all the same structures, accommodations, and equipment that the Health Licensing Office requires for all facilities; the living area must be separated from the facility by solid walls extending from floor',
+			'An identifying house number or a sign; equipped with all the same structures, accommodations, and equipment that the Health Licensing Office requires for all facilities; the living area must be separated from the facility by solid walls extending from floor to ceiling',
+			'floor to ceiling An identifying house number or a sign; equipped with all the same structures, accommodations, and equipment that the Health Licensing Office requires for all facilities; the living area must be separated from the facility by solid walls extending from'
+		],
+		correctAnswer: 2
+	},
+	{
+		question: 'What does it cost to get a facility license?',
+		answers: ['$50', '$125', '$75', '$100'],
+		correctAnswer: 3
+	},
+	{
+		question: 'What is the purpose of an event facility license?',
+		answers: [
+			'purposes This license allows a facility to operate a facility on an irregular basis outside and away from a permanent physical location for conventions, educational, demonstration, and exhibition',
+			'exhibition purposes This license allows a facility to operate a facility on an irregular basis outside and away from a permanent physical location for conventions, educational, demonstration, and',
+			'and exhibition purposes This license allows a facility to operate a facility on an irregular basis outside and away from a permanent physical location for conventions, educational, demonstration,',
+			'This license allows a facility to operate a facility on an irregular basis outside and away from a permanent physical location for conventions, educational, demonstration, and exhibition purposes'
+		],
+		correctAnswer: 3
+	},
+	{
+		question:
+			'What would the first offense fine be for failing to collect and maintain complete client records for each client?',
+		answers: ['$250', '$750', '$300', '$500'],
+		correctAnswer: 3
+	},
+
+	{
+		question:
+			'What is the 1st offense fine if a licensee performs services while their license is inactive?',
+		answers: ['$100', '$300', '$250', '$200'],
+		correctAnswer: 3
+	},
+	{
+		question: 'What is the 1st offense fine if a licensee performs services while their license is inactive?',
+		answers: [
+			'$100',
+			'$250',
+			'$300',
+			'$200'
+		],
+		correctAnswer: 3
+	}
+	{
+		question: 'How must instruments be sterilized?',
+		answers: [
+			'FDA Using an autoclave sterilizer, steam, chemical or gas that is registered and listed with the',
+			'the FDA Using an autoclave sterilizer, steam, chemical or gas that is registered and listed with',
+			'Using an autoclave sterilizer, steam, chemical or gas that is registered and listed with the FDA',
+			'with the FDA Using an autoclave sterilizer, steam, chemical or gas that is registered and listed'
+		],
+		correctAnswer: 2
+	},
+	{
+		question: 'What does your frame act as for the coil circuit?',
+		answers: ['A voltage buffer', 'A magnetic isolator', 'A current amplifier', 'The ground'],
+		correctAnswer: 3
+	},
+	{
+		question: 'What is a possible reason for the machine to not work at all?',
+		answers: [
+			'spring There is debris between the contact screw and the front',
+			'front spring There is debris between the contact screw and the',
+			'the front spring There is debris between the contact screw and',
+			'There is debris between the contact screw and the front spring'
+		],
+		correctAnswer: 3
+	},
+	{
+		question: 'What types of screws should you use to hold the coils to the frame?',
+		answers: [
+			'Always use a magnetic screw that sits flush to the frame',
+			'frame Always use a magnetic screw that sits flush to the',
+			'the frame Always use a magnetic screw that sits flush to',
+			'to the frame Always use a magnetic screw that sits flush'
+		],
+		correctAnswer: 0
+	},
+	{
+		question: 'What is the most important part of a tattoo machine?',
+		answers: ['Power supply', 'Needle cartridge', 'Frame alignment', 'Coils'],
+		correctAnswer: 0
+	},
+	{
+		question: 'What is the function of the tube vise?',
+		answers: [
+			'use Firmly hold the tube in place and properly align the tube while the machine is in',
+			'in use Firmly hold the tube in place and properly align the tube while the machine is',
+			'is in use Firmly hold the tube in place and properly align the tube while the machine',
+			'Firmly hold the tube in place and properly align the tube while the machine is in use'
+		],
+		correctAnswer: 3
+	},
+	{
+		question: 'Why should you use plain steel for a spring rather than a coated spring?',
+		answers: [
+			'The coating wears away quickly, which causes a bad connection',
+			'connection The coating wears away quickly, which causes a bad',
+			'bad connection The coating wears away quickly, which causes a',
+			'a bad connection The coating wears away quickly, which causes'
+		],
+		correctAnswer: 0
+	},
+	{
+		question: 'What kind of reaction can you expect from a machine with a very low spring angle?',
+		answers: [
+			'Erratic voltage spikes and inconsistent current',
+			'Excessive needle depth regardless of hand speed',
+			'Spongy and weak.',
+			'Sharp recoil with loud vibration'
+		],
+		correctAnswer: 2
+	},
+	{
+		question: 'A Sailor Jerry Tattoo is best known for its',
+		answers: [
+			'Clean bold black outlines',
+			'outlines Clean bold black',
+			'black outlines Clean bold',
+			'bold black outlines Clean'
+		],
+		correctAnswer: 0
+	},
+	{
+		question: 'You must avoid ________________ for 2 weeks after a tattoo .',
+		answers: [
+			'beds Hot tubs and tanning',
+			'tanning beds Hot tubs and',
+			'and tanning beds Hot tubs',
+			'Hot tubs and tanning beds'
+		],
+		correctAnswer: 3
+	},
+	{
+		question: 'There was never a tradition of tattoo in Europe before the modern era .',
+		answers: ['False', 'True'],
+		correctAnswer: 1
+	},
+	{
+		question: 'The word we use today , Tattoo has its root in the ______________ language',
+		answers: ['Maori', 'Aztec', 'Polynesian', 'Arabic'],
+		correctAnswer: 2
 	}
 ];
