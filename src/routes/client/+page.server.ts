@@ -2,6 +2,7 @@ import { fail } from '@sveltejs/kit';
 import type { Actions } from './$types';
 import { validateRequiredFields } from '$lib/services/server.ts';
 import { extractFormData } from '$lib/utils/server.ts';
+import { clientDataFields } from './data.ts';
 
 function handleDbError(
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -54,21 +55,9 @@ export const actions: Actions = {
 
 		if (botError) return fail(400, { error: botError });
 
-		const required = ['first_name', 'last_name', 'email', 'preferred_contact', 'telephone'];
-
-		const optional = [
-			'instagram',
-			'address',
-			'city',
-			'state',
-			'zip',
-			'dob',
-			'dl_or_id_number',
-			'dl_or_id_exp',
-			'preferred_name',
-			'pronouns'
-		];
-		const allFields = [...required, ...optional];
+		const allInitFields = clientDataFields.filter((f) => f.init);
+		const required = allInitFields.filter((f) => f.required).map((f) => f.id);
+		const allFields = allInitFields.map((f) => f.id);
 
 		const values = extractFormData(formData, allFields);
 
@@ -83,7 +72,7 @@ export const actions: Actions = {
 		if (error) {
 			const dbError = handleDbError(error, {
 				email: 'This email is already registered',
-				telephone: 'This phone number is already registered'
+				phone: 'This phone number is already registered'
 			});
 
 			return fail(dbError.status, dbError.body);
