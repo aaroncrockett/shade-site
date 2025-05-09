@@ -1,13 +1,34 @@
 <script lang="ts">
-	let { questions, page, hasMore, score: startingScore, quizDataLength } = data;
+	// import type { PageProps } from './$types';
 
-	let selectedAnswers: (number | null)[] = Array(questions.length).fill(null);
-	let feedback: ('correct' | 'incorrect' | null)[] = Array(questions.length).fill(null);
-	let score = startingScore;
+	interface Data {
+		questions: { question: string; answers: string[]; correctAnswer: number }[];
+		page: number;
+		hasMore: boolean;
+		score: number;
+		quizDataLength: number;
+	}
 
-	$: answeredCount = selectedAnswers.filter((a) => a !== null).length;
+	const { data }: { data: Data } = $props();
+	const { questions, page, hasMore, score: startingScore, quizDataLength } = data;
 
-	$: percentage = quizDataLength > 0 ? Math.round((score / quizDataLength) * 100) : 0;
+	const selectedAnswers = $state<(number | null)[]>(Array(questions.length).fill(null));
+	const feedback = $state<('correct' | 'incorrect' | null)[]>(Array(questions.length).fill(null));
+	const score = $state(startingScore);
+
+	const answeredCount = $derived.by(() => selectedAnswers.filter((a) => a !== null).length);
+
+	const percentage = $derived.by(() =>
+		quizDataLength > 0 ? Math.round((score / quizDataLength) * 100) : 0
+	);
+
+	const correctAnswers = $derived.by(() =>
+		questions.map((q, i) => (feedback[i] === 'correct' ? q.question : null)).filter(Boolean)
+	);
+
+	const incorrectAnswers = $derived.by(() =>
+		questions.map((q, i) => (feedback[i] === 'incorrect' ? q.question : null)).filter(Boolean)
+	);
 
 	function selectAnswer(qIndex: number, choiceIndex: number) {
 		if (selectedAnswers[qIndex] !== null) return;
@@ -15,25 +36,18 @@
 		selectedAnswers[qIndex] = choiceIndex;
 		if (choiceIndex === questions[qIndex].correctAnswer) {
 			feedback[qIndex] = 'correct';
-			score++;
+			score.set(score + 1);
 		} else {
 			feedback[qIndex] = 'incorrect';
 		}
 	}
-
-	$: correctAnswers = questions
-		.map((q, i) => (feedback[i] === 'correct' ? q.question : null))
-		.filter(Boolean);
-
-	$: incorrectAnswers = questions
-		.map((q, i) => (feedback[i] === 'incorrect' ? q.question : null))
-		.filter(Boolean);
 </script>
 
 <div class="relative">
 	<div class="bg-success-500 fixed top-0 left-0 z-10 mb-4 w-full p-4 text-lg font-bold text-white">
 		Score: {score} / {quizDataLength} ({percentage}%)
 	</div>
+
 	{#each questions as q, i}
 		<div class="mb-6">
 			<p class="font-semibold">{i + 1 + (page - 1) * 10}. {q.question}</p>
@@ -43,12 +57,12 @@
 					<button
 						on:click={() => selectAnswer(i, j)}
 						class="rounded border px-4 py-2 text-left text-white
-						{selectedAnswers[i] === j
+							{selectedAnswers[i] === j
 							? feedback[i] === 'correct'
 								? 'border-green-500 bg-green-200 !text-black'
 								: 'border-red-500 bg-red-200 !text-black'
 							: 'border-gray-300'}
-						{selectedAnswers[i] !== null && j === q.correctAnswer && selectedAnswers[i] !== j
+							{selectedAnswers[i] !== null && j === q.correctAnswer && selectedAnswers[i] !== j
 							? 'border-green-400 bg-green-100 !text-black'
 							: ''}"
 						disabled={selectedAnswers[i] !== null}

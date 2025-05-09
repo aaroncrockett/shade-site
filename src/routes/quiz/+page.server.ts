@@ -34,11 +34,13 @@ export const load: ServerLoad = async ({ url }) => {
 	const end = start + QUESTIONS_PER_PAGE;
 
 	return {
-		questions: order.slice(start, end).map((i) => quizData[i]),
-		page,
-		score,
-		order: orderParam,
-		hasMore: end < quizData.length,
-		quizDataLength: quizData.length
+		data: {
+			questions: order.slice(start, end).map((i) => quizData[i]),
+			page,
+			score,
+			order: orderParam,
+			hasMore: end < quizData.length,
+			quizDataLength: quizData.length
+		}
 	};
 };

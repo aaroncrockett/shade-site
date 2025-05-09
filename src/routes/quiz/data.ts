@@ -858,7 +858,8 @@ export const quizData = [
 		correctAnswer: 3
 	},
 	{
-		question: 'Diabetics can be tattooed with proper preparation , but they have an increased chance of:',
+		question:
+			'Diabetics can be tattooed with proper preparation , but they have an increased chance of:',
 		answers: [
 			'Ink rejection',
 			'Infection spreading to other clients',
@@ -909,12 +910,7 @@ export const quizData = [
 	},
 	{
 		question: 'The region of the world that Tribal Tattoo is derived from is',
-		answers: [
-			'Africa',
-			'South America',
-			'Middle East',
-			'South Pacific'
-		],
+		answers: ['Africa', 'South America', 'Middle East', 'South Pacific'],
 		correctAnswer: 3
 	},
 	{
@@ -950,14 +946,9 @@ export const quizData = [
 	},
 	{
 		question: 'How long is a temporary facility license good for?',
-		answers: [
-			'7 days',
-			'30 days',
-			'10 days',
-			'15 days'
-		],
+		answers: ['7 days', '30 days', '10 days', '15 days'],
 		correctAnswer: 3
-	}
+	},
 	{
 		question:
 			'What information must be provided to each client receiving services at a mobile facility?',
@@ -1023,15 +1014,11 @@ export const quizData = [
 		correctAnswer: 3
 	},
 	{
-		question: 'What is the 1st offense fine if a licensee performs services while their license is inactive?',
-		answers: [
-			'$100',
-			'$250',
-			'$300',
-			'$200'
-		],
+		question:
+			'What is the 1st offense fine if a licensee performs services while their license is inactive?',
+		answers: ['$100', '$250', '$300', '$200'],
 		correctAnswer: 3
-	}
+	},
 	{
 		question: 'How must instruments be sterilized?',
 		answers: [
