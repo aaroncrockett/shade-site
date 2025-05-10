@@ -6,9 +6,10 @@
 		label = '',
 		type = '',
 		required = false,
-		base = 'md:flex md:gap-4',
-		gap = ' md:gap-4',
-		labelBase = 'block whitespace-nowrap',
+		base = 'md:grid md:grid-cols-[minmax(40%,auto)_1fr] lg:grid-cols-[minmax(33%,auto)_1fr] items-center ',
+
+		gap = 'space-y-1',
+		labelBase = 'block whitespace-nowrap !font-bold',
 		inputBase = 'placeholder:text-white placeholder:text-xs !text-white !ring-neutral-600 bg-neutral-900/30 !ring-4 py-2 px-4 rounded-sm',
 		classes = '',
 		labelColor = 'text-white',

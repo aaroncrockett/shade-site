@@ -100,7 +100,19 @@ h1.hero-hl {
 	@apply mx-auto max-w-[1300px] p-2 sm:p-4;
 }
 
-/* global gallert and lightbox */
+/* global accordion  */
+.accordion-control-base {
+	@apply flex w-full flex-row items-center bg-neutral-800 p-4;
+}
+
+.accordion-control-hover {
+	@apply hover:bg-neutral-700 hover:text-white;
+}
+.accordion-control-classes {
+	@apply transition-colors duration-300;
+}
+
+/* global gallery and lightbox */
 .svelte-lightbox-header button {
 	@apply text-2xl text-neutral-500;
 }

@@ -125,10 +125,10 @@
 			<div bind:this={customTattooRef}></div>
 			<Accordion.Item
 				value="custom"
-				controlBase="p-4 w-full bg-neutral-800 flex flex-row "
-				controlHover="hover:bg-neutral-700 hover:text-white"
+				controlBase="accordion-control-base"
+				controlHover="accordion-control-hover"
 				controlRounded="rounded-sm"
-				controlClasses="transition-colors duration-300"
+				controlClasses="accordion-control-classes"
 			>
 				{#snippet control()}
 					<button
