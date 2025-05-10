@@ -1,29 +1,16 @@
 <script lang="ts">
 	const { data } = $props();
-	// import { getClientFieldMap } from '../data.ts';
-	import { clientDataFields } from '../data.ts';
 
-	// const clientFieldMap = getClientFieldMap();
+	import { CLIENT_DATA_FIELDS } from '$lib/config';
 	import InputField from '$lib/components/ui/input/index.svelte';
 	import SelectField from '$lib/components/ui/select/index.svelte';
-	const medicalConditions = [
-		'Diabetes',
-		'Heart condition',
-		'Hepatitis',
-		'HIV/AIDS',
-		'Pregnant or nursing',
-		'Skin condition (e.g. eczema, psoriasis)',
-		'Seizure disorder',
-		'Bleeding disorder',
-		'Other'
-	];
-	const acknowledgements = ['Are you drunk?', 'Do you really want this tattoo?'];
+	import { MEDICAL_CONDITIONS, ACKNOWLEDGEMENTS } from '$lib/config';
 
 	let selectedMedicalConditions = $state<string[]>([]);
 	let selectedAcknowledgements = $state<string[]>([]);
 
 	const isFormValid = $derived.by(() => {
-		return acknowledgements.every((ack) => selectedAcknowledgements.includes(ack));
+		return ACKNOWLEDGEMENTS.every((ack) => selectedAcknowledgements.includes(ack));
 	});
 </script>
 
@@ -40,7 +27,7 @@
 </div>
 
 {#snippet medicalConditionsCheckboxes()}
-	{#each medicalConditions as condition}
+	{#each MEDICAL_CONDITIONS as condition}
 		<label class="flex items-center gap-2">
 			<input
 				type="checkbox"
@@ -82,7 +69,7 @@
 		<span class=" block !text-xs !text-white">* indicates required fields</span>
 
 		<div class="grid gap-2 md:grid-cols-2 md:gap-4">
-			{#each clientDataFields.filter((field: any) => !field.init) as field}
+			{#each CLIENT_DATA_FIELDS.filter((field: any) => !field.init) as field}
 				{#if field.type === 'select' && field.options}
 					<SelectField
 						{...field}
