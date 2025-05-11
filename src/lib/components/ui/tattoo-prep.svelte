@@ -15,7 +15,7 @@
 	</p>
 	<p>
 		<span class="mr-1">🧘</span> During the early stages of your tattoo, I am quiet and focused and will
-		not be able to hold a conversations. That said, as the tattoo progresses I can become more talkative.
+		not be able to hold a conversations. That said, as the tattoo progresses I often become more talkative.
 		I would genuinely enjoy getting to know you if you’re up for it! Of course, you’re just as welcome
 		to stay quiet, relax, listen to headphones, etc.
 	</p>
