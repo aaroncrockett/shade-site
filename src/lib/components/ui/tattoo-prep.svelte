@@ -14,8 +14,13 @@
 		<span class="mr-1">🍺</span> By Oregon law, you must not appear intoxicated by alcohol or drugs.
 	</p>
 	<p>
-		<span class="mr-1">🧘</span> During the beginning stages of your tattoo, I tend to be quiet and focused.
-		You're welcome to bring a friend, stay quiet, talk, or listen to music — whatever makes you most
-		comfortable.
+		<span class="mr-1">🧘</span> During the early stages of your tattoo, I am quiet and focused and will
+		not be able to hold a conversations. That said, as the tattoo progresses I can become more talkative.
+		I would genuinely enjoy getting to know you if you’re up for it! Of course, you’re just as welcome
+		to stay quiet, relax, listen to headphones, etc.
+	</p>
+	<p>
+		<span class="mr-1">🧑‍🤝‍🧑</span>
+		You are welcome to bring a friend or socialize with others in the studio!
 	</p>
 </div>
