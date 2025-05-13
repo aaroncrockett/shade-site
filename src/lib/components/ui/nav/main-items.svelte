@@ -14,7 +14,7 @@
 	class="main-nav-li list-none"
 	aria-current={page.url.pathname === '/tattoos' ? 'page' : undefined}
 >
-	<a class="text-white" href="/tatoos" onclick={onItemClick}>Tat Gallery</a>
+	<a class="text-white" href="/tattoos" onclick={onItemClick}>Tat Gallery</a>
 </li>
 <li
 	class="main-nav-li list-none"
