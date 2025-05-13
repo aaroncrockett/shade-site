@@ -15,7 +15,8 @@
 		labelColor = 'text-white',
 		labelWidth = 'md:w-1/2 lg:w-1/3',
 		inputWidth = 'w-full input',
-		placeholder = ''
+		placeholder = '',
+		...rest
 	}: PageProps = $props();
 
 	const uid = $props.id();
@@ -33,5 +34,6 @@
 		{required}
 		{placeholder}
 		class="{inputBase} {inputWidth}"
+		{...rest}
 	/>
 </div>

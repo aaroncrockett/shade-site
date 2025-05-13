@@ -26,13 +26,37 @@ export const ADMIN_SEG = '/admin';
 export const CLIENT_DATA_FIELDS = [
 	{ id: 'first_name', label: 'First Name', type: 'text', required: true, init: true },
 	{ id: 'last_name', label: 'Last Name', type: 'text', required: true, init: true },
-	{ id: 'email', label: 'Email', type: 'email', required: true, init: true },
+	{
+		id: 'email',
+		label: 'Email',
+		type: 'email',
+		required: true,
+		init: true,
+		placeholder: 'example@example.com'
+	},
 	{ id: 'instagram', label: 'Instagram Handle', type: 'text', init: true },
-	{ id: 'phone', label: 'Phone', type: 'tel', required: true, init: true },
+	{
+		id: 'phone',
+		label: 'Phone',
+		type: 'tel',
+		required: true,
+		init: true,
+		pattern: '^\\(?\\d{3}\\)?[-\\s]?\\d{3}[-\\s]?\\d{4}$',
+		inputmode: 'tel',
+		placeholder: ' (xxx)-xxx-xxxx) or xxx-xxx-xxxx'
+	},
 	{ id: 'address', label: 'Street Address' },
 	{ id: 'city', label: 'City' },
 	{ id: 'state', label: 'State' },
-	{ id: 'zip', label: 'ZIP Code' },
+	{
+		id: 'zip',
+		label: 'ZIP Code',
+		type: 'text',
+
+		pattern: '[0-9]{5}',
+		inputmode: 'numeric',
+		placeholder: 'Enter a 5-digit ZIP code'
+	},
 	{ id: 'dob', label: 'Date of Birth', type: 'date' },
 	{ id: 'dl_or_id_number', label: 'DL/ID #' },
 	{ id: 'dl_or_id_exp', label: 'DL/ID Expiration', type: 'date' },
@@ -40,7 +64,7 @@ export const CLIENT_DATA_FIELDS = [
 	{
 		id: 'pronouns',
 		label: 'Pronouns',
-		required: true,
+
 		init: true,
 		type: 'checkbox',
 		options: ['he/him', 'she/her', 'they/them']

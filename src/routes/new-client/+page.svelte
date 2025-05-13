@@ -19,7 +19,7 @@
 		return ACKNOWLEDGEMENTS.every((ack) => selectedAcknowledgements.includes(ack));
 	});
 
-	let accordionValue: string[] = $state([]);
+	let accordionValue: string[] = $state(['optional']);
 
 	function toggleAccordion(item: string) {
 		if (accordionValue.includes(item)) {
@@ -49,7 +49,7 @@
 
 		<form method="POST">
 			{#snippet extraFields()}
-				<div class="flex flex-col gap-4 rounded-sm bg-neutral-950/50 p-4">
+				<div class="bg-primary-900 flex flex-col gap-4 rounded-sm p-4">
 					<div class={gridWrapperRowCls}>
 						{#each CLIENT_DATA_FIELDS.filter((field) => !field.init) as field}
 							{#if field.type === 'select' && field.options}
@@ -84,7 +84,6 @@
 									<textarea
 										name="medicationss"
 										rows="2"
-										required
 										class="w-full rounded-sm bg-neutral-900/30 px-4 py-2 !text-white !ring-4 !ring-neutral-600 placeholder:text-xs placeholder:text-white"
 									></textarea>
 								</div>
@@ -121,10 +120,11 @@
 				>
 					<Accordion.Item
 						value="optional"
-						controlBase="accordion-control-base"
+						controlBase="accordion-control-base !bg-primary-900"
 						controlHover="accordion-control-hover"
 						controlRounded="rounded-sm"
 						controlClasses="accordion-control-classes"
+						indicatorBase="text-3xl"
 					>
 						{#snippet control()}
 							<button
@@ -133,9 +133,10 @@
 								aria-expanded={accordionValue.includes('optional')}
 								class="acumin w-full text-left text-2xl md:text-3xl"
 							>
-								<div class="flex items-center gap-4">
-									Extra <p class="text-sm">
-										Filling this out will save time during the tattoo session, but is not required.
+								<div class="text-warning-500 flex items-center gap-4">
+									Extra <p class="!text-base">
+										Filling this out will save time during the tattoo session, but is not required
+										at this time. All information is confidential.
 									</p>
 								</div>
 							</button>

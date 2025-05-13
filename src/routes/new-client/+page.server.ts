@@ -81,8 +81,6 @@ export const actions: Actions = {
 		const formData = await request.formData();
 		const botError = detectBotSubmission(formData);
 
-		console.log(formData);
-
 		if (botError) return fail(400, { error: botError });
 
 		const required = CLIENT_DATA_FIELDS.filter((f) => f.required).map((f) => f.id);
