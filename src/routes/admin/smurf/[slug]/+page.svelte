@@ -13,7 +13,6 @@
 <h1 class="mb-4 text-2xl font-bold">{smurf.first_name} {smurf.last_name}</h1>
 <p><strong>Email:</strong> {smurf.email}</p>
 
-<!-- Tattoo Creation Form -->
 <form method="POST" action="?/createTattoo" class="mb-8 space-y-4">
 	<input type="hidden" name="client_id" value={smurf.id} />
 
