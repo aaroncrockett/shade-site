@@ -1,7 +1,8 @@
 <script lang="ts">
 	import type { PageProps } from './$types';
 
-	const {
+	let {
+		value = $bindable(),
 		id = '',
 		label = '',
 		type = '',
@@ -28,6 +29,7 @@
 			<span class={labelColor}>*</span>{/if}
 	</label>
 	<input
+		bind:value
 		id={`${uid}-${id}`}
 		name={id}
 		{type}

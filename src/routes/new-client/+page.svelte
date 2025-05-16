@@ -11,13 +11,6 @@
 
 	let { form }: PageProps = $props();
 	import Logo from '$lib/components/ui/logo.svelte';
-	let selectedMedicalConditions = $state<string[]>([]);
-	let selectedAcknowledgements = $state<string[]>([]);
-	let prepConfirmed = $state(false);
-
-	const isFormValid = $derived.by(() => {
-		return ACKNOWLEDGEMENTS.every((ack) => selectedAcknowledgements.includes(ack));
-	});
 
 	let accordionValue: string[] = $state(['optional']);
 
@@ -27,6 +20,31 @@
 		} else {
 			accordionValue = [...accordionValue, item];
 		}
+	}
+
+	let medicationInput = $state('');
+	let medications = $state<string[]>([]);
+	let medicationsString = $derived(medications.join(','));
+
+	function preventEnter(fn: () => void) {
+		return (e: KeyboardEvent) => {
+			if (e.key === 'Enter') {
+				e.preventDefault();
+				fn();
+			}
+		};
+	}
+
+	function addMedication() {
+		const value = medicationInput.trim();
+		if (value && !medications.includes(value)) {
+			medications = [...medications, value];
+			medicationInput = '';
+		}
+	}
+
+	function removeMedication(item: string) {
+		medications = medications.filter((med) => med !== item);
 	}
 
 	const gridWrapperRowCls = 'grid gap-4 p-4 md:grid-cols-2 md:p-6';
@@ -51,7 +69,7 @@
 			{#snippet extraFields()}
 				<div class="bg-primary-900 flex flex-col gap-4 rounded-sm p-4">
 					<div class={gridWrapperRowCls}>
-						{#each CLIENT_DATA_FIELDS.filter((field) => !field.init) as field}
+						{#each CLIENT_DATA_FIELDS.filter((field) => !field.init && field.type !== 'multi-input') as field}
 							{#if field.type === 'select' && field.options}
 								<SelectField
 									{...field}
@@ -79,14 +97,36 @@
 							/>
 
 							<div class={gridColCls}>
-								<label for="medications" class="flex items-center gap-2">Medications</label>
-								<div class="md:flex md:gap-4">
-									<textarea
-										name="medicationss"
-										rows="2"
-										class="w-full rounded-sm bg-neutral-900/30 px-4 py-2 !text-white !ring-4 !ring-neutral-600 placeholder:text-xs placeholder:text-white"
-									></textarea>
-								</div>
+								<InputField
+									id="medication-pre"
+									label="Medicadtions"
+									type="text"
+									placeholder="Enter a medication"
+									onkeydown={preventEnter(addMedication)}
+									bind:value={medicationInput}
+								/>
+								<button
+									type="button"
+									onclick={addMedication}
+									class="btn bg-success-500 w-1/4 md:ml-[40%] lg:ml-[33%]">+</button
+								>
+								{#if medications.length}
+									<ul class="flex flex-wrap gap-2 pt-2">
+										{#each medications as med}
+											<li
+												class="flex items-center gap-2 rounded-full bg-neutral-800 px-3 py-1 text-white"
+											>
+												<span>{med}</span>
+												<button
+													type="button"
+													onclick={() => removeMedication(med)}
+													class="text-red-500">×</button
+												>
+											</li>
+										{/each}
+									</ul>
+								{/if}
+								<input name="medications" value={medicationsString} />
 							</div>
 						</div>
 					</div>
@@ -94,7 +134,7 @@
 			{/snippet}
 
 			<div class={gridWrapperRowCls}>
-				{#each CLIENT_DATA_FIELDS.filter((field) => field.init) as field}
+				{#each CLIENT_DATA_FIELDS.filter((field) => field.init && field.type) as field}
 					{#if field.type === 'select' && field.options}
 						<SelectField
 							{...field}
@@ -174,7 +214,7 @@
 			<div class="flex flex-col gap-3 bg-neutral-800 p-4">
 				<h2>Tattoo Prep</h2>
 				<p class="text-xl">Please keep theese in mind before coming to your tattoo session!</p>
-				<TattooPrep bind:value={prepConfirmed} />
+				<TattooPrep />
 			</div>
 			<div class="p-4">
 				<button type="submit" class="btn bg-primary-500 rounded-full">Submit</button>

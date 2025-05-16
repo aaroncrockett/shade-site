@@ -66,7 +66,13 @@ function normalizeData(fields: string[], values: Record<string, any>): Record<st
 
 			case 'pronouns': {
 				if (Array.isArray(value)) {
-					normalized[field] = value.join(', ');
+					normalized[field] = value.join(',');
+				}
+				break;
+			}
+			case 'medical_conditions': {
+				if (Array.isArray(value)) {
+					normalized[field] = value.join(',');
 				}
 				break;
 			}
@@ -81,14 +87,16 @@ export const actions: Actions = {
 		const formData = await request.formData();
 		const botError = detectBotSubmission(formData);
 
+		const selectedConditions = formData.getAll('medical_conditions').join(',');
+
 		if (botError) return fail(400, { error: botError });
 
 		const required = CLIENT_DATA_FIELDS.filter((f) => f.required).map((f) => f.id);
 
-		const values = extractFormData(
-			formData,
-			CLIENT_DATA_FIELDS.map((field) => field.id)
-		);
+		const values = extractFormData(formData, [...CLIENT_DATA_FIELDS.map((field) => field.id)]);
+
+		values.medical_conditions = selectedConditions;
+
 		const normalizedValues = normalizeData(['pronouns', 'phone'], values);
 		const validation = validateRequiredFields(normalizedValues, required);
 

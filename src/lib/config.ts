@@ -76,6 +76,11 @@ export const CLIENT_DATA_FIELDS = [
 		options: ['email', 'instagram'],
 		required: true,
 		init: true
+	},
+	{
+		id: 'medications',
+		label: 'Medications',
+		type: 'multi-input'
 	}
 ];
 
