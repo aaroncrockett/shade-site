@@ -1,6 +1,6 @@
 import { flashImgData } from '../../flash';
 
-import type { Collection } from '$lib/types';
+import type { Collection, Subject } from '$lib/types';
 
 const rotationClasses = ['-rotate-5', '-rotate-2', 'rotate-0', 'rotate-0', 'rotate-2', 'rotate-5'];
 
@@ -29,10 +29,10 @@ function getRandomRotationClass() {
 
 const localState = $state<{
 	collections: Collection[];
-	priceFilter: 'under200' | 'over200' | null;
+	subjects: Subject[];
 }>({
-	collections: ['illustrative color', 'illustrative black and b&g', 'linocut/woodcut'],
-	priceFilter: null
+	collections: ['illustrative-b-g', 'linocut/woodcut'],
+	subjects: []
 });
 
 export const localVars = {

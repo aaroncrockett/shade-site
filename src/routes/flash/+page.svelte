@@ -6,7 +6,10 @@
 	import h1ImgBg from '$lib/images/heart-bg-sm.png';
 	import BgImgWrapper from '$lib/components/ui/background-image-wrapper.svelte';
 
-	import { Collections } from '$lib/types.ts';
+	import { Collections, CollectionNamesMap } from '$lib/types.ts';
+	import { Subjects, SubjectNamesMap } from '$lib/types';
+
+	// If Subjects is a readonly tuple, convert it to an array for use in .includes and .map
 
 	import { localVars } from './page.svelte.ts';
 
@@ -21,12 +24,7 @@
 				localState.collections.includes(collection)
 			);
 
-			const matchesPrice =
-				!localState.priceFilter ||
-				(localState.priceFilter === 'under200' && img.price <= 200) ||
-				(localState.priceFilter === 'over200' && img.price > 200);
-
-			return matchesCollection && matchesPrice;
+			return matchesCollection;
 		});
 	});
 
@@ -36,6 +34,14 @@
 			localState.collections = [...localState.collections, collection];
 		} else {
 			localState.collections = localState.collections.filter((c) => c !== collection);
+		}
+	}
+	function toggleSubject(subject: typeof Subjects) {
+		const index = localState.subjects.indexOf(subject);
+		if (index === -1) {
+			localState.subjects = [...localState.subjects, subject];
+		} else {
+			localState.subjects = localState.subjects.filter((c) => c !== subject);
 		}
 	}
 </script>
@@ -52,7 +58,6 @@
 
 	<div>
 		<h2>Filter by Collection</h2>
-		<p>this feature is coming REALLY soon!</p>
 
 		<div class="flex flex-wrap gap-2">
 			{#each Collections as collection}
@@ -65,48 +70,26 @@
 					}`}
 					onclick={() => toggleCollection(collection)}
 				>
-					{collection}
+					{CollectionNamesMap[collection]}
 				</button>
 			{/each}
 		</div>
 	</div>
 
-	<!-- <div>
-		<h2 class="">Filter by Price</h2>
-		<div class="flex gap-2">
-			<label class="flex items-center">
-				<input
-					type="radio"
-					name="priceFilter"
-					class="mr-2"
-					checked={localState.priceFilter === null}
-					onclick={() => (localState.priceFilter = null)}
-				/>
-				<span>All Prices</span>
-			</label>
-
-			<label class="flex items-center">
-				<input
-					type="radio"
-					name="priceFilter"
-					class="mr-2"
-					checked={localState.priceFilter === 'under200'}
-					onclick={() => (localState.priceFilter = 'under200')}
-				/>
-				<span>Under $200</span>
-			</label>
-
-			<label class="flex items-center">
-				<input
-					type="radio"
-					name="priceFilter"
-					class="mr-2"
-					checked={localState.priceFilter === 'over200'}
-					onclick={() => (localState.priceFilter = 'over200')}
-				/>
-				<span>Over $200</span>
-			</label>
-		</div>
+	<div>
+		{#each Subjects as subject}
+			<button
+				type="button"
+				class={`btn rounded-sm  ${
+					localState.subjects.includes(subject)
+						? 'border-success-500 text-success-500 border-2 bg-neutral-950/50'
+						: ' text-surface-100 border-2 border-neutral-800'
+				}`}
+				onclick={() => toggleSubject(subject as any)}
+			>
+				{SubjectNamesMap[subject]}
+			</button>
+		{/each}
 	</div>
 
 	<div
@@ -134,5 +117,5 @@
 				</GalleryImage>
 			{/each}
 		</LightboxGallery>
-	</div> -->
+	</div>
 </section>

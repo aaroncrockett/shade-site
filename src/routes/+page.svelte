@@ -8,7 +8,7 @@
 	<meta name="description" content="Shade to Shade Tattoo Artist." />
 </svelte:head>
 
-<section class="page-section relative z-5 md:!flex-row">
+<section class="page-section relative z-10 bg-transparent md:!flex-row">
 	<div class="order-2 flex w-full flex-col gap-4 pb-4 leading-12 tracking-wide md:order-1 md:w-1/2">
 		<h1 class="hero-hl text-100 text-center font-light md:text-left">Booking for May!</h1>
 		<h2

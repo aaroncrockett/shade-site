@@ -57,41 +57,74 @@ export interface BookedDate {
 
 export type DayOfWeek = 'sun' | 'mon' | 'tue' | 'wed' | 'thu' | 'fri' | 'sat';
 
-// Tattoos and Flash
+// --- STYLE ---
 
-export type Style =
-	| 'black-and-grey'
-	| 'blackwork'
-	| 'cartoon'
-	| 'color'
-	| 'delicate'
-	| 'illustrative'
-	| 'linocut/woodcut';
-
-export type Subject =
-	| 'abstract'
-	| 'animals'
-	| 'botanical'
-	| 'fantasy'
-	| 'insects'
-	| 'pop-culture'
-	| 'skulls'
-	| 'symbols'
-	| 'weapons';
-
-export type Technique =
-	| 'bold-line'
-	| 'dot-work'
-	| 'fine-line'
-	| 'illustrative-line'
-	| 'stipple'
-	| 'whip-shading';
-
-export const Collections = [
-	'linocut/woodcut',
-	'illustrative color',
-	'illustrative black and b&g'
+export const Styles = [
+	'black-and-grey',
+	'blackwork',
+	'cartoon',
+	'color',
+	'delicate',
+	'illustrative',
+	'linocut/woodcut'
 ] as const;
+
+export type Style = (typeof Styles)[number];
+
+export const StyleNamesMap = {
+	'black-and-grey': 'Black and Grey',
+	blackwork: 'Blackwork',
+	cartoon: 'Cartoon',
+	color: 'Color',
+	delicate: 'Delicate',
+	illustrative: 'Illustrative',
+	'linocut/woodcut': 'Linocut / Woodcut'
+} as const;
+
+// --- SUBJECT ---
+
+export const Subjects = [
+	'animals',
+	'botanical',
+	'fantasy',
+	'insects',
+	'video-games',
+	'skulls',
+	'symbols'
+] as const;
+
+export type Subject = (typeof Subjects)[number];
+
+export const SubjectNamesMap = {
+	animals: 'Animals',
+	botanical: 'Botanical',
+	fantasy: 'Fantasy',
+	insects: 'Insects',
+	'video-games': 'Video Games',
+	skulls: 'Skulls',
+	symbols: 'Symbols'
+} as const;
+
+// --- TECHNIQUE ---
+
+export const Techniques = ['bold-line', 'fine-line', 'illustrative-line', 'stipple'] as const;
+
+export type Technique = (typeof Techniques)[number];
+
+export const TechniqueNamesMap = {
+	'bold-line': 'Bold Line',
+	'fine-line': 'Fine Line',
+	'illustrative-line': 'Illustrative Line',
+	stipple: 'Stipple'
+} as const;
+
+export const Collections = ['linocut/woodcut', 'illustrative-b-g', 'new'] as const;
+
+export const CollectionNamesMap = {
+	'linocut/woodcut': 'Linocut / Woodcut',
+	'illustrative-b-g': 'Illustrative Black & Grey',
+	new: '💥 New Flash 💥'
+} as const;
 
 export type Collection = (typeof Collections)[number];
 
