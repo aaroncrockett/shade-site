@@ -9,8 +9,6 @@
 	import { Collections, CollectionNamesMap } from '$lib/types.ts';
 	import { Subjects, SubjectNamesMap } from '$lib/types';
 
-	// If Subjects is a readonly tuple, convert it to an array for use in .includes and .map
-
 	import { localVars } from './page.svelte.ts';
 
 	const { images, customLbStyles, localState } = localVars;
