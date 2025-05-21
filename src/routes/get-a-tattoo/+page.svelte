@@ -60,6 +60,10 @@
 					If interested in getting a tattoo, or if you have any questions, DM on Instagram or send
 					me an email.
 				</p>
+				<p>
+					I can price a tattoo either by piece of by the hour. The hourly charge is $125 an hour. IF
+					you choose to price by the piece the price is fixed.
+				</p>
 
 				<div class="rounded-md bg-neutral-900/80 p-4">
 					<p>@shade-to-shade-art</p>
@@ -108,7 +112,7 @@
 					</li>
 				</ul>
 
-				<p>Deposits will be applied to the final cost.</p>
+				<p>The $25 deposits will be applied to the final cost.</p>
 				<p>
 					Final payment is due in cash at your appointment before tattooing. Tips are always
 					appreciated and can be given at the end of the session.
