@@ -26,22 +26,23 @@
 		</div>
 		<div class=" flex flex-col gap-4">
 			<p>
+				I love tattooing and creating art that people are excited about. I want people to feel
+				welcome, so don't hesitate to ask any questions.
+			</p>
+			<p>
 				I've been drawing and interested in art since I was a child. In addition to tattooing, I
-				have worked as a web designer (and developer). I taught 2D design to college students when I
-				was a graduate student in Painting, as well. I also designed and developed this web
-				application.
+				have worked as a web designer (and developer). I got an MFA in Painting in 2011, and still
+				make art on the side. I also designed and developed this web application.
 			</p>
 			<p>
-				I love hiking, jogging, being outdoors, and exploring the endless food carts and restaurants
-				around Portland. I’ve got a wide range of interests that include TV/film, music, Buddhism,
-				and video games — when I can find the time.
+				I love hiking, jogging, and exploring the endless food carts and restaurants around
+				Portland. In the summer I love going to Rooster Rock and Sauvie Island with my husband and
+				friends, and occasionally a night out to bars and events. I’ve got a wide range of interests
+				that include TV/film, music, Buddhism.
 			</p>
-			<p>I live in SE Portland with my husband Nick and our dog Jasper.</p>
 			<p>
-				Tattooing is something I care deeply about, and I bring a lot of focus and intention to
-				every piece I do. That said, I think it’s just as important to keep the vibe relaxed and
-				fun. I don’t have much patience for ego or gatekeeping — I’d rather create a space where
-				people feel welcome.
+				I live in SE Portland with my husband Nick and our dog Jasper (AKA Jasper Johns, AKA Jasper
+				James St. James Johns Snow).
 			</p>
 		</div>
 	</div>

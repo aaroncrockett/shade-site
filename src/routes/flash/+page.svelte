@@ -15,31 +15,24 @@
 
 	const filteredImages = $derived.by(() => {
 		return images.filter((img) => {
-			// Only show images if at least one collection is selected
-			if (localState.collections.length === 0) return false;
+			if (localState.tags.length === 0) return false;
 
-			const matchesCollection = img.collections.some((collection) =>
-				localState.collections.includes(collection)
-			);
+			if (img.collections?.some((tag) => localState.tags.includes(tag))) return true;
+			if (img.subjects?.some((tag) => localState.tags.includes(tag))) return true;
+			// if (img.styles?.some((tag) => localState.tags.includes(tag))) return true;
+			// if (img.techniques?.some((tag) => localState.tags.includes(tag))) return true;
 
-			return matchesCollection;
+			return false;
 		});
 	});
 
-	function toggleCollection(collection: (typeof Collections)[number]) {
-		const index = localState.collections.indexOf(collection);
+	function toggleUsingArray(tag: (typeof Tag)[number]) {
+		const index = localState.tags.indexOf(tag);
+
 		if (index === -1) {
-			localState.collections = [...localState.collections, collection];
+			localState.tags = [...localState.tags, tag];
 		} else {
-			localState.collections = localState.collections.filter((c) => c !== collection);
-		}
-	}
-	function toggleSubject(subject: typeof Subjects) {
-		const index = localState.subjects.indexOf(subject);
-		if (index === -1) {
-			localState.subjects = [...localState.subjects, subject];
-		} else {
-			localState.subjects = localState.subjects.filter((c) => c !== subject);
+			localState.tags = localState.tags.filter((c) => c !== tag);
 		}
 	}
 </script>
@@ -62,11 +55,11 @@
 				<button
 					type="button"
 					class={`btn rounded-sm  ${
-						localState.collections.includes(collection)
+						localState.tags.includes(collection)
 							? 'border-success-500 text-success-500 border-2 bg-neutral-950/50'
 							: ' text-surface-100 border-2 border-neutral-800'
 					}`}
-					onclick={() => toggleCollection(collection)}
+					onclick={() => toggleUsingArray(collection)}
 				>
 					{CollectionNamesMap[collection]}
 				</button>
@@ -79,11 +72,11 @@
 			<button
 				type="button"
 				class={`btn rounded-sm  ${
-					localState.subjects.includes(subject)
+					localState.tags.includes(subject)
 						? 'border-success-500 text-success-500 border-2 bg-neutral-950/50'
 						: ' text-surface-100 border-2 border-neutral-800'
 				}`}
-				onclick={() => toggleSubject(subject as any)}
+				onclick={() => toggleUsingArray(subject as any)}
 			>
 				{SubjectNamesMap[subject]}
 			</button>

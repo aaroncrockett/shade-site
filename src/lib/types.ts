@@ -60,73 +60,86 @@ export type DayOfWeek = 'sun' | 'mon' | 'tue' | 'wed' | 'thu' | 'fri' | 'sat';
 // --- STYLE ---
 
 export const Styles = [
-	'black-and-grey',
-	'blackwork',
-	'cartoon',
-	'color',
-	'delicate',
-	'illustrative',
-	'linocut/woodcut'
+	'black-and-grey-style',
+	'blackwork-style',
+	'cartoon-style',
+	'color-style',
+	'delicate-style',
+	'illustrative-style',
+	'linocut/woodcut-style'
 ] as const;
 
 export type Style = (typeof Styles)[number];
 
 export const StyleNamesMap = {
-	'black-and-grey': 'Black and Grey',
-	blackwork: 'Blackwork',
-	cartoon: 'Cartoon',
-	color: 'Color',
-	delicate: 'Delicate',
-	illustrative: 'Illustrative',
-	'linocut/woodcut': 'Linocut / Woodcut'
+	'black-and-grey-style': 'Black and Grey',
+	'blackwork-style': 'Blackwork',
+	'cartoon-style': 'Cartoon',
+	'color-style': 'Color',
+	'delicate-style': 'Delicate',
+	'illustrative-style': 'Illustrative',
+	'linocut/woodcut-style': 'Linocut / Woodcut'
 } as const;
 
 // --- SUBJECT ---
 
 export const Subjects = [
-	'animals',
-	'botanical',
-	'fantasy',
-	'insects',
-	'video-games',
-	'skulls',
-	'symbols'
+	'animals-subject',
+	'botanical-subject',
+	'fantasy-subject',
+	'insects-subject',
+	'video-games-subject',
+	'skulls-subject',
+	'symbols-subject'
 ] as const;
 
 export type Subject = (typeof Subjects)[number];
 
 export const SubjectNamesMap = {
-	animals: 'Animals',
-	botanical: 'Botanical',
-	fantasy: 'Fantasy',
-	insects: 'Insects',
-	'video-games': 'Video Games',
-	skulls: 'Skulls',
-	symbols: 'Symbols'
+	'animals-subject': 'Animals',
+	'botanical-subject': 'Botanical',
+	'fantasy-subject': 'Fantasy',
+	'insects-subject': 'Insects',
+	'video-games-subject': 'Video Games',
+	'skulls-subject': 'Skulls',
+	'symbols-subject': 'Symbols'
 } as const;
 
 // --- TECHNIQUE ---
 
-export const Techniques = ['bold-line', 'fine-line', 'illustrative-line', 'stipple'] as const;
+export const Techniques = [
+	'bold-line-technique',
+	'fine-line-technique',
+	'illustrative-line-technique',
+	'stipple-technique'
+] as const;
 
 export type Technique = (typeof Techniques)[number];
 
 export const TechniqueNamesMap = {
-	'bold-line': 'Bold Line',
-	'fine-line': 'Fine Line',
-	'illustrative-line': 'Illustrative Line',
-	stipple: 'Stipple'
+	'bold-line-technique': 'Bold Line',
+	'fine-line-technique': 'Fine Line',
+	'illustrative-line-technque': 'Illustrative Line',
+	'stipple-technique': 'Stipple'
 } as const;
 
-export const Collections = ['linocut/woodcut', 'illustrative-b-g', 'new'] as const;
+export const Collections = [
+	'linocut/woodcut-collection',
+	'illustrative-b-g-collection',
+	'new-collection'
+] as const;
 
 export const CollectionNamesMap = {
-	'linocut/woodcut': 'Linocut / Woodcut',
-	'illustrative-b-g': 'Illustrative Black & Grey',
-	new: '💥 New Flash 💥'
+	'linocut/woodcut-collection': 'Linocut / Woodcut',
+	'illustrative-b-g-collection': 'Illustrative Black & Grey',
+	'new-collection': '💥 New Flash 💥'
 } as const;
 
 export type Collection = (typeof Collections)[number];
+
+export const AllTags = [...Styles, ...Subjects, ...Techniques, ...Collections] as const;
+
+export type Tag = (typeof AllTags)[number];
 
 export interface ImageData {
 	collections: Collection[];

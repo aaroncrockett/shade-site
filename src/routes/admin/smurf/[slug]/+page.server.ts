@@ -40,8 +40,8 @@ export const actions: Actions = {
 				collection: values.collection,
 				client_id: values.client_id
 			})
-			.select('id, name, collection, client_id') // Select the fields you want to return
-			.single(); // Ensures only one record is returned
+			.select('id, name, collection, client_id')
+			.single();
 		console.log('Data:', data);
 
 		if (error) {
