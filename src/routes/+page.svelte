@@ -8,7 +8,7 @@
 	<meta name="description" content="FML - Tattoo" />
 </svelte:head>
 
-<section class="page-section relative z-10 bg-transparent md:!flex-row">
+<section class="page-section relative z-10 bg-transparent">
 	<p>This page is being built RN.</p>
 
 	<p>email me at fml.tattoo.pdx@gmail.com</p>

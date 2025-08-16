@@ -38,7 +38,7 @@
 <div class="noise"></div>
 <div class="app h-full min-h-screen overflow-hidden bg-neutral-950/85">
 	<div class="bg-neutral-900/90 shadow-md">
-		<header class="site-wrapper">
+		<!-- <header class="site-wrapper">
 			<nav class="flex flex-col items-center justify-between gap-2 px-4 sm:flex-row sm:gap-4">
 				<Logo />
 				<Modal
@@ -72,12 +72,11 @@
 					{/snippet}
 				</Modal>
 
-				<!-- Main nav items, desktop only -->
 				<ul class="hidden flex-col gap-1 text-center sm:flex-row sm:gap-4 sm:text-left md:flex">
 					<NavMainItems />
 				</ul>
 			</nav>
-		</header>
+		</header> -->
 	</div>
 	{#if page.url.pathname === '/'}
 		<div
@@ -90,7 +89,7 @@
 		{@render children()}
 	</main>
 
-	<footer class="relative z-5 h-auto w-full bg-neutral-900/60 px-5 shadow-sm">
+	<!-- <footer class="relative z-5 h-auto w-full bg-neutral-900/60 px-5 shadow-sm">
 		<FooterMainItems />
-	</footer>
+	</footer> -->
 </div>
