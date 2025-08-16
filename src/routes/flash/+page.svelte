@@ -13,21 +13,33 @@
 
 	const { images, customLbStyles, localState } = localVars;
 
+	const filterType: string[] = [];
+
 	const filteredImages = $derived.by(() => {
 		return images.filter((img) => {
 			if (localState.tags.length === 0) return false;
 
-			if (img.collections?.some((tag) => localState.tags.includes(tag))) return true;
-			if (img.subjects?.some((tag) => localState.tags.includes(tag))) return true;
+			if (filterType.includes('collections')) {
+				if (!img.collections?.some((tag) => localState.tags.includes(tag))) return false;
+			}
+			if (filterType.includes('subjects')) {
+				if (!img.subjects?.some((tag) => localState.tags.includes(tag))) return false;
+			}
+
 			// if (img.styles?.some((tag) => localState.tags.includes(tag))) return true;
 			// if (img.techniques?.some((tag) => localState.tags.includes(tag))) return true;
-
-			return false;
+			return true;
 		});
 	});
 
-	function toggleUsingArray(tag: (typeof Tag)[number]) {
+	function toggleFlash(tag: (typeof Tag)[number], filterName: string) {
 		const index = localState.tags.indexOf(tag);
+
+		if (!filterType.includes(filterName)) {
+			filterType.push(filterName);
+		} else {
+			filterType.splice(filterType.indexOf(filterName), 1);
+		}
 
 		if (index === -1) {
 			localState.tags = [...localState.tags, tag];
@@ -59,7 +71,7 @@
 							? 'border-success-500 text-success-500 border-2 bg-neutral-950/50'
 							: ' text-surface-100 border-2 border-neutral-800'
 					}`}
-					onclick={() => toggleUsingArray(collection)}
+					onclick={() => toggleFlash(collection, 'collections')}
 				>
 					{CollectionNamesMap[collection]}
 				</button>
@@ -76,7 +88,7 @@
 						? 'border-success-500 text-success-500 border-2 bg-neutral-950/50'
 						: ' text-surface-100 border-2 border-neutral-800'
 				}`}
-				onclick={() => toggleUsingArray(subject as any)}
+				onclick={() => toggleFlash(subject as any, 'subjects')}
 			>
 				{SubjectNamesMap[subject]}
 			</button>

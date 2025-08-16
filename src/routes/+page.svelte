@@ -5,11 +5,16 @@
 
 <svelte:head>
 	<title>Home</title>
-	<meta name="description" content="Shade to Shade Tattoo Artist." />
+	<meta name="description" content="FML - Tattoo" />
 </svelte:head>
 
 <section class="page-section relative z-10 bg-transparent md:!flex-row">
-	<div class="order-2 flex w-full flex-col gap-4 pb-4 leading-12 tracking-wide md:order-1 md:w-1/2">
+	<p>This page is being built RN.</p>
+
+	<p>email me at fml.tattoo.pdx@gmail.com</p>
+	<p>or DM me on instagram @fml_tattoo</p>
+
+	<!-- <div class="order-2 flex w-full flex-col gap-4 pb-4 leading-12 tracking-wide md:order-1 md:w-1/2">
 		<h1 class="hero-hl text-100 text-center font-light md:text-left">Booking for May!</h1>
 		<h2
 			class=" rounded-sm bg-neutral-900/50 p-4 text-lg leading-8 font-bold uppercase sm:text-xl sm:leading-10"
@@ -36,5 +41,5 @@
 			alt="Black and gray stippled snake tattoo"
 			class="mx-auto hidden max-h-[450px] w-auto rounded-sm md:block lg:max-h-[600px]"
 		/>
-	</div>
+	</div> -->
 </section>
