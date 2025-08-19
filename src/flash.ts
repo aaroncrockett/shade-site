@@ -1,35 +1,51 @@
-import moth from '$lib/images/flash/moth-flash.png?enhanced';
-import knife from '$lib/images/flash/knife-flash.png?enhanced';
+import imgAll1 from '$lib/images/flash/flash-all-1.png?enhanced';
+import imgAll1Tn from '$lib/images/flash/flash-all-1-tn.png?enhanced';
+import imgAll2 from '$lib/images/flash/flash-all-2.png?enhanced';
+import imgAll2Tn from '$lib/images/flash/flash-all-2-tn.png?enhanced';
+import imgD from '$lib/images/flash/flash-d-1.png?enhanced';
+import imgDTn from '$lib/images/flash/flash-d-1-tn.png?enhanced';
+import imgPpl from '$lib/images/flash/flash-ppl-1.png?enhanced';
+import imgPplTn from '$lib/images/flash/flash-ppl-1-tn.png?enhanced';
+import imgM from '$lib/images/flash/flash-m-1.png?enhanced';
+import imgMTn from '$lib/images/flash/flash-m-1-tn.png?enhanced';
 
-// Math.floor(1_000_000 + Math.random() * 9_000_000)
-
-import type { ImageData } from '$lib/types';
-
-export const flashImgData: ImageData[] = [
+export const flashImgs = [
 	{
-		collections: ['linocut/woodcut-collection'],
-		Date: '2025-04',
-		description: 'Moth in a linocut style with limited gray.',
-		full: moth,
-		id: 6664479,
-		price: 375,
-		styles: ['linocut/woodcut-style', 'blackwork-style', 'black-and-grey-style'],
-		subjects: ['insects-subject', 'skulls-subject', 'symbols-subject'],
-		techniques: ['illustrative-line-technique'],
-		thumbnail: moth,
-		title: 'Linocut Moth'
+		id: 0,
+		thumbnail: imgAll1Tn,
+		full: imgAll1,
+		title: 'Flash: skulls and devils and shit',
+		description: 'Flash - skulls and devils and shit'
 	},
 	{
-		collections: ['linocut/woodcut-collection'],
-		Date: '2025-04',
-		description: 'Linocut style knife.',
-		full: knife,
-		id: 6788676,
-		price: 400,
-		styles: ['blackwork-style', 'linocut/woodcut-style'],
-		subjects: ['fantasy-subject'],
-		techniques: ['illustrative-line-technique'],
-		thumbnail: knife,
-		title: 'Linocut Knife'
+		id: 1,
+		thumbnail: imgAll2Tn,
+		full: imgAll2,
+		title: 'Flash - masks and shit',
+		description: 'Flash - masks and shit.'
+	},
+
+	{
+		id: 2,
+		thumbnail: imgDTn,
+		full: imgD,
+		title: 'Flash - deviant collection',
+		description: 'Flash - deviant collection.'
+	},
+
+	{
+		id: 3,
+		thumbnail: imgPplTn,
+		full: imgPpl,
+		title: 'Flash - Portrait collection',
+		description: 'Flash - Portrait collection.'
+	},
+
+	{
+		id: 4,
+		thumbnail: imgMTn,
+		full: imgM,
+		title: 'Flash - Micro Collection',
+		description: 'Flash - Micro Collection.'
 	}
 ];

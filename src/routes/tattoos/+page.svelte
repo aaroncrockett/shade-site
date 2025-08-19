@@ -1,10 +1,7 @@
 <script lang="ts">
 	import { LightboxGallery, GalleryThumbnail, GalleryImage } from 'svelte-lightbox';
 
-	import h1ImgBg from '$lib/images/heart-bg-sm.png';
-	import BgImgWrapper from '$lib/components/ui/background-image-wrapper.svelte';
-
-	import { images } from '../../tattoos';
+	import { tattoos } from '../../tattoos';
 
 	// Custom lightbox settings
 	const custom = {
@@ -26,14 +23,10 @@
 </svelte:head>
 
 <section class="page-section">
-	<BgImgWrapper bgImg={h1ImgBg}>
-		<h1 class="text-center">TATTOO GALLERY</h1>
-	</BgImgWrapper>
-
 	<div class="mx-auto grid grid-cols-3 gap-1 px-2 sm:gap-2 sm:px-4 md:gap-4 lg:grid-cols-4">
 		<LightboxGallery enableClickToClose={true} customization={custom}>
 			<svelte:fragment slot="thumbnail">
-				{#each images as { id, thumbnail, title, description }}
+				{#each tattoos as { id, thumbnail, title, description }}
 					<GalleryThumbnail {id}>
 						<enhanced:img
 							class="aspect-square w-full max-w-[220px] cursor-pointer rounded-sm object-cover sm:max-w-[260]"
@@ -45,7 +38,7 @@
 				{/each}
 			</svelte:fragment>
 
-			{#each images as { id, full, title, description }}
+			{#each tattoos as { id, full, title, description }}
 				<GalleryImage {id} {title} {description}>
 					<enhanced:img src={full} alt={title} />
 				</GalleryImage>
