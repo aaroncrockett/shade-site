@@ -17,7 +17,7 @@
 	}
 </script>
 
-<div class="flex gap-2 rounded bg-neutral-900/60 p-3">
+<div class="flex gap-2 rounded p-3">
 	{#if editing}
 		<form method="POST" action="?/edit" class="flex items-center gap-2">
 			<input class="input" type="text" name="first_name" bind:value={edited.first_name} />

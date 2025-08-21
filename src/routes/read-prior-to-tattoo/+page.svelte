@@ -17,11 +17,11 @@
 		<h1 class="text-center">Read Prior To Your Tattoo</h1>
 	</BgImgWrapper>
 
-	<div class="flex flex-col gap-4 rounded-sm bg-neutral-700 p-4">
+	<div class="flex flex-col gap-4 rounded-sm p-4">
 		<h2>Tattoo Prep</h2>
 		<TattooPrep />
 	</div>
-	<div class="flex flex-col gap-4 rounded-sm bg-neutral-700 p-4">
+	<div class="flex flex-col gap-4 rounded-sm p-4">
 		<h2>Aftercare</h2>
 		<Aftercare />
 	</div>

@@ -34,7 +34,6 @@
 	});
 </script>
 
-<div class="noise"></div>
 <div class="app h-full min-h-screen overflow-hidden">
 	<div class=" shadow-md">
 		<header class="site-wrapper">

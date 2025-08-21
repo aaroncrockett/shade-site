@@ -65,7 +65,7 @@
 					you choose to price by the piece the price is fixed.
 				</p>
 
-				<div class="rounded-md bg-neutral-900/80 p-4">
+				<div class="rounded-md p-4">
 					<p>@shade-to-shade-art</p>
 					<p>email: shade.to.shade.art@proton.me</p>
 				</div>
@@ -90,7 +90,7 @@
 						custom tattoo
 					</span>.
 				</p>
-				<ul class="ml-4 rounded-sm bg-neutral-800/80 p-4">
+				<ul class="ml-4 rounded-sm p-4">
 					<li>
 						I won't copy another tattoo artist's original work! If the design is super common, then
 						I don't have a problem using it as is. Otherwise I will have to redesign the piece with
@@ -152,8 +152,7 @@
 
 			<Accordion.Item
 				value="prep"
-				controlBase="p-4 w-full bg-neutral-800 flex flex-row "
-				controlHover="hover:bg-neutral-700 hover:text-white"
+				controlBase="p-4 w-full flex flex-row "
 				controlRounded="rounded-sm"
 				controlClasses="transition-colors duration-300"
 			>
@@ -174,8 +173,7 @@
 			</Accordion.Item>
 			<Accordion.Item
 				value="aftercare"
-				controlBase="p-4 w-full bg-neutral-800 flex flex-row "
-				controlHover="hover:bg-neutral-700 hover:text-white"
+				controlBase="p-4 w-full flex flex-row "
 				controlRounded="rounded-sm"
 				controlClasses="transition-colors duration-300"
 			>

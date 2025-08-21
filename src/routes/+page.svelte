@@ -17,8 +17,12 @@
 	</div>
 	<h1>This website is being built RN. For bookings or questions:</h1>
 	<h2>email me at fml.tattoo.pdx@gmail.com</h2>
-	<h2>or DM me on instagram @fml_tattoo</h2>
-	<h2>All I really have up is images of my tattoos and flash. But more to come.</h2>
+	<h2>or DM me on instagram @fml_tattoo or @aaron_does_tattoos</h2>
+	<p class="text-xl">Currently this website has a tattoo image gallery and flash image gallery.</p>
+	<p class="text-xl">
+		More is coming soon. Including a nicely designed webpage, about me section, images of my studio,
+		and more.
+	</p>
 
 	<!-- <div class="order-2 flex w-full flex-col gap-4 pb-4 leading-12 tracking-wide md:order-1 md:w-1/2">
 		<h1 class="hero-hl text-100 text-center font-light md:text-left">Booking for May!</h1>
